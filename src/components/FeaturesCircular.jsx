@@ -4,7 +4,7 @@ import "./FeaturesCircular.css";
 const FeaturesCircular = () => {
   // Example data for 10 circular items, including names and links
   const circularFeatures = [
-    { id: 1, name: "New Arrivals", imageUrl: "/assets/round2.jpg", href: "#" },
+    { id: 1, name: "New Arrivals", imageUrl: "/assets/round2.webp", href: "#" },
     {
       id: 2,
       name: "Gold Necklaces",
@@ -20,7 +20,7 @@ const FeaturesCircular = () => {
     {
       id: 4,
       name: "Gold Chains",
-      imageUrl: "/assets/jewels/gold/chain/chain1.png",
+      imageUrl: "/assets/jewels/gold/chain/chain1.webp",
       href: "gold-jewellery#chains",
     },
     {

@@ -17,7 +17,7 @@ const HeaderTwo = () => {
   return (
     <div className="header-two" style={headerStyle}>
       <nav className="nav">
-        <button className="hamburger" onClick={handleToggleMenu}>
+        <button className="hamburger" onClick={handleToggleMenu} style={{color:"#700B00"}}>
           ☰
         </button>
         <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
@@ -176,11 +176,11 @@ const HeaderTwo = () => {
     <li>
       <a href="/digigold">
         <img
-          src="/assets/digiicon.jpg"
+          src="/assets/digiicon.webp"
           alt="Digi Gold"
           className="dropdown-image"
         />
-        Digi Gold
+     MKM Pocket Gold
       </a>
     </li>
 

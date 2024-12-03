@@ -21,7 +21,7 @@ const AboutHero = () => {
         {/* Hero Image 1 */}
         <div className="about-hero-image">
         <video
-  src="/assets/about3.mp4"
+  src="/assets/about3.webm"
   alt="Hero 1"
   autoPlay
   muted

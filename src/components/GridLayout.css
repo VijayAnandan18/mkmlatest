@@ -66,10 +66,28 @@ h1 em {
 }
 
 /* Full-Width Image */
+.about-image {
+  width: 100%; /* Ensures the image spans the full width */
+  height: auto; /* Maintains aspect ratio */
+  display: block;
+  margin: 0 auto; /* Centers the image horizontally */
+  border-radius: 10px; /* Optional: Rounded corners */
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
 .about-image img {
   width: 100%; /* Ensures the image spans the full width */
   height: auto; /* Maintains aspect ratio */
   display: block;
   margin: 0 auto; /* Centers the image horizontally */
   border-radius: 10px; /* Optional: Rounded corners */
+  opacity: 1; /* Fully visible once loaded */
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-in */
+}
+
+/* Zoom effect on hover */
+.about-image:hover {
+  transform: scale(1.05); /* Slight zoom */
 }

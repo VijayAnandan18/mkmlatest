@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import './Contacthero.css';
 
 const Contacthero = () => {
-  const [videoSource, setVideoSource] = useState('assets/contact.mp4');
+  const [videoSource, setVideoSource] = useState('assets/contact.webm');
 
   useEffect(() => {
     const updateVideoSource = () => {
       if (window.innerWidth <= 768) {
-        setVideoSource('assets/contactmobile.mp4'); // Mobile video
+        setVideoSource('assets/contactmobile.webm'); // Mobile video
       } else {
-        setVideoSource('assets/contact.mp4'); // Desktop video
+        setVideoSource('assets/contact.webm'); // Desktop video
       }
     };
 

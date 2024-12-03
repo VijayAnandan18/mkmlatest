@@ -58,6 +58,23 @@ const GoldRateTag = () => {
                   <th colSpan="2" style={{ textAlign: "center" }}>Today's Gold Rate</th>
                 </tr>
                 <tr>
+                  <th
+  colSpan="2"
+  style={{ background: "#700B00", color: "white", textAlign: "center" }}
+>
+  Updated on: {new Date().toLocaleString("en-US", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  })}
+</th>
+
+                  </tr>
+                <tr>
                   <th>Gold Type</th>
                   <th>Price (₹)</th>
                 </tr>

@@ -22,7 +22,7 @@ const MainContact = () => {
       </div>
       <div className="image-card">
         <img
-          src="/assets/sociallinks.jpeg"
+          src="/assets/sociallinks.webp"
           alt="Social Links"
           className="social-image"
         />

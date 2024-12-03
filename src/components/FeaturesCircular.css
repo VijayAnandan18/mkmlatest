@@ -47,7 +47,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: 10s linear infinite change-color, 5s linear infinite orb;
+  animation: 5s linear infinite change-color, 5s linear infinite orb;
 }
 
 .orb-image {
@@ -87,7 +87,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .orb {
-    --size: 70px; /* Reduce size of the orb for mobile view */
+    --size: 90px; /* Reduce size of the orb for mobile view */
   }
 
   /* Add margin to the first orb and its label */
@@ -98,7 +98,7 @@
 
 @media (max-width: 480px) {
   .orb {
-    --size: 60px; /* Further reduce size on smaller screens */
+    --size:  90px; /* Further reduce size on smaller screens */
   }
 
   /* Add margin to the first orb and its label for smaller screens */

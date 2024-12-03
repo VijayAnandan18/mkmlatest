@@ -23,7 +23,7 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Schemes</h3>
           <ul className="footer-links">
-            <li><a href="/digigold">Digi Gold</a></li>
+            <li><a href="/digigold">Pocket Gold</a></li>
           </ul>
         </div>
         <div className="footer-section">

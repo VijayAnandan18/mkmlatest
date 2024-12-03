@@ -9,7 +9,7 @@ const DigiGoldContent = () => {
         <p>Explore our exclusive gold schemes designed to help you grow your wealth securely.</p>
       </div>
       <div className="image-section scheme-image">
-        <img src="/assets/scheme.jpg" alt="Gold Scheme" className="scheme-img" />
+        <img src="/assets/scheme.webp" alt="Gold Scheme" className="scheme-img" />
       </div>
       
       <div className="content-section one">

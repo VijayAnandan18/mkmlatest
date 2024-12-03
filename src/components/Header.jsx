@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IoLocationOutline } from "react-icons/io5"; // Location icon
 import { HiMiniPhone } from "react-icons/hi2"; // Phone icon
+import CustomDropdown from "./CustomDropdown"; // Import the CustomDropdown component
 import "./Header.css"; // Header styles
 
 const Header = () => {
@@ -52,7 +53,6 @@ const Header = () => {
   };
 
   useEffect(() => {
-    // Fetch location information
     const fetchLocation = async () => {
       try {
         const response = await fetch("https://ipapi.co/json/");
@@ -67,27 +67,34 @@ const Header = () => {
     };
 
     fetchLocation();
-    fetchGoldRates();
   }, []);
-
   return (
     <header className="header">
       <div className="logo-container">
-        <img src="assets/logo1.png" alt="Logo" className="logo" />
-        <img src="assets/logo2.png" alt="Logo" className="logo" style={{ width: "140px" }} />
+        <img src="assets/logo1.webp" alt="Logo" className="logo" style={{ height: "55px",width:"50px" }}/>
+        <img src="assets/logo2.webp" alt="Logo" className="logo" style={{ width: "140px" }} />
       </div>
 
       <div className="search-container">
-        <input type="text" placeholder="Search" className="search-box" />
+        <CustomDropdown
+          options={[
+            { label: "Gold Rings", value: "gold-jewellery#rings" },
+            { label: "Gold Bangles", value: "gold-jewellery#bangles" },
+            { label: "Diamond Rings", value: "diamond-jewellery#rings" },
+            { label: "Silver Articles", value: "silver-collection#articles" },
+            { label: "Schemes (DigiGold)", value: "digigold" },
+          ]}
+          placeholder="Search here..."
+        />
       </div>
 
       <div className="location-container">
         <IoLocationOutline className="location-icon" />
-        <a 
-          href="https://maps.app.goo.gl/fDHQGWRaN74YVShb7" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          style={{ textDecoration: 'none' }}
+        <a
+          href="https://maps.app.goo.gl/LMWydXhk1kSWVpVx6"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none" }}
         >
           <span className="store" style={{ color: "#700B00" }}>Store</span>
         </a>
@@ -99,7 +106,6 @@ const Header = () => {
       </div>
 
       <div className="goldtext-rate">
- 
         <p className="shiny-text2" data-text="Gold Rate">Gold Rate</p>
         <div className="dropdown">
           <div className="dropdown-content">
@@ -108,6 +114,11 @@ const Header = () => {
                 <thead>
                   <tr>
                     <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>Today's Gold Rate</th>
+                  </tr>
+                  <tr>
+                    <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>
+                      Updated on: {new Date().toLocaleString()}
+                    </th>
                   </tr>
                   <tr>
                     <th style={{ background: "#700B00", color: "white" }}>Gold Type</th>
@@ -146,7 +157,7 @@ const Header = () => {
 
       <div className="phone-container">
         <HiMiniPhone className="phone-icon" />
-        <a href="tel:+919778907890" className="phone-link">
+        <a href="tel:+919443758266" className="phone-link">
           <span className="phone-number">+91 9443758266</span>
         </a>
       </div>

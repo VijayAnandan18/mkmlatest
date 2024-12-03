@@ -10,10 +10,10 @@ const GoldJewellery = () => {
   };
 
   const cards = [
-    { id: 1, img: "/assets/gold1.png", section: "earrings" },
-    { id: 2, img: "/assets/gold2.png", section: "bangles" },
-    { id: 3, img: "/assets/gold3.png", section: "chains" },
-    { id: 4, img: "/assets/gold4.png", section: "necklaces" },
+    { id: 1, img: "/assets/gold1.webp", section: "earrings" },
+    { id: 2, img: "/assets/gold2.webp", section: "bangles" },
+    { id: 3, img: "/assets/gold3.webp", section: "chains" },
+    { id: 4, img: "/assets/gold4.webp", section: "necklaces" },
   ];
 
   return (

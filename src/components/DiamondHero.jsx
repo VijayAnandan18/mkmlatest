@@ -6,7 +6,7 @@ const DiamondHero = () => {
     <div className="diamond-hero-video-container">
       <video
         className="diamond-hero-video"
-        src="assets/diamondhero.mp4"
+        src="assets/diamondhero.webm"
         autoPlay
         muted
         loop
