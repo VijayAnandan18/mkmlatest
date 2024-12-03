@@ -1,0 +1,118 @@
+/* Contact container */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure full viewport height */
+    background-color: #ffff;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent horizontal scroll */
+  }
+  
+  /* Form wrapper */
+  .contact-form-wrapper {
+    width: 100%;
+    max-width: 500px; /* Prevent form from growing too wide */
+    background-color: #eec664;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box; /* Include padding in width calculations */
+  }
+  
+  /* Form heading */
+  .contact-form-wrapper h2 {
+    margin-bottom: 20px;
+    color: #700b00;
+    font-family: 'Mier demi', sans-serif;
+  }
+  
+  /* Form group */
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Ensure padding does not affect width */
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #700b00;
+    outline: none;
+  }
+  
+  /* Comments textarea */
+  textarea {
+    resize: none;
+  }
+  
+  /* Form actions */
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cancel-button,
+  .submit-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cancel-button {
+    background-color: #ccc;
+    color: #000;
+  }
+  
+  .cancel-button:hover {
+    background-color: #bbb;
+  }
+  
+  .submit-button {
+    background-color: #700b00;
+    color: #fff;
+  }
+  
+  .submit-button:hover {
+    background-color: #500800;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .contact-form-wrapper {
+      padding: 15px;
+    }
+  
+    .form-actions {
+      flex-direction: column;
+      gap: 10px; /* Add spacing between buttons */
+    }
+  
+    .cancel-button,
+    .submit-button {
+      width: 100%; /* Make buttons full-width for smaller screens */
+    }
+  }
+  

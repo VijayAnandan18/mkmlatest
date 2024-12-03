@@ -1,0 +1,75 @@
+.Gridlayout {
+  width: 100%;
+  padding: 20px; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+h1 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: "Mier demi", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: #080808;
+  transition: all 0.4s ease 0s;
+}
+
+h1 span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1.3;
+}
+
+h1 em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* === HEADING STYLE #1 === */
+.one h1 {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.one h1:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #700B00;
+}
+
+.one h1:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 25px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #700B00;
+}
+
+/* About Description Text */
+.about-description {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin: 15px 0 30px;
+  font-family: "Arial", sans-serif;
+}
+
+/* Full-Width Image */
+.about-image img {
+  width: 100%; /* Ensures the image spans the full width */
+  height: auto; /* Maintains aspect ratio */
+  display: block;
+  margin: 0 auto; /* Centers the image horizontally */
+  border-radius: 10px; /* Optional: Rounded corners */
+}

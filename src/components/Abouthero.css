@@ -1,0 +1,99 @@
+/* Main container */
+/* Main container */
+.about-hero-container {
+  margin: 0 auto;
+  padding: 20px;
+  overflow: hidden; /* Ensure no overflow */
+}
+/* Grid container */
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Default 2 columns */
+  grid-template-rows: auto auto; /* Default rows */
+  gap: 0px; /* Adjust gap for spacing */
+  width: 100%;
+  max-width: 100%;
+}
+/* Grid items */
+.about-hero-content {
+  padding: 20px;
+  background-color: white;
+  color: #544114;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(112, 11, 0.1);
+  max-width: 100%; /* Prevent content box from exceeding width */
+  box-sizing: border-box; /* Ensure padding doesn't affect total width */
+}
+
+
+/* History section */
+.about-hero-content.history {
+  grid-column: 2; /* Place this section in the second column */
+  grid-row: 2; /* Place this section in the second row */
+}
+
+/* Image and video styles */
+.about-hero-image img,
+.about-hero-image video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific styles for videos */
+.about-hero-image video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Heading styles */
+.about-hero-heading {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15px;
+ 
+   text-align: center;
+  background: linear-gradient(90deg, #614100cc, #d89700, #6b4700c4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 10px; /* Smaller gap for compact layout */
+  }
+
+  /* Reorder for mobile */
+  .about-hero-image:nth-child(2) {
+    order: 1; /* First video */
+  }
+
+  .about-hero-content:nth-child(1) {
+    order: 2; /* "About Us" content */
+  }
+
+  .about-hero-content.history {
+    order: 3; /* "Our Vision and Mission" content */
+  }
+
+  .about-hero-image:nth-child(4) {
+    display: none; /* Hide the second video */
+  }
+
+  .about-hero-container {
+    padding: 10px;
+  }
+
+  .about-hero-heading {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .about-hero-content {
+    padding: 15px;
+  }
+}

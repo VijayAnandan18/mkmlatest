@@ -1,0 +1,148 @@
+/* Hamburger Button */
+.hamburger {
+  display: none; /* Default: hidden */
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #700B00;
+  cursor: pointer;
+}
+/* Header Styles */
+.header-two {
+  width: 100%;
+margin-top: 0.5px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 5px; /* Max height of the header */
+
+  position: relative; /* Establish stacking context */
+  z-index: 10; /* Ensure it's above background elements */
+}
+
+/* Ensure navigation bar aligns properly */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  width: 100%;
+  
+
+  font-weight: bold;
+  position: relative;
+  z-index: 15; /* Keep above background */
+  padding: 0; /* Remove extra padding */
+  margin: -15px 0; /* Adjust to fit within 10px height */
+}
+.shiny-text2 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  position: relative;
+  color: #700B00;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.shiny-text2::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #FFD700, transparent);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -150%;
+  }
+  100% {
+    background-position: 150%;
+  }
+}
+
+/* Dropdown Images */
+.dropdown-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+  min-width: 250px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+}
+
+/* Show dropdown on hover */
+.nav-item:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.dropdown li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown li:hover {
+  background-color: #f0f0f0;
+}
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger on smaller screens */
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute; /* Proper positioning */
+    top: 100%; /* Align under header */
+    left: 0;
+    background-color: #fff;
+    z-index: 15;
+  }
+
+  .nav-list.open {
+    display: flex;
+  }
+
+  .dropdown {
+    position: relative;
+    min-width: 100%; /* Fit dropdown to the full width */
+  }
+}

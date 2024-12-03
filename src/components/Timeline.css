@@ -1,0 +1,139 @@
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #700B00;
+    background-color: #f8eed8f1;
+  }
+  
+  .timeline {
+    position: relative;
+    width: 100%;
+    max-width: 60rem;
+    margin: 2rem 0;
+  }
+  
+  .timeline-event {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+    border-left: 2px solid #700B00;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .timeline-event::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #700B00;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  
+  .date {
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-color: #b67f00;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    position: relative;
+    width: max-content;
+  }
+  
+  .title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+  }
+  
+  .credits {
+    margin-top: 1rem;
+    text-align: right;
+  }
+  
+  .credits a {
+    color: #1e1e1e;
+    text-decoration: none;
+  }
+  .two h1 {
+    font-size: 2rem; /* Default size for larger screens */
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #700B00;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .timeline-container {
+      padding: 1rem;
+    }
+  
+    .timeline {
+      width: 100%;
+      max-width: 100%;
+      margin: 1rem 0;
+    }
+  
+    .timeline-event {
+      padding-left: 1rem;
+    }
+  
+    .date {
+      font-size: 1rem;
+      padding: 0.25rem 0.5rem;
+    }
+  
+    .title {
+      font-size: 1rem;
+    }
+  
+    .description {
+      font-size: 0.9rem;
+    }
+    .two h1 {
+      font-size: 1.5rem; /* Adjust font size for tablets and smaller screens */
+      line-height: 1.4;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .timeline-container {
+      padding: 1rem 0.5rem;
+    }
+  
+    .timeline-event {
+      padding-left: 0.5rem;
+    }
+  
+    .date {
+      font-size: 0.9rem;
+      padding: 0.25rem 0.5rem;
+    }
+  
+    .title {
+      font-size: 0.9rem;
+    }
+    .two h1 {
+      font-size: 1.2rem; /* Adjust font size for mobile devices */
+      line-height: 1.4;
+    }
+    .description {
+      font-size: 0.8rem;
+    }
+  }
+  

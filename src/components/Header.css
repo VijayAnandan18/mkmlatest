@@ -1,0 +1,325 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif; /* Apply Poppins globally */
+  
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 15px; /* Reduced padding */
+
+  background-color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9); /* Adjusted shadow */
+  flex-wrap: wrap;
+  gap: 15px; /* Reduced gap */
+  height: 60px; /* Set a fixed height */
+  position: relative;
+}
+
+/* Logo */
+.header .logo-container img {
+  width: 40px; /* Reduced logo size */
+  height: auto;
+}
+.header .phone-container,
+.header .search-container,
+.header .location-container,
+.header .country-container {
+  font-size: 0.9rem; /* Adjusted font size for smaller height */
+}
+
+
+/* Phone Icon */
+.phone-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #700B00;
+}
+
+.phone-icon {
+  font-size: 1.5rem;
+  color: rgb(182, 127, 0);
+}
+
+.phone-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Ensure it uses the current text color */
+}
+/* Ensure smaller padding for child elements */
+.phone-container, .search-container, .location-container, .country-container {
+  gap: 8px; /* Reduced gap between icons and text */
+}
+
+/* Adjust .nav-item styles for smaller height */
+.nav-item a {
+  padding: 8px 16px; /* Reduced padding */
+  font-size: 0.9rem; /* Smaller font size */
+}
+
+/* Search box styles */
+.search-container .search-box {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid #b67f00;
+  font-size: 1rem;
+  width: 350px;
+  transition: border-color 0.3s ease; /* Smooth transition */
+}
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color:#b67f00 ;
+}
+
+.search-container .search-box:focus {
+  border-color: #b67f00; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Store location */
+.location-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.location-icon {
+  font-size: 1.3rem;
+  color: rgb(182, 127, 0);
+}
+
+/* Country container */
+.country-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.country-flag {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.country-name {
+  font-size: 1rem;
+}
+.goldtext-rate {
+  position: relative;
+  font-size: 0.8rem; /* Reduced font size */
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+.shiny-text2 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  position: relative;
+  color: #700B00;
+  overflow: hidden;
+}
+
+.shiny-text2::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #FFD700, transparent);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -150%;
+  }
+  100% {
+    background-position: 150%;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: auto; /* Dynamic width */
+  min-width: 300px;
+}
+
+.goldtext-rate:hover .dropdown {
+  display: block;
+}
+
+.gold-rate-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.gold-rate-table th,
+.gold-rate-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+
+/* Navigation Styles */
+.header-two {
+  width: 100%;
+  background-size: cover; /* Ensures the image covers the entire header */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 20px 0; /* Adds padding for vertical space */
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+  margin: 0 15px;
+}
+
+.nav-item a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  text-align: center;
+}
+
+.nav-item:hover > a {
+  background-color: rgb(182, 127, 0, 0.4); /* Darken the link on hover */
+}
+
+/* Dropdown Styles */
+.nav-item:hover .dropdown {
+  display: visible;
+}
+
+.dropdown li {
+  padding: 10px;
+}
+
+.dropdown li a {
+  color: black;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    justify-content: center; /* Center content horizontally */
+    gap: 10px;
+    padding: 15px;
+  }
+ 
+  /* Dropdown styling */
+.search-dropdown {
+  position: absolute;
+  top: 60px; /* Adjust this value as needed */
+  right: 10px; /* Adjust for positioning */
+  background-color: #700b00;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-link:hover {
+  background-color: #a70000; /* Lighten the background on hover */
+}
+
+  .search-container, .location-container, .country-container {
+    display: none; /* Hide these sections in mobile */
+  }
+
+  .phone-container, .gold-rate {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    order: 2; /* Ensure phone and gold rate appear after the logo */
+  }
+
+  .phone-container {
+    flex-direction: row;
+  }
+
+  .gold-rate {
+    flex-direction: row;
+    font-size: 1rem;
+    text-align: center;
+
+  }
+
+  .phone-icon {
+    font-size: 1.5rem;
+    color: rgb(182, 127, 0);
+  }
+
+  /* Adjust the dropdown to appear correctly in mobile */
+  .gold-rate .dropdown-content {
+    font-size: 1rem;
+
+  }
+
+  .gold-rate .dropdown-button {
+  
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #700B00;
+  }
+}
+@media (max-width: 768px) {
+  .goldtext-rate{
+display:none;
+}}

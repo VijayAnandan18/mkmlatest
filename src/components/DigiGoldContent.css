@@ -1,0 +1,71 @@
+.digi-gold-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .content-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px; /* Space between sections */
+  }
+  
+  .heading {
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: bold;
+    margin-bottom: 10px; /* Space below heading */
+  }
+  
+  .subheading {
+    font-size: 1.2rem; /* Adjust size as needed */
+    color: #555; /* Light color for better readability */
+    margin-bottom: 20px; /* Space before next section */
+  }
+  
+  .image-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Add some space between images */
+  }
+  
+  .scheme-image img {
+    width: 100%;
+    max-width: 2200px;
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .schemes2-image img {
+    width: 100%;
+    max-width: 5400px;
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .scheme-image img, .schemes2-image img {
+      width: 90%; /* Reduce the size of the images for smaller screens */
+      max-width: none; /* Remove max-width to allow image scaling */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .content-section {
+      padding: 0 10px; /* Add some padding to the content */
+    }
+  
+    .heading {
+      font-size: 1.5rem; /* Adjust heading size for mobile */
+    }
+  
+    .subheading {
+      font-size: 1rem; /* Adjust subheading size for mobile */
+    }
+  
+    .content-section p {
+      text-align: justify; /* Justify the paragraph text in mobile view */
+    }
+  }
+  

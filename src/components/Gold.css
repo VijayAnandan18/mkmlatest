@@ -1,0 +1,179 @@
+.one {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #111111;
+  margin: 0.5em 0;
+  font-family: 'Mier-demi', sans-serif;
+}
+
+/* Gold Rate styles */
+.gold-rate {
+  position: relative;
+  font-size: 0.8rem; /* Reduced font size */
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Shiny Text Effect */
+.shiny-text {
+  font-family: 'Mier-demi';
+  text-transform: uppercase;
+  font-size: 1.8rem; /* Adjusted font size */
+  letter-spacing: 2px; /* Adjust spacing */
+  position: relative;
+  color: black;
+  overflow: hidden;
+  display: flex; /* Center the text using flex */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 20px 0; /* Add vertical spacing */
+}
+
+.shiny-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #FFD700, transparent);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -150%;
+  }
+  100% {
+    background-position: 150%;
+  }
+}
+
+/* Center the container of the sub-heading */
+.sub-heading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.one p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Base styles */
+.collection-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  align-items: flex-end;
+  margin: 0 auto;
+}
+
+.collection-card {
+  width: 100%;
+  background: white;
+  border-radius: 25px;
+  border: 2px solid rgb(182, 127, 0); /* Added border color */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* To stack image and content */
+}
+
+.collection-card .collection-imgBox {
+  position: relative;
+  width: 100%;
+  height: 310px;
+  overflow: hidden;
+  border-color: rgb(182, 127, 0); /* Set the border color */
+  border-radius: 15px;
+}
+
+.collection-card .collection-imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+  transform-origin: right;
+}
+
+.collection-card:hover .collection-imgBox img {
+  transform: scale(1.5);
+}
+
+.collection-card .collection-content {
+  display: flex;
+  justify-content: center; /* Center the content */
+  align-items: center;
+  padding: 10px;
+}
+
+.collection-card .collection-content .collection-productName {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  margin: 5px 0;
+  text-align: center; /* Center the text */
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .collection-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 15px; /* Adjust gap between cards */
+    justify-content: center; /* Center the entire grid */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .collection-card {
+    width: 90%; /* Reduce the card width */
+    max-width: 300px; /* Set a max-width for more control */
+    border-radius: 15px;
+  }
+
+  .collection-card .collection-imgBox {
+    height: 200px; /* Adjust height */
+  }
+
+  .collection-card .collection-content .collection-productName {
+    font-size: 16px; /* Adjust font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .collection-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    justify-content: center; /* Center the entire grid */
+  }
+
+  .collection-card {
+    width: 85%; /* Further reduce the card width */
+    max-width: 280px; /* Adjust max-width */
+  }
+
+  .collection-card .collection-imgBox {
+    height: 180px; /* Adjust height for smaller screens */
+  }
+
+  .collection-card .collection-content .collection-productName {
+    font-size: 12px; /* Adjust font size for smaller screens */
+  }
+}

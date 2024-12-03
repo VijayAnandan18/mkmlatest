@@ -1,0 +1,139 @@
+/* Main container */
+.footer-container {
+  background-color: white;
+  color: black;
+  padding: 40px 0;
+  border-top: 1px solid #444;
+}
+
+/* Section layout */
+.footer-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer links styling */
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #FFD700;
+}
+
+/* About row styles */
+.footer-about-row {
+  background-color: #b48000; /* Updated background color */
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.footer-about {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-about h3 {
+  margin-bottom: 15px;
+}
+
+.footer-about p {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+/* QR and app store buttons */
+.footer-qr {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.app-store-buttons img {
+  width: 130px;
+}
+
+/* Social links */
+.footer-social ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  color: black; /* Updated color */
+  gap: 15px;
+}
+
+.footer-social li {
+  display: inline-block;
+}
+
+.footer-social a {
+  color: black; /* Ensure social links are black */
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #FFD700;
+}
+
+/* Footer bottom text */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 0.8rem;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.logo-image {
+  max-width: 100%;
+  height: auto;
+  width: 150px; /* Adjust width as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Footer links styling */
+.footer-links,h3 {
+ margin-left: 20px;
+}
+
+  .logo-image {
+    width: 120px; /* Adjust for smaller screens */
+  }
+  .footer-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-about {
+    padding: 0 10px;
+  }
+
+  .app-store-buttons img {
+    width: 100px;
+  }
+}

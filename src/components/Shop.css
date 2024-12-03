@@ -1,0 +1,149 @@
+/* Main container for the shop page */
+.shop-container {
+    padding: 2rem;
+    background-color: #ba8f2311;
+  }
+  
+  /* Navigation styles */
+  .shop-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .shop-nav button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background: linear-gradient(90deg, #614100cc, #d89700, #6b4700c4);
+    /* Gradient from dark to light to dark */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+ 
+  .shop-nav button:hover {
+    background-color: #700b00;
+  }
+  
+  /* Grid container for the jewelry images */
+  .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Card for each jewelry image */
+  .shop-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  /* Heading Styles */
+.shop-heading {
+  margin-bottom: 2rem; /* Space between heading and navigation */
+}
+.shop-explore-more {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.shop-explore-more button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background: linear-gradient(90deg, #614100cc, #d89700, #6b4700c4);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: blink 1.5s infinite; /* Apply the blinking animation */
+  transition: transform 1s;
+}
+
+.shop-explore-more button:hover {
+  transform: scale(1.05);
+}
+
+/* Blinking animation */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.one h1 {
+  text-align: center;
+
+  padding-bottom: 5px;
+}
+.one h1:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #700B00;
+}
+.one h1:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 25px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #700B00;
+}
+
+  /* Responsive styles */
+/* Mobile view */
+@media (max-width: 768px) {
+  .shop-nav button {
+    padding: 0.4rem 1.0rem; /* Reduce the padding of buttons */
+    font-size: 0.7rem; /* Slightly reduce the font size */
+  }
+
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns in the grid */
+    gap: 0.5rem; /* Reduced gap between items */
+  }
+
+  .shop-card img {
+    max-width: 100%; /* Allow the image to scale within the container */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 5px;
+  }
+
+  .shop-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hide-on-mobile {
+  display: none; /* Completely hide the element */
+}
+}
+
+  
+  /* Tablet and larger screens */
+  @media (min-width: 1024px) {
+    .shop-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    }
+  }
+  

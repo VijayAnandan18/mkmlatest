@@ -1,0 +1,112 @@
+/* Container styles */
+.goldjewellery-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column; /* Aligns heading and cards vertically */
+  justify-content: center;
+  align-items: center;
+}
+/* === BASE HEADING === */ 
+.one {
+  text-align: center;
+  margin-bottom: 20px; /* Adds space between the heading and cards */
+}
+
+.one h1 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: "Mier Demi";
+  font-weight: 300;
+  font-size: 40px;
+  color: #080808;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.one h1 span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1.3;
+}
+.one h1 em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.one h1:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #700B00;
+}
+.one h1:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 25px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #700B00;
+}
+
+/* Subheading styles */
+.one p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* Grid Layout */
+.goldcards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Updated for 3 cards per row */
+  gap: 20px;
+  width: 100%;
+  max-width: 1400px;
+}
+
+/* Card styles */
+.goldcard {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  aspect-ratio: 2660 / 1376; /* Maintain the image aspect ratio */
+}
+
+.goldcard:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Image styles */
+.goldcard__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .goldcards {
+    grid-template-columns: 1fr; /* Single-column layout on smaller screens */
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .goldcard {
+    max-width: 100%;
+    margin: 0 auto;
+    aspect-ratio: 2660 / 1376; /* Maintain aspect ratio for images */
+  }
+}

@@ -1,0 +1,58 @@
+/* Main container for the gemstone section */
+.gemstone-container {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -100px;
+  }
+  
+  /* Grid for the gemstone cards */
+  .gemstones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+  }
+  
+  /* Card styling */
+  .gemstone-card {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+  }
+  
+  .gemstone-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Image styling inside the card */
+  .gemstone-card__image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  /* Responsive styling for mobile view */
+  @media (max-width: 768px) {
+    /* Main container for the gemstone section */
+.gemstone-container {
+    
+    margin-top: 0px;
+  }
+    .gemstones {
+      grid-template-columns: 1fr;
+      gap: 15px;
+      padding: 10px; /* Optional: Adds some padding to the container */
+    }
+  
+    .gemstone-card {
+      max-width: 100%; /* Increase the card width on mobile (from 90% to 95%) */
+      margin: 0 auto; /* Center the card */
+    }
+  }
+  

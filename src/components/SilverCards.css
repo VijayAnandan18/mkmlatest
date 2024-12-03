@@ -1,0 +1,55 @@
+/* Container styles */
+.silverjewellery-container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column; /* Aligns heading and cards vertically */
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  /* Grid Layout */
+  .silvercards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Updated for 3 cards per row */
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+  }
+  
+  /* Card styles */
+  .silvercard {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    aspect-ratio: 2660 / 1376; /* Maintain the image aspect ratio */
+  }
+  
+  .silvercard:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Image styles */
+  .silvercard__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    .silvercards {
+      grid-template-columns: 1fr; /* Single-column layout on smaller screens */
+      gap: 15px;
+      padding: 10px;
+    }
+  
+    .silvercard {
+      max-width: 100%;
+      margin: 0 auto;
+      aspect-ratio: 2660 / 1376; /* Maintain aspect ratio for images */
+    }
+  }
+  

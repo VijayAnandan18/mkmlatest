@@ -1,0 +1,58 @@
+.home-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .marquee-wrapper {
+    width: 100%;
+    position: sticky; /* Keeps it at the top during scroll */
+    top: 0;
+    z-index: 100; /* Ensures it stays on top of other elements */
+  }
+  
+  .home-content {
+    padding: 20px;
+    text-align: center;
+  }
+  .floating-icon {
+    position: fixed;
+    bottom: 20px; /* Adjust position from the bottom */
+    right: 20px; /* Adjust position from the right */
+    background-color: #f4c542; /* Gold color */
+    border-radius: 50%; /* Makes the icon round */
+    padding: 10px; /* Adjust size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem; /* Adjust icon size */
+    z-index: 1000; /* Ensure it's on top of other elements */
+  }
+  
+  @media (max-width: 768px) {
+    .features-container {
+      display: none; /* Hide the features container on mobile devices */
+    }
+    .bottom-navbar {
+      display: block; /* Ensures the bottom navigation is visible on smaller screens */
+    }
+    .floating-icon {
+      font-size: 1.5rem; /* Adjust size for smaller screens */
+      padding: 8px; /* Adjust padding for mobile */
+    }
+  }
+  @media (min-width: 769px) {
+    .bottom-navbar {
+      display: none; /* Hides the bottom navigation on larger screens */
+    }
+  }
+  @media (max-width: 480px) {
+    .features-container {
+      display: none; /* Hide the features container on mobile devices */
+    }
+  }
+  

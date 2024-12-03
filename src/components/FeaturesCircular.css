@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.features-circular-container {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  justify-content: center;
+  margin: 10px auto;
+  gap: 20px;
+  padding: 20px;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile devices */
+  white-space: nowrap; /* Prevent wrapping of items */
+}
+
+.orb-wrapper {
+  text-align: center; /* Centers the text and image */
+  flex-shrink: 0; /* Prevents shrinking of items */
+  width: 110px; /* Width for each item */
+  text-decoration: none; 
+}
+
+.orb {
+  --size: 90px;
+  --color: #FFA500;
+  --lighter-color: color-mix(in srgb, var(--color) 60%,#FFA500);
+  --darker-color: color-mix(in srgb, var(--color) 40%, #FFA500);
+  --blur: 40px;
+  --spread: 5px;
+  --angle: -90deg;
+  --border: 5px;
+
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  aspect-ratio: 1;
+  background:
+    radial-gradient(color-mix(in srgb, var(--darker-color) 65%, transparent) -50%, transparent 50%),
+    radial-gradient(var(--color), var(--color)) no-repeat 50% 50% / 50% 50%,
+    radial-gradient(var(--color), var(--color)) no-repeat 50% 50% / 50% 50%,
+    linear-gradient(#FFA500,#FFA500 ) padding-box,
+    conic-gradient(from var(--angle) at 50% 50%, color-mix(in srgb, var(--lighter-color), transparent) 0 72deg, var(--darker-color) 100deg 180deg, transparent 288deg, color-mix(in srgb, var(--lighter-color), transparent)) border-box,
+    radial-gradient(farthest-corner at 50% 50%, transparent 50%, var(--darker-color) 80% 100%) border-box;
+
+  background-blend-mode: normal, overlay, multiply, normal, normal, normal, normal;
+  border: var(--border) solid transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: 10s linear infinite change-color, 5s linear infinite orb;
+}
+
+.orb-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.orb-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/* Keyframes for animation */
+@keyframes change-color {
+  0% { --color: #F0E68C; }
+  12% { --color: #F0E68C; }
+  24% { --color: #DAA520; }
+  36% { --color: #FFD700; }
+  48% { --color: #FFA500; }
+  60% { --color: #FFD700; }
+  72% { --color: #F0E68C; }
+  84% { --color: #FFA500; }
+}
+
+@keyframes orb {
+  0% { --angle: -90deg; --blur: 40px; --spread: 5px; }
+  50% { --blur: 80px; --spread: 10px; }
+  100% { --angle: 270deg; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .orb {
+    --size: 70px; /* Reduce size of the orb for mobile view */
+  }
+
+  /* Add margin to the first orb and its label */
+  .orb-wrapper:first-child {
+    margin-left: 80px; /* Ensure both the circle and label align */
+  }
+}
+
+@media (max-width: 480px) {
+  .orb {
+    --size: 60px; /* Further reduce size on smaller screens */
+  }
+
+  /* Add margin to the first orb and its label for smaller screens */
+  .orb-wrapper:first-child {
+    margin-left: 80px; /* Ensure both the circle and label align */
+  }
+}

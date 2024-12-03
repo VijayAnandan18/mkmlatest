@@ -1,0 +1,23 @@
+.spinner-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: background to make it more noticeable */
+  }
+  
+  .spinner {
+    width: 100px; /* Adjust the size as needed */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Keyframe for rotating 5 times */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(1800deg); /* 5 full rotations (5 x 360°) */
+    }
+  }
+  
