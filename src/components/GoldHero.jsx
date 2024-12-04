@@ -6,7 +6,7 @@ const GoldHero = () => {
     <div className="gold-hero-video-container">
       <video
         className="gold-hero-video"
-        src="assets/goldhero.mp4"
+        src="assets/goldhero.webm"
         autoPlay
         muted
         loop

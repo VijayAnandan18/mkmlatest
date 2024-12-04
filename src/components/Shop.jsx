@@ -8,10 +8,9 @@ const Shop = () => {
 
   const jewelryImages = {
     womens: [
-
-      { id: 2, url: "assets/men1.webp", name: "Men's Jewellery" },
-      { id: 1, url: "assets/women1.webp", name: "Women'sJewellery" },
-      { id: 3, url: "assets/kid1.webp", name: "Kid's  Jewellery" },
+      { id: 2, url: "assets/men1.webp", name: "Men's Jewellery", section: "necklaces" },
+      { id: 1, url: "assets/women1.webp", name: "Women's Jewellery", section: "bracelets" },
+      { id: 3, url: "assets/kid1.webp", name: "Kid's Jewellery", section: "chains" },
     ],
   };
 
@@ -19,8 +18,8 @@ const Shop = () => {
     setSelectedCategory(category);
   };
 
-  const handleCardClick = (id) => {
-    navigate("/gold-jewellery");
+  const handleCardClick = (section) => {
+    navigate(`/gold-jewellery#${section}`);
   };
 
   return (
@@ -37,7 +36,7 @@ const Shop = () => {
           <div
             key={image.id}
             className={`shop-card ${image.id === 3 ? "hide-on-mobile" : ""}`}
-            onClick={() => handleCardClick(image.id)}
+            onClick={() => handleCardClick(image.section)}
           >
             <img src={image.url} alt={`Jewelry ${image.id}`} />
             <div className="card-name">{image.name}</div>

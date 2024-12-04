@@ -1,0 +1,61 @@
+/* Container for Images */
+.image-gallery-container {
+    max-width: 50%; /* Reduce overall container width */
+    max-height: 250px; /* Reduce height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px; /* Spacing between images */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 10px; /* Add some padding for better spacing */
+  }
+  
+  /* Styling for Images */
+  .image-gallery-container img {
+    width: 100%; /* Ensure images fit their container */
+    max-width: 30%; /* Allow three images to fit neatly within the container */
+    height: 100%; /* Maintain consistent height with container */
+    object-fit: cover;
+    -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, #0004);
+    transform-origin: center;
+    transform: perspective(800px) rotateY(25deg);
+    transition: 0.5s;
+    border-radius: 8px; /* Rounded corners for a sleek look */
+  }
+  
+  /* Hover Effects for Container */
+  .image-gallery-container:hover img {
+    opacity: 0.3;
+  }
+  
+  /* Hover Effects for Individual Images */
+  .image-gallery-container img:hover {
+    transform: perspective(800px) rotateY(0deg);
+    opacity: 1;
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .image-gallery-container {
+      flex-direction: column; /* Stack images vertically */
+      gap: 15px; /* Reduce gap for better fit */
+      max-width: 90%; /* Expand the container width slightly for mobile */
+      max-height: auto; /* Allow flexible height on smaller devices */
+      padding: 0; /* Remove padding for better fit */
+    }
+    .image-gallery-container img {
+      max-width: 100%; /* Take full width of the container */
+      height: auto; /* Ensure proportional height */
+      transform: perspective(800px) rotateY(0deg); /* Remove 3D rotation for better appearance on mobile */
+      -webkit-box-reflect: none; /* Remove reflection for simpler mobile design */
+    }
+  }
+  
+  /* Add margins for smaller screens to prevent overlap */
+  @media (max-width: 480px) {
+    .image-gallery-container img {
+      margin-bottom: 10px; /* Add spacing between stacked images */
+    }
+  }
+  
+  
