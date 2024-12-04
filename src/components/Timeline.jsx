@@ -9,7 +9,13 @@ const Timeline = () => {
 
       </div>
       <div className="timeline-image-container">
-        <img src="assets/timeline.webp" alt="Timeline" className="timeline-image" />
+      <video
+        className="timeline-image-container"
+        src="assets/timeline.mp4"
+        autoPlay
+        muted
+        loop
+      />
       </div>
       {/*<div className="timeline">
         <div className="timeline-event">
