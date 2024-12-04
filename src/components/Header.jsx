@@ -10,48 +10,44 @@ const Header = () => {
   const [goldRates, setGoldRates] = useState(null);
 
   // Function to fetch and cache gold rates
-  const fetchGoldRates = async () => {
-    try {
-      const accessKey = "goldapi-1d03vsm471m42s-io"; // Replace with your API key
+  useEffect(() => {
+    const fetchGoldRates = async () => {
+      try {
+        const accessKey = "goldapi-1d03vsm471m42s-io"; // Replace with your API key
+        const cachedGoldRates = localStorage.getItem("goldRates");
+        const cachedTime = localStorage.getItem("goldRatesTime");
 
-      // Check if data is in localStorage and valid (less than 24 hours old)
-      const cachedGoldRates = localStorage.getItem("goldRates");
-      const cachedTime = localStorage.getItem("goldRatesTime");
-
-      if (cachedGoldRates && cachedTime) {
-        const currentTime = new Date().getTime();
-        const timeDifference = currentTime - cachedTime;
-        if (timeDifference < 24 * 60 * 60 * 1000) { // 24 hours in milliseconds
-          setGoldRates(JSON.parse(cachedGoldRates));
-          console.log("Loaded gold rates from cache");
-          return;
+        if (cachedGoldRates && cachedTime) {
+          const currentTime = new Date().getTime();
+          const timeDifference = currentTime - cachedTime;
+          if (timeDifference < 24 * 60 * 60 * 1000) {
+            setGoldRates(JSON.parse(cachedGoldRates));
+            return;
+          }
         }
-      }
 
-      // Fetch new data if cache is not valid or does not exist
-      const response = await fetch("https://www.goldapi.io/api/XAU/INR", {
-        headers: {
-          "x-access-token": accessKey,
-          "Content-Type": "application/json"
+        const response = await fetch("https://www.goldapi.io/api/XAU/INR", {
+          headers: {
+            "x-access-token": accessKey,
+            "Content-Type": "application/json"
+          }
+        });
+        const data = await response.json();
+
+        if (data) {
+          setGoldRates(data);
+          localStorage.setItem("goldRates", JSON.stringify(data));
+          localStorage.setItem("goldRatesTime", new Date().getTime());
+        } else {
+          console.error("Invalid data received from Gold API.");
         }
-      });
-      const data = await response.json();
-
-      if (data) {
-        setGoldRates(data);
-        console.log("Gold rates:", data);
-
-        // Store new data in localStorage with the current time
-        localStorage.setItem("goldRates", JSON.stringify(data));
-        localStorage.setItem("goldRatesTime", new Date().getTime());
-      } else {
-        console.error("Invalid data received from Gold API.");
+      } catch (error) {
+        console.error("Error fetching gold rates:", error);
       }
-    } catch (error) {
-      console.error("Error fetching gold rates:", error);
-    }
-  };
+    };
 
+    fetchGoldRates();
+  }, []);
   useEffect(() => {
     const fetchLocation = async () => {
       try {
@@ -116,10 +112,17 @@ const Header = () => {
                     <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>Today's Gold Rate</th>
                   </tr>
                   <tr>
-                    <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>
-                      Updated on: {new Date().toLocaleString()}
-                    </th>
-                  </tr>
+  <th
+    colSpan="2"
+    style={{ background: "#700B00", color: "white", textAlign: "center" }}
+  >
+    Updated on: {`${new Date().toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    })} 10:05 AM`} {/* Fixed time */}
+  </th>
+</tr>
                   <tr>
                     <th style={{ background: "#700B00", color: "white" }}>Gold Type</th>
                     <th style={{ background: "#700B00", color: "white" }}>Price (₹)</th>

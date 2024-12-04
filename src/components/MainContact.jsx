@@ -14,7 +14,7 @@ const MainContact = () => {
     <div className="main-contact-container">
       <div className="contact-card">
         <p className="contact-info">
-          For any assistance or inquiry, please click here.
+          For any assistance or enquiry, please click here.
         </p>
         <button className="enquiry-button" onClick={handleEnquiryClick}>
           Enquiry

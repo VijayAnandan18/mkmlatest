@@ -14,6 +14,20 @@
     max-width: 60rem;
     margin: 2rem 0;
   }
+  .timeline-image-container {
+    width: 100%;
+    overflow: hidden; /* Ensure no overflow */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem; /* Add space between image and timeline content */
+  }
+  
+  .timeline-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Maintain aspect ratio and cover the space */
+    max-width: 100%; /* Ensure it scales down with smaller screens */
+  }
   
   .timeline-event {
     position: relative;

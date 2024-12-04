@@ -174,7 +174,7 @@ const HeaderTwo = () => {
   <a href="#">Schemes  ▾</a>
   <ul className="dropdown">
     <li>
-      <a href="/digigold">
+      <a href="/pocketgold">
         <img
           src="/assets/digiicon.webp"
           alt="Digi Gold"

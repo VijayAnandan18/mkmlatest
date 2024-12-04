@@ -5,9 +5,13 @@ const Timeline = () => {
   return (
     <div className="timeline-container">
       <div className="two">
-        <h1>A Legacy of Excellence: Our Journey Through the Years</h1>
+      <h1 style={{ fontWeight: "bold" }}>A Legacy of Excellence: Our Journey Through the Years</h1>
+
       </div>
-      <div className="timeline">
+      <div className="timeline-image-container">
+        <img src="assets/timeline.webp" alt="Timeline" className="timeline-image" />
+      </div>
+      {/*<div className="timeline">
         <div className="timeline-event">
           <div className="date">2024</div>
           <div className="content">
@@ -62,10 +66,9 @@ const Timeline = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div>*/}
     </div>
   );
 };
 
 export default Timeline;
-

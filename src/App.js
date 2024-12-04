@@ -9,7 +9,8 @@ import DiamondPage from "./pages/DiamondPage";
 import SilverPage from "./pages/SilverPage";
 import DigiGold from "./pages/DigiGold";
 import Spinner from "./pages/Spinner"; // Import the Spinner component
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -20,7 +21,12 @@ function App() {
     }, 1000); // Adjust time as needed (e.g., 3 seconds for demo)
     return () => clearTimeout(timer);
   }, []);
-
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
   return (
     <Router>
       {loading ? (
@@ -34,7 +40,7 @@ function App() {
           <Route path="/gold-jewellery" element={<CollectionPage />} />
           <Route path="/diamond-jewellery" element={<DiamondPage />} />
           <Route path="/silver-collection" element={<SilverPage />} />
-          <Route path="/digigold" element={<DigiGold />} />
+          <Route path="/pocketgold" element={<DigiGold />} />
         </Routes>
       )}
     </Router>

@@ -1,7 +1,7 @@
 /* Main container for the shop page */
 .shop-container {
     padding: 2rem;
-    background-color: #ba8f2311;
+    background-color: white;
   }
   
   /* Navigation styles */
@@ -29,23 +29,60 @@
     background-color: #700b00;
   }
   
-  /* Grid container for the jewelry images */
-  .shop-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.6rem;
-    max-width: 1200px;
-    margin: auto;
+
+  .shop-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Removed the perspective property */
+    transition: transform 0.3s ease-in-out; /* Keep the smooth transition */
+  }
+/* Card image */
+.shop-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Add 3D hover effect */
+.shop-card:hover img {
+  transform: rotateY(10deg) rotateX(5deg);
+}
+.card-name {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #700B00; /* Updated text color */
+}
+  /* Remove the 3D hover effect */
+  .shop-card:hover {
+    /* Remove the transform properties for 3D effect */
+    transform: none; /* No transform effect */
   }
   
-  /* Card for each jewelry image */
-  .shop-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+.shop-card {
+  margin: 0; /* Remove any extra margin */
+}
+
+.shop-container {
+  padding: 1rem; /* Adjust the padding for less space */
+}
+
+.shop-heading {
+  margin-bottom: 1rem; /* Reduce the space between heading and grid */
+}
+
+/* Ensure the grid layout remains consistent */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+  max-width: 1200px;
+  margin: auto;
+}
   /* Heading Styles */
 .shop-heading {
   margin-bottom: 2rem; /* Space between heading and navigation */
@@ -110,34 +147,43 @@
   background-color: #700B00;
 }
 
-  /* Responsive styles */
 /* Mobile view */
 @media (max-width: 768px) {
   .shop-nav button {
-    padding: 0.4rem 1.0rem; /* Reduce the padding of buttons */
-    font-size: 0.7rem; /* Slightly reduce the font size */
+    padding: 0.4rem 1.0rem; /* Maintain reduced padding */
+    font-size: 0.7rem; /* Keep the reduced font size */
   }
 
   .shop-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns in the grid */
-    gap: 0.5rem; /* Reduced gap between items */
+    grid-template-columns: repeat(3, 1fr); /* Keep 3 columns */
+    gap: 0.5rem; /* Maintain the gap */
+    padding: 0; /* No padding */
   }
 
   .shop-card img {
-    max-width: 100%; /* Allow the image to scale within the container */
-    height: auto; /* Maintain the aspect ratio */
+    max-width: 100%;
+    height: auto;
     border-radius: 5px;
   }
 
   .shop-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0; /* Ensure no extra margin */
+  }
+
+  .shop-container {
+    padding: 1rem; /* Less space padding */
+  }
+
+  .shop-heading {
+    margin-bottom: 1rem; /* Maintain reduced space */
+  }
+
+  /* Ensure no transition or animation effects */
+  .shop-grid, .shop-card, .shop-nav button, .shop-container {
+    transition: none !important; /* Remove any transition effects */
+  }
 }
-.hide-on-mobile {
-  display: none; /* Completely hide the element */
-}
-}
+
 
   
   /* Tablet and larger screens */
@@ -146,4 +192,3 @@
       grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
     }
   }
-  

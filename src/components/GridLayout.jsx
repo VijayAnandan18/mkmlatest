@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./GridLayout.css"; // External CSS file for the styles
+import "./GridLayout.css";
 
 const GridLayout = () => {
-  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+  const [isImageVisible, setIsImageVisible] = useState(false);
 
   const handleImageClick = () => {
     // Scroll to the top of the page before navigating
@@ -12,9 +12,23 @@ const GridLayout = () => {
     navigate("/about");
   };
 
-  const handleImageLoad = () => {
-    setLoading(false);
+  // Function to check if the image is in the viewport
+  const handleScroll = () => {
+    const imageElement = document.querySelector(".about-image img");
+    if (imageElement) {
+      const rect = imageElement.getBoundingClientRect();
+      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        setIsImageVisible(true);
+      }
+    }
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="Gridlayout">
@@ -27,11 +41,10 @@ const GridLayout = () => {
       </p>
 
       {/* Full-Width Image Section */}
-      <div className={`about-image ${loading ? "loading" : ""}`} onClick={handleImageClick}>
+      <div className={`about-image ${isImageVisible ? "visible" : ""}`} onClick={handleImageClick}>
         <img
           src="assets/about.png"
           alt="About Us"
-          onLoad={handleImageLoad} // Trigger when image has fully loaded
         />
       </div>
     </div>

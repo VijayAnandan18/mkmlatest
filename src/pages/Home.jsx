@@ -18,6 +18,7 @@ import GoldRateTag from "../components/GoldRateTag";
 
 
 
+
 const Home = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 

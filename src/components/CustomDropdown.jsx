@@ -23,7 +23,7 @@ const CustomDropdown = () => {
     { value: "/silver-collection#bangles", label: "Silver bangles" },
     { value: "/contact", label: "Contact us" },
     { value: "/about", label: "About us" },
-    { value: "/digigold", label: "Schemes (DigiGold)" },
+    { value: "/digigold", label: "Schemes (PocketGold)" },
     
   ];
 
