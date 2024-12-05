@@ -49,7 +49,7 @@ export default function CustomBottomNavigation() {
         value="digi-gold"
         icon={<GiReceiveMoney style={{ color: '#b58a1c', fontSize: 30 }} />} // Use style for consistent styling
         showLabel={false} // Hide the label
-        onClick={() => handleNavigation('/digigold')} // Navigate to digi gold
+        onClick={() => handleNavigation('/pocketgold')} // Navigate to digi gold
       />
       <BottomNavigationAction
         value="contact"

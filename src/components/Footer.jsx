@@ -66,7 +66,7 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <p>
-          © {currentYear} MKM Jewellers. All rights reserved. The product/service names listed in this document are marks and/or registered marks of their respective owners and used under license. Unauthorized use strictly prohibited.
+          © {currentYear} MKM Thangamaligai. All rights reserved. The product/service names listed in this document are marks and/or registered marks of their respective owners and used under license. Unauthorized use strictly prohibited.
         </p>
       </div>
     </footer>

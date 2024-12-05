@@ -8,9 +8,10 @@ const Shop = () => {
 
   const jewelryImages = {
     womens: [
-      { id: 2, url: "assets/men1.webp", name: "Men'sJewellery", section: "necklaces" },
-      { id: 1, url: "assets/women1.webp", name: "Women's Jewellery", section: "bracelets" },
-      { id: 3, url: "assets/kid1.webp", name: "Kid's Jewellery", section: "chains" },
+      { id: 2, url: "assets/men1.webp",  section: "necklaces" },
+ { id: 1, url: "assets/women1.webp", section: "bracelets" },
+ { id: 3, url: "assets/kid1.webp", section: "chains" },
+    
     ],
   };
 
