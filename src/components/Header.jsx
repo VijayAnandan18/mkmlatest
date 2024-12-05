@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { IoLocationOutline } from "react-icons/io5"; // Location icon
-import { HiMiniPhone } from "react-icons/hi2"; // Phone icon
+import { GiRotaryPhone } from "react-icons/gi";
 import CustomDropdown from "./CustomDropdown"; // Import the CustomDropdown component
 import "./Header.css"; // Header styles
 
@@ -179,9 +179,9 @@ const Header = () => {
       </div>
 
       <div className="phone-container">
-        <HiMiniPhone className="phone-icon" />
-        <a href="tel:+919443758266" className="phone-link">
-          <span className="phone-number">+91 9443758266</span>
+        <GiRotaryPhone className="phone-icon" />
+        <a href="tel:+0462 4055001" className="phone-link">
+          <span className="phone-number">+0462 4055001</span>
         </a>
       </div>
     </header>

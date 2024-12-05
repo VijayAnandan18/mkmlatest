@@ -28,7 +28,7 @@ const Shop = () => {
       {/* Heading Section */}
       <div className="shop-heading one">
         <h1>Our Collections</h1>
-        <p>Find Jewelry for Women, Men, and Kids</p>
+        <p>Find Jewellery for Women, Men, and Kids</p>
       </div>
 
       {/* Grid of Images */}

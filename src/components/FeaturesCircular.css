@@ -1,22 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
 .features-circular-container {
   display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping */
+  flex-wrap: nowrap;
   justify-content: center;
   margin: 10px auto;
   gap: 20px;
   padding: 20px;
   overflow-x: auto; /* Allow horizontal scrolling */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile devices */
-  white-space: nowrap; /* Prevent wrapping of items */
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  scroll-behavior: smooth; /* Smooth scrolling */
+  scrollbar-width: thin;
+  scrollbar-color: #d89700 transparent; /* Change scrollbar color */
+}
+
+.features-circular-container::-webkit-scrollbar {
+  height: 8px; /* Adjust height for horizontal scrollbar */
+}
+
+.features-circular-container::-webkit-scrollbar-thumb {
+  background-color: gold; /* Thumb color */
+  border-radius: 4px; /* Optional for rounded corners */
+}
+
+.features-circular-container::-webkit-scrollbar-track {
+  background-color: transparent; /* Track color */
 }
 
 .orb-wrapper {
-  text-align: center; /* Centers the text and image */
-  flex-shrink: 0; /* Prevents shrinking of items */
-  width: 110px; /* Width for each item */
-  text-decoration: none; 
+  text-align: center;
+  flex-shrink: 0;
+  width: 110px;
+  text-decoration: none;
 }
 
 .orb {
@@ -66,25 +80,17 @@
   font-size: 0.9rem;
 }
 
-/* Keyframes for animation */
+/* Keyframes */
 @keyframes change-color {
   0% { --color: #F0E68C; }
-  12% { --color: #F0E68C; }
-  24% { --color: #DAA520; }
-  36% { --color: #FFD700; }
-  48% { --color: #FFA500; }
-  60% { --color: #FFD700; }
-  72% { --color: #F0E68C; }
-  84% { --color: #FFA500; }
+  100% { --color: #FFA500; }
 }
 
 @keyframes orb {
   0% { --angle: -90deg; --blur: 40px; --spread: 5px; }
-  50% { --blur: 80px; --spread: 10px; }
   100% { --angle: 270deg; }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .orb {
     --size: 90px; /* Reduce size of the orb for mobile view */

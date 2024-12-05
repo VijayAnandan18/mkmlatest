@@ -1,8 +1,36 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./FeaturesCircular.css";
 
 const FeaturesCircular = () => {
-  // Example data for 10 circular items, including names and links
+  const scrollContainerRef = useRef(null);
+  const [scrollDirection, setScrollDirection] = useState(1); // 1 for right, -1 for left
+
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    const scrollInterval = setInterval(() => {
+      if (scrollContainer) {
+        // Check current scroll position
+        if (scrollDirection === 1) {
+          // Scroll right
+          if (scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth) {
+            setScrollDirection(-1); // Reverse direction when reaching the end
+          } else {
+            scrollContainer.scrollLeft += 1; // Scroll right
+          }
+        } else {
+          // Scroll left
+          if (scrollContainer.scrollLeft <= 0) {
+            setScrollDirection(1); // Reverse direction when reaching the start
+          } else {
+            scrollContainer.scrollLeft -= 1; // Scroll left
+          }
+        }
+      }
+    }, 20); // Adjust interval for speed
+
+    return () => clearInterval(scrollInterval);
+  }, [scrollDirection]);
+
   const circularFeatures = [
     { id: 1, name: "New Arrivals", imageUrl: "/assets/round2.webp", href: "#" },
     {
@@ -52,13 +80,13 @@ const FeaturesCircular = () => {
   ];
 
   return (
-    <div className="features-circular-container">
+    <div className="features-circular-container" ref={scrollContainerRef}>
       {circularFeatures.map((feature) => (
         <a
           key={feature.id}
           href={feature.href}
-          target={feature.href.startsWith("http") ? "_blank" : "_self"} // Open external links in a new tab
-          rel="noopener noreferrer" // Security for external links
+          target={feature.href.startsWith("http") ? "_blank" : "_self"}
+          rel="noopener noreferrer"
           className="orb-wrapper"
         >
           <div className="orb">

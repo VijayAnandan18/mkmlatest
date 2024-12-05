@@ -7,9 +7,9 @@ const Contacthero = () => {
   useEffect(() => {
     const updateVideoSource = () => {
       if (window.innerWidth <= 768) {
-        setVideoSource('assets/contactmobile.webm'); // Mobile video
+        setVideoSource('assets/contactmobile.mp4'); // Mobile video
       } else {
-        setVideoSource('assets/contact.webm'); // Desktop video
+        setVideoSource('assets/contact.mp4'); // Desktop video
       }
     };
 
