@@ -51,18 +51,38 @@ const Header = () => {
   useEffect(() => {
     const fetchLocation = async () => {
       try {
-        const response = await fetch("https://ipapi.co/json/");
+        const response = await fetch(
+          "http://api.ipapi.com/api/161.185.160.93?access_key=c65dfc1530826f5c021b280840dbb4ff"
+        );
         const data = await response.json();
-        setCountry(data.country_name);
-        setFlag(`https://flagcdn.com/w40/${data.country_code.toLowerCase()}.png`);
+
+        if (data.country_name && data.country_code) {
+          setCountry(data.country_name);
+          setFlag(`https://flagcdn.com/w40/${data.country_code.toLowerCase()}.png`);
+          // Save the current date in localStorage
+          localStorage.setItem("lastFetchDate", new Date().toISOString());
+        } else {
+          throw new Error("Invalid API response");
+        }
       } catch (error) {
         console.error("Error fetching location:", error);
         setCountry("India");
-        setFlag("india-flag.png");
+        setFlag("https://flagcdn.com/w40/in.png"); // Indian flag as default
       }
     };
 
-    fetchLocation();
+    // Check if the API call should be made (once daily)
+    const lastFetchDate = localStorage.getItem("lastFetchDate");
+    const today = new Date().toISOString().split("T")[0]; // Get only the date part
+    const lastFetchDay = lastFetchDate ? lastFetchDate.split("T")[0] : null;
+
+    if (lastFetchDay !== today) {
+      fetchLocation();
+    } else {
+      // Default to India if API call is skipped
+      setCountry("India");
+      setFlag("https://flagcdn.com/w40/in.png");
+    }
   }, []);
   return (
     <header className="header">
