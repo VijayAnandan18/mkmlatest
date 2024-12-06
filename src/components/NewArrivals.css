@@ -16,6 +16,7 @@
   color: var(--text);
   margin-top: 3px;
   text-align: flex-start;
+
   font-weight: bold;
   background-color: antiquewhite;
 }

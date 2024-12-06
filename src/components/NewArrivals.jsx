@@ -42,6 +42,7 @@ const NewArrivals = () => {
     { src: "assets/newarrivals8.webp", name: "Mangalasutra" },
     { src: "assets/newarrivals9.webp", name: "Gold Emerald Necklace" },
     { src: "assets/newarrivals10.webp", name: "Gold Stud Chain" },
+
   ];
 
   return (

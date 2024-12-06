@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css'; // Assuming you have a CSS file for styling
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa'; // Importing icons for social media
+import { FaFacebook, FaEnvelope, FaInstagram, FaYoutube } from 'react-icons/fa'; // Correctly import FaEnvelope
+// Importing icons for social media
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -62,6 +63,11 @@ const Footer = () => {
           <li><a href="https://www.facebook.com/people/MKM-Thangamaligai/61555917721795/?mibextid=ZbWKwL" aria-label="Facebook"><FaFacebook size={30} /></a></li>
           <li><a href="https://www.instagram.com/mkmthangamaligai/profilecard/?igsh=MnE0MzcxeHRzYWl0" aria-label="Instagram"><FaInstagram size={30} /></a></li>
           <li><a href="https://www.youtube.com/@MKMThangamaligai" aria-label="YouTube"><FaYoutube size={30} /></a></li>
+          <li>
+  <a href="mailto:mkmthangamaligai@gmail.com" aria-label="Gmail">
+    <FaEnvelope size={30} />
+  </a>
+</li>
         </ul>
       </div>
       <div className="footer-bottom">
