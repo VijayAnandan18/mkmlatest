@@ -56,6 +56,10 @@ const Gold = () => {
     { name: 'Enamel Fusion Nose pin', image: '/assets/jewels/gold/nosepin/nosepin2.jpg' },
     { name: 'Petal Pattern Nose pin', image: '/assets/jewels/gold/nosepin/nosepin3.jpg' },
     { name: 'Floral Gold Nose pin', image: '/assets/jewels/gold/nosepin/nosepin4.jpg' },
+    { name: ' 1g Gold coin', image: '/assets/jewels/gold/goldcoins/coin1.webp' },
+    { name: '2g Gold coin', image: '/assets/jewels/gold/goldcoins/coin2.webp' },
+    { name: '4g Gold coin', image: '/assets/jewels/gold/goldcoins/coin3.webp' },
+    { name: '8g Gold coin', image: '/assets/jewels/gold/goldcoins/coin4.webp' },
   ];
   
 
@@ -68,6 +72,7 @@ const Gold = () => {
     { heading: "Bracelets", items: products.slice(20, 28), id: "bracelets" },
     { heading: "Chains", items: products.slice(28, 36), id: "chains" },
     { heading: "Nosepins", items: products.slice(36, 40), id: "nosepins" },
+    { heading: "Gold Coins", items: products.slice(40, 44), id: "coins" },
   ];
 
   return (

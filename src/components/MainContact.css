@@ -1,22 +1,22 @@
 /* Main contact container */
 .main-contact-container {
   display: flex;
-  flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Adds space between the cards */
+  gap: 20px;
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Horizontal card */
+/* Contact card */
 .contact-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f8f1d2; /* Light color for emphasis */
-  border: 1px solid #700b00; /* Border color */
+  background-color: #f8f1d2;
+  border: 1px solid #700b00;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -25,14 +25,13 @@
   max-width: 600px;
   box-sizing: border-box;
 }
-
 /* Image card */
 .image-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e3e3e3; /* Light grey background */
-  border: 1px solid #700b00; /* Border color */
+  background-color: #e3e3e3;
+  border: 1px solid #700b00;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -41,24 +40,24 @@
   box-sizing: border-box;
 }
 
-/* Image */
+/* Social image */
 .social-image {
   width: 100%;
   height: auto;
-  max-width: 100%; /* Ensures the image fits the card */
+  max-width: 100%;
 }
 
 /* Contact info text */
 .contact-info {
   margin-bottom: 20px;
   font-size: 16px;
-  color: #700b00; /* Text color */
+  color: #700b00;
   font-weight: bold;
 }
 
 /* Enquiry button */
 .enquiry-button {
-  background-color: #700b00; /* Button color */
+  background-color: #700b00;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -70,22 +69,57 @@
 }
 
 .enquiry-button:hover {
-  background-color: #500800; /* Darker shade on hover */
+  background-color: #500800;
 }
 
+/* Contact icons section */
+.contact-icons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Horizontally center items */
+  justify-content: center; /* Vertically center items */
+  width: 100%;
+  gap: 10px; /* Adds spacing between items */
+}
+
+
+.contact-item {
+  display: flex;
+  align-items: center; /* Ensures icons and text are vertically aligned */
+  justify-content: center; /* Horizontally centers each row */
+  gap: 8px; /* Adds spacing between icon and text */
+  margin-bottom: 10px; /* Adds spacing between rows */
+}
+
+.contact-icon {
+  margin-right: 8px;
+  color: #700b00;
+  font-size: 20px;
+}
+
+.contact-link {
+  color: #700b00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
 /* Responsive design */
 @media (max-width: 768px) {
   .contact-card,
   .image-card {
-    width: 100%; /* Full width on smaller screens */
-    max-width: 100%; /* Ensure full use of available space */
+    width: 100%;
+    max-width: 100%;
   }
 
   .enquiry-button {
-    width: 100%; /* Full-width button on smaller screens */
+    width: 100%;
   }
 
   .social-image {
-    width: 100%; /* Ensure the image fits within the card */
+    width: 100%;
   }
 }

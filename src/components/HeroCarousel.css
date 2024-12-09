@@ -1,4 +1,3 @@
-/* Hero Carousel Container */
 .hero-carousel {
   position: relative;
   width: 100%;
@@ -17,10 +16,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure the image covers the container */
-  object-position: center; /* Default positioning for desktop view */
+  object-fit: cover;
+  object-position: center;
   opacity: 0; /* Start hidden */
-  transition: opacity 1s ease-in-out; /* Smooth fade transition */
+  transition: opacity 1s ease-in-out;
 }
 
 /* Active Image */
@@ -28,14 +27,66 @@
   opacity: 1; /* Fully visible */
 }
 
+/* Navigation buttons */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+/* Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.indicator {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0 2px;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.3s;
+}
+
+.indicator.active {
+  color: #fff;
+}
+
 /* Mobile View Adjustments */
 @media (max-width: 768px) {
   .hero-carousel {
-    height: 30vh; /* Reduce height for mobile */
-    padding-bottom: 0; /* No padding-bottom for mobile */
+    height: 30vh;
+    padding-bottom: 0;
   }
 
   .hero-image {
-    object-position: right; /* Display the right half of the image */
+    object-position: right;
   }
 }

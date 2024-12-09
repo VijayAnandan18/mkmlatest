@@ -1,0 +1,77 @@
+/* Container styling */
+.gifts-container {
+    padding: 20px;
+    background-color: #f9f9f9; /* Optional background color for better visuals */
+  }
+
+/* Grid layout */
+.gifts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Spacing between items */
+  }
+  
+  /* Card styling */
+  .gift-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  
+  /* Styling for the card images */
+  .gift-card img {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits without cropping or stretching */
+    border-radius: 5px;
+  }
+  
+  /* Title and description */
+  .gift-title,
+  .gift-description {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Styling for cards with larger images (spanning two rows) */
+  .gift-card:nth-child(3),
+  .gift-card:nth-child(4) {
+    grid-row: span 2; /* Span over two rows */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* Responsive styles for smaller devices */
+  @media (max-width: 768px) {
+    .gifts-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+  
+    .main-heading {
+      font-size: 1.5rem; /* Adjust heading size */
+    }
+  
+    .one p {
+      font-size: 1rem; /* Adjust paragraph size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gifts-grid {
+      grid-template-columns: 1fr; /* 1 column */
+    }
+  
+    .gifts-container {
+      padding: 10px; /* Reduce padding for smaller devices */
+    }
+  }  

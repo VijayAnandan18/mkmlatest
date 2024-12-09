@@ -40,7 +40,7 @@ function App() {
           <Route path="/gold-jewellery" element={<CollectionPage />} />
           <Route path="/diamond-jewellery" element={<DiamondPage />} />
           <Route path="/silver-collection" element={<SilverPage />} />
-          <Route path="/pocketgold" element={<DigiGold />} />
+          <Route path="/digigold" element={<DigiGold />} />
         </Routes>
       )}
     </Router>

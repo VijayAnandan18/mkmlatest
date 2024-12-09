@@ -6,10 +6,11 @@ const SilverCollection = () => {
   const location = useLocation();
 
   const products = [
-    { name: 'Kuthuvilakku', image: '/assets/jewels/silver/articles/articles1.webp' },
-    { name: 'Sandal Box', image: '/assets/jewels/silver/articles/articles2.webp' },
-    { name: 'Silver Pooja Set', image: '/assets/jewels/silver/articles/articles3.webp' },
-    { name: 'KumKum box', image: '/assets/jewels/silver/articles/articles4.webp' },
+    { name: ' Dazzling Anklet', image: '/assets/jewels/silver/anklets/anklet1.jpg' },
+    { name: 'Stylish Anklet', image: '/assets/jewels/silver/anklets/anklet2.jpg' },
+    { name: 'Layered Anklet', image: '/assets/jewels/silver/anklets/anklet3.jpg' },
+    { name: 'Classic Anklet', image: '/assets/jewels/silver/anklets/anklet4.jpg' },
+    
     { name: ' HandCrafted Silver Bangle', image:  '/assets/jewels/silver/bangles/bangle1.webp' },
     { name: ' Crafted Gleam Silver Bangle', image: '/assets/jewels/silver/bangles/bangle2.webp' },
     { name: 'Stylish Stylish Bangle', image:  '/assets/jewels/silver/bangles/bangle3.webp' },
@@ -22,6 +23,10 @@ const SilverCollection = () => {
     { name: 'Silver Saraswathi Idol', image: '/assets/jewels/silver/idols/idol2.webp' },
     { name: 'Silver Elephant Idol', image: '/assets/jewels/silver/idols/idol3.webp'},
     { name: 'Silver Ganeshs Idol', image:'/assets/jewels/silver/idols/idol4.webp' },
+    { name: 'Kuthuvilakku', image: '/assets/jewels/silver/articles/articles1.webp' },
+    { name: 'Sandal Box', image: '/assets/jewels/silver/articles/articles2.webp' },
+    { name: 'Silver Pooja Set', image: '/assets/jewels/silver/articles/articles3.webp' },
+    { name: 'KumKum box', image: '/assets/jewels/silver/articles/articles4.webp' },
 
 
   ];
@@ -29,10 +34,11 @@ const SilverCollection = () => {
 
   // Group products into sections
   const productGroups = [
-    { heading: 'Articles', items: products.slice(0, 4), id: "articles"  },
+    { heading: 'Anklets', items: products.slice(0, 4), id: "anklets"  },
     { heading: 'Bangles', items: products.slice(4, 8), id: "bangles"   },
     { heading: 'Bracelets', items: products.slice(8, 12), id: "bracelets"   },
     { heading: 'Idols', items: products.slice(12, 16), id: "idols"   },
+    { heading: 'Articles', items: products.slice(16, 20), id: "articles"   },
 
   ];
   useEffect(() => {

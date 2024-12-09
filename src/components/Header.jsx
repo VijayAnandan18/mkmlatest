@@ -91,18 +91,7 @@ const Header = () => {
         <img src="assets/logo2.webp" alt="Logo" className="logo" style={{ width: "140px" }} />
       </div>
 
-      <div className="search-container">
-        <CustomDropdown
-          options={[
-            { label: "Gold Rings", value: "gold-jewellery#rings" },
-            { label: "Gold Bangles", value: "gold-jewellery#bangles" },
-            { label: "Diamond Rings", value: "diamond-jewellery#rings" },
-            { label: "Silver Articles", value: "silver-collection#articles" },
-            { label: "Schemes (DigiGold)", value: "digigold" },
-          ]}
-          placeholder="Search here..."
-        />
-      </div>
+    
 
       <div className="location-container">
         <IoLocationOutline className="location-icon" />
@@ -120,11 +109,16 @@ const Header = () => {
         <img src={flag} alt={`${country} Flag`} className="country-flag" />
         <span className="country-name" style={{ color: "#700B00" }}>{country}</span>
       </div>
-
+     {/* <div className="phone-container">
+        <GiRotaryPhone className="phone-icon" />
+        <a href="tel:+0462 4055001" className="phone-link">
+          <span className="phone-number">+0462 4055001</span>
+        </a>
+      </div>*/}
       <div className="goldtext-rate">
         <p className="shiny-text2" data-text="Gold Rate">Gold Rate</p>
-        <div className="dropdown">
-          <div className="dropdown-content">
+        <div className="dropdown-header">
+          <div className="dropdown-content-header">
             {goldRates ? (
               <table className="gold-rate-table">
                 <thead>
@@ -178,11 +172,18 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="phone-container">
-        <GiRotaryPhone className="phone-icon" />
-        <a href="tel:+0462 4055001" className="phone-link">
-          <span className="phone-number">+0462 4055001</span>
-        </a>
+    
+      <div className="search-container">
+        <CustomDropdown
+          options={[
+            { label: "Gold Rings", value: "gold-jewellery#rings" },
+            { label: "Gold Bangles", value: "gold-jewellery#bangles" },
+            { label: "Diamond Rings", value: "diamond-jewellery#rings" },
+            { label: "Silver Articles", value: "silver-collection#articles" },
+            { label: "Schemes (DigiGold)", value: "digigold" },
+          ]}
+          placeholder="Search here..."
+        />
       </div>
     </header>
   );

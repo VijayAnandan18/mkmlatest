@@ -12,6 +12,7 @@ const Footer = () => {
           <h3>Get to know us</h3>
           <ul className="footer-links">
             <li><a href="/about">About us</a></li>
+            <li><a href="/about">Our Policies</a></li>
           </ul>
         </div>
         <div className="footer-section">
@@ -24,7 +25,11 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Schemes</h3>
           <ul className="footer-links">
-            <li><a href="/pocketgold">Pocket Gold</a></li>
+            <li><a href="/digigold">Digi Gold</a></li>
+            <li><a href="/digigold">Fixed deposit</a></li>
+            <li><a href="/digigold">Future Plus</a></li>
+            <li><a href="/digigold">Future gold</a></li>
+            <li><a href="/digigold"> MKM Daily collections</a></li>
           </ul>
         </div>
         <div className="footer-section">
@@ -33,6 +38,7 @@ const Footer = () => {
             <li><a href="/gold-jewellery">Gold Jewellery</a></li>
             <li><a href="/diamond-jewellery">Diamond Jewellery</a></li>
             <li><a href="/silver-collection">Silver Collection</a></li>
+            <li><a href="/gold-jewellery#coins">Gold Coins</a></li>
           </ul>
         </div>
       </div>

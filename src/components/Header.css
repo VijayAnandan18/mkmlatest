@@ -156,7 +156,7 @@ body {
   }
 }
 
-.dropdown {
+.dropdown-header {
   position: absolute;
   top: 100%;
   right: 0;
@@ -166,9 +166,10 @@ body {
   border-radius: 5px;
   width: auto; /* Dynamic width */
   min-width: 300px;
+  z-index: 1000;
 }
 
-.goldtext-rate:hover .dropdown {
+.goldtext-rate:hover .dropdown-header {
   display: block;
 }
 
@@ -233,11 +234,11 @@ body {
   display: visible;
 }
 
-.dropdown li {
+.dropdown-header li {
   padding: 10px;
 }
 
-.dropdown li a {
+.dropdown-header li a {
   color: black;
 }
 

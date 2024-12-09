@@ -1,125 +1,115 @@
-/* Hamburger Button */
-.hamburger {
-  display: none; /* Default: hidden */
-  font-size: 30px;
-  background: none;
-  border: none;
-  color: #700B00;
-  cursor: pointer;
-}
 /* Header Styles */
 .header-two {
   width: 100%;
-margin-top: 0.5px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 5px; /* Max height of the header */
+  background-color: #fff;
+  margin-top: 0.5px;
 
-  position: relative; /* Establish stacking context */
-  z-index: 10; /* Ensure it's above background elements */
+  position: relative;
+  z-index: 10; /* Ensure it is above other content */
+  padding: 5px 0; /* Reduce top and bottom padding */
 }
 
-/* Ensure navigation bar aligns properly */
+/* Navigation Bar */
 .nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  font-size: 17px;
-  width: 100%;
-  
 
+  padding: 5px 10px; /* Reduce padding */
+  font-size: 16px; /* Slightly smaller font size */
   font-weight: bold;
   position: relative;
-  z-index: 15; /* Keep above background */
-  padding: 0; /* Remove extra padding */
-  margin: -15px 0; /* Adjust to fit within 10px height */
 }
-.shiny-text2 {
-  font-family: "Poppins", sans-serif;
-  text-transform: uppercase;
-  font-size: 1.2em;
-  letter-spacing: 2px;
-  position: relative;
-  color: #700B00;
-  overflow: hidden;
+
+/* Hamburger Button for Mobile */
+.hamburger {
+  display: none; /* Shown only on mobile */
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #fff;
   cursor: pointer;
 }
 
-.shiny-text2::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, #FFD700, transparent);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 2s linear infinite;
+/* Mega Menu Styling */
+.nav-item {
+  position: relative;
+  list-style: none;
 }
 
-@keyframes shine {
-  0% {
-    background-position: -150%;
-  }
-  100% {
-    background-position: 150%;
-  }
+/* Navigation Item Links */
+.nav-item a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px; /* Reduce padding for links */
+  display: block;
+  font-weight: bold;
+  font-size: 15px; /* Slightly smaller font size */
 }
-
-/* Dropdown Images */
-.dropdown-image {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-  border-radius: 5px;
-  object-fit: cover;
-}
-
-/* Dropdown Styles */
+.nav-item a :hover{
+color:goldenrod;}
+/* Dropdown Menu (Mega Menu) */
 .dropdown {
   display: none;
   position: absolute;
+  flex-wrap: wrap; /* Allow items to wrap into multiple rows */
   top: 100%;
   left: 0;
   background-color: #fff;
-  list-style: none;
-  padding: 5px 0;
-  margin: 0;
-  min-width: 250px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 560px; /* Stretch across full width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  box-sizing: border-box;
   z-index: 20;
 }
 
-/* Show dropdown on hover */
+/* Show Dropdown on Hover */
 .nav-item:hover .dropdown {
-  display: block;
+  display: flex; /* Display as flexbox for alignment */
+
 }
 
+/* Dropdown Content */
 .dropdown li {
+  flex: 1 1 120px; /* Reduced width for each item */
   display: flex;
-  align-items: center;
-  padding: 10px;
+  flex-direction: column;
+  align-items: center; /* Center-align content */
+  margin: 5px; /* Reduce spacing between items */
+  list-style: none;
+  text-align: center; /* Center text */
+  max-width: 120px; /* Ensure text and image fit within this width */
+}
+
+.dropdown li img {
+  width: 120px; /* Image width */
+  height: 120px; /* Image height */
+  object-fit: cover;
+  border-radius: 8px; /* Rounded corners */
+  margin-bottom: 5px; /* Spacing below the image */
 }
 
 .dropdown li a {
-  text-decoration: none;
-  color: #333;
-  font-size: 14px;
+  font-size: 13px; /* Slightly smaller font size */
   font-weight: bold;
-  display: flex;
-  align-items: center;
+  color: #333;
+  word-wrap: break-word; /* Break long words */
+  text-align: center; /* Center-align the text */
+  max-width: 100%; /* Ensure text doesn't overflow */
 }
 
 .dropdown li:hover {
-  background-color: #f0f0f0;
+  background-color: #f9f9f9; /* Highlight on hover */
 }
-/* Mobile Responsive */
+
+.dropdown li:hover {
+  background-color: #f9f9f9;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .hamburger {
-    display: block; /* Show hamburger on smaller screens */
+    display: block; /* Show hamburger for mobile */
   }
 
   .nav {
@@ -130,19 +120,30 @@ margin-top: 0.5px;
     display: none;
     flex-direction: column;
     width: 100%;
-    position: absolute; /* Proper positioning */
-    top: 100%; /* Align under header */
-    left: 0;
     background-color: #fff;
-    z-index: 15;
+   
   }
 
   .nav-list.open {
     display: flex;
   }
-
+  .nav-item a {
+  color:black;
+}
   .dropdown {
-    position: relative;
-    min-width: 100%; /* Fit dropdown to the full width */
+    display: none; /* Hide dropdowns on mobile */
+  }
+
+  .nav-item:hover .dropdown {
+    display: none; /* Prevent hover effect on mobile */
+  }
+
+  .dropdown li {
+    flex-wrap: wrap; /* Wrap items */
+    text-align: left; /* Align text to left */
+  }
+
+  .dropdown li img {
+    display: none; /* Hide images in dropdown on mobile */
   }
 }

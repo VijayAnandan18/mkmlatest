@@ -6,7 +6,7 @@ const Reels = () => {
     <div>
     <div className="one">
     <h1>Follow Us On Social Media</h1>
-    <p>Stay Updated with Our Stories and Updates on Instagram</p>
+    <p>Stay Updated with Our Stories and Updates on Social Media</p>
   </div>
     <div className="reels-container">
       
