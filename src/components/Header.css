@@ -15,7 +15,7 @@ body {
   padding: 5px 15px; /* Reduced padding */
 
   background-color: #fff;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9); /* Adjusted shadow */
+ /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);  Adjusted shadow */
   flex-wrap: wrap;
   gap: 15px; /* Reduced gap */
   height: 60px; /* Set a fixed height */

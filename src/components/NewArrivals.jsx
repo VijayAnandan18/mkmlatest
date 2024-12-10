@@ -49,7 +49,7 @@ const NewArrivals = () => {
     <div className="new-arrivals">
       <div className="one">
         <h1>Sparkling Trends</h1>
-        <p>Stay ahead with jewelry that sparkles with style.</p>
+        <p>Stay ahead with jewellery that sparkles with style.</p>
       </div>
       <Slider {...settings}>
         {images.map((item, index) => (

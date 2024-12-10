@@ -9,7 +9,7 @@ const HeaderTwo = () => {
   };
 
   return (
-<div className="header-two" style={{ background: "linear-gradient(135deg, rgba(112, 11, 0, 0.8), rgba(139, 13, 13, 0.6), rgba(90, 4, 4, 0.8), rgba(112, 11, 0, 0.8))", backgroundColor: "#700B00" }}>
+<div className="header-two" style={{ backgroundColor: "rgb(182, 127, 0)" }}>
 
       <nav className="nav" >
         <button className="hamburger" onClick={handleToggleMenu}>

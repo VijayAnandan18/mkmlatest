@@ -3,11 +3,19 @@ import './HeroCarousel.css';
 
 const HeroCarousel = () => {
   const desktopMedia = [
-    { type: 'video', src: "assets/hero4.mp4" },
     { type: 'image', src: "assets/hero1.webp" },
-    { type: 'video', src: "assets/hero3.mp4" },
-    { type: 'video', src: "assets/hero2.mp4" },
-    { type: 'video', src: "assets/hero1.webm" },
+    { type: 'image', src: "assets/hero2.webp" },
+    { type: 'image', src: "assets/hero3.webp" },
+    { type: 'image', src: "assets/hero4.webp" },
+    { type: 'image', src: "assets/hero5.webp" },
+    { type: 'image', src: "assets/hero6.webp" },
+    { type: 'image', src: "assets/hero7.webp" },
+    { type: 'image', src: "assets/hero8.webp" },
+    { type: 'image', src: "assets/hero9.webp" },
+    { type: 'image', src: "assets/hero10.webp" },
+    { type: 'image', src: "assets/hero11.webp" },
+    { type: 'image', src: "assets/hero12.webp" },
+    
   ];
 
   const mobileMedia = [
@@ -35,9 +43,9 @@ const HeroCarousel = () => {
   useEffect(() => {
     const calculateDelay = () => {
       if (currentMediaIndex === 0 || currentMediaIndex === 4) {
-        return 10000; // Slow down for hero1 and hero4
+        return 3000; // Slow down for hero1 and hero4
       }
-      return 8000; // Default speed for other media
+      return 3000; // Default speed for other media
     };
 
     const intervalId = setTimeout(() => {
@@ -98,7 +106,7 @@ const HeroCarousel = () => {
             onClick={() => goToSlide(index)}
             aria-label={`Slide ${index + 1}`}
           >
-            {index === currentMediaIndex ? '___' : '_'}
+            {index === currentMediaIndex ? '.' : '.'}
           </button>
         ))}
       </div>

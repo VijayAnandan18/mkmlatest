@@ -20,7 +20,7 @@ body {
 .marquee-container-custom {
   position: relative;
   width: 100%; /* Full width */
-  height: 30px;
+  height: 20px;
   background-color: #700B00;
   color: white;
   overflow: hidden;
@@ -33,7 +33,7 @@ body {
 .marquee-text-custom {
   display: inline-block;
   white-space: nowrap;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   font-weight: bold;
   animation: scrollLeft 40s linear infinite; /* Adjust the duration as needed */
 }
