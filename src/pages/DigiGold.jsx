@@ -27,11 +27,11 @@ const  DigiGold = () => {
       <Marquee />
       <Header />
       <HeaderTwo />
-      <DigiGoldBack/>
+  
     
 
       <HeroCarousel />
-
+      <DigiGoldBack/>
    <DigiGoldContent/>
       <Footer />
 

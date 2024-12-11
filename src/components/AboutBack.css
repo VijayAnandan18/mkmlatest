@@ -1,28 +1,28 @@
 .aboutback-header-unique {
-    background-color: #b57f00 ;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .aboutback-nav-unique {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-link-unique {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    margin-left: 15px;
-  }
-  
-  .nav-link-unique:hover {
-    color:#700B00 ;
-  }
-  
-  .separator-unique {
-    margin: 0 5px;
-    font-size: 1.2rem;
-  }
-  
+  background-color: white;
+  padding: 5px; /* Reduced padding */
+  display: flex;
+  align-items: center;
+}
+
+.aboutback-nav-unique {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link-unique {
+  text-decoration: none;
+  color: #b57f00;
+  font-size: 14px; /* Reduced font size */
+  margin-left: 10px; /* Adjusted margin */
+  line-height: 1.2; /* Adjusted line height */
+}
+
+.nav-link-unique:hover {
+  color: #700B00;
+}
+
+.separator-unique {
+  margin: 0 3px; /* Reduced margin */
+  font-size: 1rem; /* Reduced font size */
+}

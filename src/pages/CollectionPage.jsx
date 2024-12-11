@@ -30,7 +30,7 @@ const CollectionPage = () => {
       <Marquee />
       <Header />
       <HeaderTwo />
-      <GoldBack/>
+
       
       {isMobile ? (
         <>
@@ -38,7 +38,7 @@ const CollectionPage = () => {
         </>
       ) : null}
       <GoldHero />
-     
+      <GoldBack/>
       <Gold />
       <Footer />
       {/* Display the bottom navigation only if it's a mobile screen */}

@@ -30,8 +30,9 @@ const ContactUs = () => {
       <Marquee />
       <Header />
       <HeaderTwo />
-      <ContactBack/>
+      
       <Contacthero/>
+      <ContactBack/>
       <MainContact />
       <Reels/>
       <Footer />

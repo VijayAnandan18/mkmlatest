@@ -63,7 +63,7 @@ const Home = () => {
       <Reels />
       <Diamond />
       <SilverCards />
-      <Gifts/>
+      {/*<Gifts/>*/}
       <Testimonials/>
       <ContactIcons/>
       <Footer />

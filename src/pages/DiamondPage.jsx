@@ -29,8 +29,9 @@ const DiamondPage = () => {
       <Marquee />
       <Header />
       <HeaderTwo />
-      <DiamondBack/>
+      
       <DiamondHero />
+      <DiamondBack/>
       <DiamondCollection />
       <Footer />
       {/* Display the bottom navigation only if it's a mobile screen */}

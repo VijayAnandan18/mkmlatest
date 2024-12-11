@@ -33,6 +33,16 @@ body {
 .header .country-container {
   font-size: 0.9rem; /* Adjusted font size for smaller height */
 }
+/* Hamburger container */
+.hamburger-container {
+  display: none; /* Hidden by default */
+}
+/* Hamburger icon */
+.hamburger-icon {
+  font-size: 1.8rem;
+  color: #700B00;
+  cursor: pointer;
+}
 
 
 /* Phone Icon */
@@ -288,7 +298,15 @@ body {
     gap: 10px;
     order: 2; /* Ensure phone and gold rate appear after the logo */
   }
+  .hamburger-container {
+    display: block; /* Show only in mobile view */
+  }
 
+  .logo-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
   .phone-container {
     flex-direction: row;
   }

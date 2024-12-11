@@ -30,8 +30,9 @@ const SilverPage = () => {
       <Marquee />
       <Header />
       <HeaderTwo />
-      <SilverBack />
+
       <SilverHero />
+      <SilverBack />
       <SilverCollection />
       <Footer />
       {/* Display the bottom navigation only if it's a mobile screen */}
