@@ -60,7 +60,7 @@ const Home = () => {
       <Shop />
       <NewArrivals />
       <GoldJewellery />
-      <Reels />
+      {/*<Reels />*/}
       <Diamond />
       <SilverCards />
       {/*<Gifts/>*/}
