@@ -18,7 +18,7 @@ const HeaderTwo = () => {
         <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
    
         <li className="nav-item">
-  <a href="/gold-jewellery">Gold ▾</a>
+  <a href="/gold-jewellery" style={{ fontFamily: 'Playfair Display', fontWeight: 'bold' }}>GOLD ▾</a>
   <ul className="dropdown">
     {/* First Row */}
     <li>
@@ -100,7 +100,7 @@ const HeaderTwo = () => {
 </li>
 
           <li className="nav-item">
-            <a href="/diamond-jewellery">Diamond ▾</a>
+            <a href="/diamond-jewellery" style={{ fontFamily: 'Playfair Display', fontWeight: 'bold' }}>DIAMOND ▾</a>
             <ul className="dropdown">
               <li>
                 <a href="/diamond-jewellery#rings">
@@ -169,7 +169,7 @@ const HeaderTwo = () => {
             </ul>
           </li>
           <li className="nav-item">
-  <a href="silver-collection">Silver ▾</a>
+  <a href="silver-collection" style={{ fontFamily: 'Playfair Display', fontWeight: 'bold' }}>SILVER ▾</a>
   <ul className="dropdown">
     <li>
       <a href="/silver-collection#idols">
@@ -224,7 +224,8 @@ const HeaderTwo = () => {
   </ul>
 </li>
 <li className="nav-item">
-  <a href="gold-jewellery#coins">Gold Coins▾</a>
+<a href="gold-jewellery#coins" style={{ fontFamily: 'Playfair Display', fontWeight: 'bold' }}>GOLD COINS▾</a>
+
   <ul className="dropdown">
     <li>
       <a href="/gold-jewellery#coins">
@@ -269,22 +270,23 @@ const HeaderTwo = () => {
   </ul>
 </li>
 <li className="nav-item">
-            <a href="/digigold">  MKM DigiGold</a>
+            <a href="/digigold" style={{ fontFamily: 'Playfair Display', fontWeight: 'bold' }}>  MKM DIGIGOLD</a>
          
           </li>
 <li className="nav-item">
-  <a href="/digigold">Schemes  ▾</a>
+  <a href="/digigold" style={{ fontFamily: 'Playfair Display', fontWeight: 'bold' }}>SCHEMES  ▾</a>
   <ul className="dropdown">
    
  
+
     <li>
-      <a href="/pocketgold">
+      <a href="/pocketgold" >
         <img
-          src="/assets/schemes/fd.jpeg"
+          src="/assets/schemes/dailycollection.jpg"
           alt="Digi Gold"
           className="dropdown-image"
         />
-     MKM Fixed Deposit
+     MKM Daily Collections Schemes
       </a>
     </li>
     <li>
@@ -310,21 +312,21 @@ const HeaderTwo = () => {
     <li>
       <a href="/pocketgold">
         <img
-          src="/assets/schemes/dailycollection.jpg"
+          src="/assets/schemes/fd.jpeg"
           alt="Digi Gold"
           className="dropdown-image"
         />
-     MKM Daily Collections Schemes
+     MKM Fixed Deposit
       </a>
     </li>
   </ul>
 </li>
 <li className="nav-item">
-            <a href="/about">About Us</a>
+            <a href="/about" style={{ fontFamily: 'Playfair Display', fontWeight: 'bold' }}>ABOUT US</a>
          
           </li>
           <li className="nav-item">
-            <a href="/contact">Contact Us</a>
+            <a href="/contact" style={{ fontFamily: 'Playfair Display', fontWeight: 'bold' }}>CONTACT US</a>
          
           </li>
          

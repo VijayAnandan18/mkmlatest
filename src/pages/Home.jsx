@@ -17,6 +17,7 @@ import Gifts from "../components/Gifts";
 import Testimonials from "../components/Testimonials";
 import CustomBottomNavigation from "../components/BottomNavbar";
 import GoldRateTag from "../components/GoldRateTag";
+import Scheme from "../components/Scheme";
 import ContactIcons from "../components/ContactIcons";
 
 
@@ -63,6 +64,7 @@ const Home = () => {
       {/*<Reels />*/}
       <Diamond />
       <SilverCards />
+      <Scheme/>
       {/*<Gifts/>*/}
       <Testimonials/>
       <ContactIcons/>

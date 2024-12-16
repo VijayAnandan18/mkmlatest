@@ -30,7 +30,11 @@ const Shop = () => {
         <h1>Our Collections</h1>
         <p>Find Jewellery for Women, Men, and Kids</p>
       </div>
-
+      <nav className="shop-nav">
+        <button onClick={() => handleCategorySelect("womens")}>Women's Jewellery</button>
+        <button onClick={() => handleCategorySelect("mens")}>Men's Jewellery</button>
+        <button onClick={() => handleCategorySelect("kids")}>Kids' Jewellery</button>
+      </nav>
       {/* Grid of Images */}
       <div className="shop-grid">
         {jewelryImages[selectedCategory].map((image) => (
