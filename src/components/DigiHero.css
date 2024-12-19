@@ -1,0 +1,20 @@
+.digihero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .digihero-image {
+    width: 100%;
+    max-width: 1365px;
+    height: auto;
+    object-fit: cover; /* Ensures the image scales well while maintaining its aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
+  }
+  

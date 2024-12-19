@@ -87,8 +87,8 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo-container">
-        <img src="assets/logo1.webp" alt="Logo" className="logo" style={{ height: "55px",width:"50px" }}/>
-        <img src="assets/logo2.webp" alt="Logo" className="logo" style={{ width: "140px" }} />
+      
+        <img src="assets/spinner.png" alt="Logo" className="logo" style={{ width: "190px", height:"70px"}} />
       </div>
 
     

@@ -1,0 +1,79 @@
+.owner-body {
+    text-align: center;
+    padding: 30px;
+    
+    font-family: Arial;
+  }
+  .owner-heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #544114;
+    margin-bottom: 20px;
+  }
+  
+
+  
+  .owner-card-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap; /* Ensures the cards wrap on smaller screens */
+    height:fit-content;
+  }
+  
+  .owner-a-box {
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+
+  }
+  
+  .owner-img-container {
+    height: 140px; /* Reduced height */
+    width: 120px;  /* Reduced width */
+    overflow: hidden;
+    border-radius: 0px 0px 20px 20px;
+    display: inline-block;
+  }
+  
+  .owner-img-container img {
+    transform: skew(0deg, -13deg);
+    height: 200px; /* Adjusted height to fit inside the container */
+    margin: -30px 0px 0px -60px; /* Adjusted margin to keep the image centered */
+  }
+  
+  .owner-inner-skew {
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0px;
+    transform: skew(0deg, 13deg);
+    font-size: 0px;
+    margin: 30px 0px 0px 0px;
+    background: #c8c2c2;
+    border:2px solid #ffe699; 
+    height: 200px; /* Reduced height */
+    width: 160px;  /* Reduced width */
+  }
+  
+  .owner-text-container {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 100px 20px 20px 20px; /* Adjusted padding to keep text aligned */
+    border-radius: 20px;
+    background: #fff;
+    margin: -100px 0px 0px 0px;
+    line-height: 19px;
+    height:250px;
+    font-size: 14px;
+border:2px solid #ffe699; /* Add this line for border color *//* Add this line for border color */
+  }
+  
+  .owner-text-container h3 {
+    margin: 20px 0px 10px 0px;
+    color:#544114;
+    font-size: 18px;
+  }
+  

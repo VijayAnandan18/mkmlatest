@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Testimonials.css';
 
 const Testimonials = () => {
@@ -32,46 +32,51 @@ const Testimonials = () => {
     showSlides(slideIndex + n);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     showSlides(slideIndex);
   }, [slideIndex]);
 
   return (
-    <section className="testimonials-section">
+    <section className="testimonials-section" style={{ backgroundImage: "url(/assets/testmonialbg.jpg)" }}>
       <div className="testimonials-rectangle"></div>
       <div className="testimonials-slideshow-container">
-      <div className="one">
-        <h1 className="main-heading">Testimonials</h1>
-        <p>Wonderful gesture while purchasing and Creative collections on MKM Thangamaligai..I would personally recommend this shop to your Gold & Diamond Purchase collections!</p>
-      </div>
-        <div className="testimonial-slide">
-       
-          <div className="testimonial-content">
-            <q style={{color: "white"}}>
-              Curabitur ligula augue, lobortis in interdum nec, dignissim vel arcu. Donec semper aliquet mattis. Curabitur convallis urna congue viverra elementum.
-            </q>
-          </div>
-          <p className="testimonial-author">By: <span>Joe Bloggs</span></p>
+        <div className="one">
+          <h1 className="main-heading" style={{color:"goldenrod"}}>Testimonials</h1>
         </div>
+
+        {/* Testimonial Slides */}
         <div className="testimonial-slide">
           <div className="testimonial-content">
-            <q style={{color: "white"}}>
-              Vivamus est felis, tempor sed mauris ac, malesuada sollicitudin ipsum. Etiam nec ullamcorper nibh, ac pretium sapien. Donec pharetra sollicitudin ligula, sit amet ornare nisi vestibulum et.
+            <q style={{ color: "white" }}>
+              Wonderful gesture while purchasing and Creative collections on MKM Thangamaligai..I would personally recommend this shop to your Gold & Diamond Purchase collections!
             </q>
           </div>
-          <p className="testimonial-author">By: <span>Jane Doe</span></p>
+          <p className="testimonial-author"  style={{color:"white"}}>By: <span  style={{color:"white"}}>Banu Priya</span></p>
         </div>
+
         <div className="testimonial-slide">
           <div className="testimonial-content">
-            <q style={{color: "white"}}>
-              Mauris malesuada, ex at volutpat euismod, velit diam placerat lacus, eu rhoncus enim metus ultricies nisi. Mauris pharetra tristique nisl.
+            <q style={{ color: "white" }}>
+              The experience which I got when I visit the shop was literally awesome, and the design is really good and unique.
             </q>
           </div>
-          <p className="testimonial-author">By: <span>John Doe</span></p>
+          <p className="testimonial-author"  style={{color:"white"}}>By: <span  style={{color:"white"}}>Nirmal</span></p>
         </div>
+
+        <div className="testimonial-slide">
+          <div className="testimonial-content">
+            <q style={{ color: "white" }}>
+              Great experience.
+            </q>
+          </div>
+          <p className="testimonial-author"  style={{color:"white"}} >By:  <span  style={{color:"white"}}>Gandhi Raj</span></p>
+        </div>
+
         <a className="testimonial-prev" onClick={() => plusSlides(-1)}>&#10094;</a>
         <a className="testimonial-next" onClick={() => plusSlides(1)}>&#10095;</a>
       </div>
+
+      {/* Dots Navigation */}
       <div className="testimonial-dot-container">
         <span className="testimonial-dot"></span>
         <span className="testimonial-dot"></span>

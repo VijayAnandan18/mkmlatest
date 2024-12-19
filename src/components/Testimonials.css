@@ -1,87 +1,98 @@
+/* Testimonials Section */
+.testimonials-section {
+  margin: 0 auto;
+  background-size: cover; /* Ensures background image covers the entire section */
+  background-position: center; /* Centers the background image */
+  padding: 50px 20px;
+  color: white;
+}
 
-  .testimonials-section {
-    margin: 0 auto;
-  }
-  
-  .testimonials-rectangle {
-    width: 40%;
-    height: 100vh;
-    background: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
-  .testimonials-slideshow-container {
-    position: relative;
-    width: 60rem;
-    max-width: 80%;
-    margin: 0 auto;
-  }
-  
-  .testimonial-slide {
-    display: none;
-    padding: 2rem 5rem 0 5rem;
-    text-align: center;
-  }
-  
-  .testimonial-content {
-    min-height: 5rem;
-    padding: 3.5rem 2.5rem 2rem 3.5rem;
-    background-color:#700B00;
-  }
-  
-  .testimonial-author {
-    color: #333;
-  }
-  
-  .testimonial-prev, .testimonial-next {
-    cursor: pointer;
-    position: absolute;
-    top: 55%;
-    width: auto;
-    margin-top: -1.875rem;
-    padding: 1rem;
-    color: goldenrod;
-    font-weight: bold;
-    font-size: 3rem;
-    border-radius: 3px;
-    user-select: none;
-    transition: 0.4s;
-  }
-  
-  .testimonial-next {
-    right: 0;
-    border-radius: 3px;
-  }
-  
-  .testimonial-prev:hover, .testimonial-next:hover {
-    background-color: #700B00;
-    color: goldenrod;
-    text-decoration: none;
-  }
-  
-  .testimonial-dot-container {
-    text-align: center;
-    padding: 0 1.25rem;
-  }
-  
-  .testimonial-dot {
-    height: 0.9375rem;
-    width: 0.9375rem;
-    margin: 0 2px;
-    background-color: goldenrod;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.4s ease;
-  }
-  
-  .testimonial-dot.active {
-    background-color: #700B00;
-  }
+.testimonials-rectangle {
+  width: 40%;
+  height: 100vh;
+  background: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
 
-/* Make the rectangle a square (212px by 134px) for mobile view */
+.testimonials-slideshow-container {
+  position: relative;
+  width: 60rem;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.testimonial-slide {
+  display: none;
+  padding: 2rem 5rem 0 5rem;
+  text-align: center;
+}
+
+.testimonial-content {
+  min-height: 5rem;
+  padding: 3.5rem 2.5rem 2rem 3.5rem;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  border: 1px solid goldenrod; /* Add a border to make it stand out */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+}
+
+.testimonial-author {
+  color: #333;
+}
+
+.testimonial-prev,
+.testimonial-next {
+  cursor: pointer;
+  position: absolute;
+  top: 55%;
+  width: auto;
+  margin-top: -1.875rem;
+  padding: 1rem;
+  color: goldenrod;
+  font-weight: bold;
+  font-size: 3rem;
+  border-radius: 3px;
+  user-select: none;
+  transition: 0.4s;
+}
+
+.testimonial-next {
+  right: 0;
+  border-radius: 3px;
+}
+
+.testimonial-prev:hover,
+.testimonial-next:hover {
+  background-color: #700B00;
+  color: goldenrod;
+  text-decoration: none;
+}
+
+.testimonial-dot-container {
+  text-align: center;
+  padding: 0 1.25rem;
+}
+
+.testimonial-dot {
+  height: 0.9375rem;
+  width: 0.9375rem;
+  margin: 0 2px;
+  background-color: goldenrod;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.4s ease;
+}
+
+.testimonial-dot.active {
+  background-color: #700B00;
+}
+
+/* Mobile View - Hide testimonials section */
 @media only screen and (max-width: 768px) {
-    .testimonials-section {
- display:none;
-      }}
+  .testimonials-section {
+    display: none; /* Hide the section on mobile */
+  }
+}

@@ -9,7 +9,7 @@ const DigiGoldBack = () => {
       <nav className="aboutback-nav-unique">
         <Link to="/" className="nav-link-unique">Home</Link>
         <span className="separator-unique"> &lt; </span>
-        <span className="about-us-text" >PocketGold</span>
+        <span className="about-us-text" >DigiGold</span>
       </nav>
     </header>
   );

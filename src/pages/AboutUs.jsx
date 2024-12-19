@@ -9,7 +9,7 @@ import Timeline from "../components/Timeline";
 import GridLayout from "../components/GridLayout";
 import CustomBottomNavigation from "../components/BottomNavbar"; // Ensure this path is correct
 import AboutBack from "../components/AboutBack";
-
+import Owner from "../components/Owner";
 const AboutUs = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -33,8 +33,10 @@ const AboutUs = () => {
       <Header />
       <HeaderTwo />
       <AboutBack/>
-      <GridLayout />
+        
       <Abouthero />
+      <Owner/>
+ 
       <Timeline />
       <Footer />
       {/* Display the bottom navigation only if it's a mobile screen */}

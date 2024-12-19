@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Marquee from "../components/Marquee";
 import Header from "../components/Header";
-import HeroCarousel from "../components/HeroCarousel";
+import DigiHero from "../components/DigiHero";
 import HeaderTwo from "../components/HeaderTwo";
 import DigiGoldContent from "../components/DigiGoldContent";
 import CustomBottomNavigation from "../components/BottomNavbar";
@@ -27,10 +27,10 @@ const  DigiGold = () => {
       <Marquee />
       <Header />
       <HeaderTwo />
-  
+  <DigiHero/>
     
 
-      <HeroCarousel />
+   
       <DigiGoldBack/>
    <DigiGoldContent/>
       <Footer />

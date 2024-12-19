@@ -19,11 +19,22 @@ const HeroCarousel = () => {
   ];
 
   const mobileMedia = [
-    { type: 'image', src: "assets/mobilehero2.webp" },
-    { type: 'image', src: "assets/mobilehero3.webp" },
-    { type: 'image', src: "assets/mobilehero4.webp" },
-    { type: 'image', src: "assets/mobilehero5.webp" },
-    { type: 'image', src: "assets/mobilehero6.webp" },
+    { type: 'image', src: "assets/mobilehero1.png" },
+    { type: 'image', src: "assets/gold1.webp" },
+    { type: 'image', src: "assets/gold2.webp" },
+    { type: 'image', src: "assets/gold3.webp" },
+    { type: 'image', src: "assets/gold4.webp" },
+    { type: 'image', src: "assets/mobilehero2.png" },
+    { type: 'image', src: "assets/mobilehero3.png" },
+    { type: 'image', src: "assets/mobilehero4.png" },
+    { type: 'image', src: "assets/mobilehero5.png" },
+    { type: 'image', src: "assets/mobilehero6.png" },
+    { type: 'image', src: "assets/mobilehero7.png" },
+    { type: 'image', src: "assets/mobilehero8.png" },
+    { type: 'image', src: "assets/mobilehero9.png" },
+    { type: 'image', src: "assets/mobilehero10.png" },
+    { type: 'image', src: "assets/mobilehero11.png" },
+    { type: 'image', src: "assets/mobilehero12.png" },
   ];
 
   const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
@@ -99,17 +110,16 @@ const HeroCarousel = () => {
         <span className="carousel-control-next-icon">&gt;</span>
       </button>
       <div className="carousel-indicators">
-        {media.map((_, index) => (
-          <button
-            key={index}
-            className={`indicator ${index === currentMediaIndex ? 'active' : ''}`}
-            onClick={() => goToSlide(index)}
-            aria-label={`Slide ${index + 1}`}
-          >
-            {index === currentMediaIndex ? '.' : '.'}
-          </button>
-        ))}
-      </div>
+  {media.map((_, index) => (
+    <button
+      key={index}
+      className={`indicator ${index === currentMediaIndex ? 'active' : ''}`}
+      onClick={() => goToSlide(index)}
+      aria-label={`Slide ${index + 1}`}
+    />
+  ))}
+</div>
+
     </div>
   );
 };

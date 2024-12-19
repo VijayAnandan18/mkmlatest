@@ -3,10 +3,10 @@
   width: 100%;
   background-color: #fff;
   margin-top: 0.5px;
-
+  border-top: 1px solid #c67e00; /* Adds a border at the top */
   position: relative;
   z-index: 10; /* Ensure it is above other content */
-  padding: 5px 0; /* Reduce top and bottom padding */
+  padding: 0px; /* Reduce top and bottom padding */
 }
 
 /* Navigation Bar */
@@ -27,7 +27,7 @@
   font-size: 30px;
   background: none;
   border: none;
-  color: #fff;
+  color: black;
   cursor: pointer;
 }
 
@@ -40,11 +40,11 @@
 /* Navigation Item Links */
 .nav-item a {
   text-decoration: none;
-  color: #fff;
+  color: black;
   padding: 5px 10px; /* Reduce padding for links */
   display: block;
   font-weight: bold;
-  font-size: 15px; /* Slightly smaller font size */
+  font-size: 13px; /* Slightly smaller font size */
 }
 .nav-item a :hover{
 color:goldenrod;}

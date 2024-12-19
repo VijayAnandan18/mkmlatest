@@ -9,7 +9,7 @@ const HeaderTwo = () => {
   };
 
   return (
-<div className="header-two" style={{ backgroundColor: "rgb(182, 127, 0)" }}>
+<div className="header-two" >
 
       <nav className="nav" >
         <button className="hamburger" onClick={handleToggleMenu}>
@@ -18,7 +18,7 @@ const HeaderTwo = () => {
         <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
    
         <li className="nav-item">
-  <a href="/gold-jewellery" style={{ fontFamily: 'Playfair Display', fontWeight: 'bold' }}>GOLD ▾</a>
+  <a href="/gold-jewellery" style={{ fontFamily: 'Poppins', fontWeight: 'bold' }}>GOLD ▾</a>
   <ul className="dropdown">
     {/* First Row */}
     <li>
@@ -100,7 +100,7 @@ const HeaderTwo = () => {
 </li>
 
           <li className="nav-item">
-            <a href="/diamond-jewellery" style={{ fontFamily: 'Playfair Display', fontWeight: 'bold' }}>DIAMOND ▾</a>
+            <a href="/diamond-jewellery" style={{ fontFamily: 'Poppins', fontWeight: 'bold' }}>DIAMOND ▾</a>
             <ul className="dropdown">
               <li>
                 <a href="/diamond-jewellery#rings">
@@ -169,7 +169,7 @@ const HeaderTwo = () => {
             </ul>
           </li>
           <li className="nav-item">
-  <a href="silver-collection" style={{ fontFamily: 'Playfair Display', fontWeight: 'bold' }}>SILVER ▾</a>
+  <a href="silver-collection" style={{ fontFamily: 'Poppins', fontWeight: 'bold' }}>SILVER ▾</a>
   <ul className="dropdown">
     <li>
       <a href="/silver-collection#idols">
@@ -224,7 +224,7 @@ const HeaderTwo = () => {
   </ul>
 </li>
 <li className="nav-item">
-<a href="gold-jewellery#coins" style={{ fontFamily: 'Playfair Display', fontWeight: 'bold' }}>GOLD COINS▾</a>
+<a href="gold-jewellery#coins" style={{ fontFamily: 'Poppins', fontWeight: 'bold' }}>GOLD COINS▾</a>
 
   <ul className="dropdown">
     <li>
@@ -270,17 +270,17 @@ const HeaderTwo = () => {
   </ul>
 </li>
 <li className="nav-item">
-            <a href="/digigold" style={{ fontFamily: 'Playfair Display', fontWeight: 'bold' }}>  MKM DIGIGOLD</a>
+            <a href="/digigold" style={{ fontFamily: 'Poppins', fontWeight: 'bold' }}>  MKM DIGIGOLD</a>
          
           </li>
 <li className="nav-item">
-  <a href="/digigold" style={{ fontFamily: 'Playfair Display', fontWeight: 'bold' }}>SCHEMES  ▾</a>
+  <a href="/digigold" style={{ fontFamily: 'Poppins', fontWeight: 'bold' }}>SCHEMES  ▾</a>
   <ul className="dropdown">
    
  
 
     <li>
-      <a href="/pocketgold" >
+      <a href="/dailycollection" >
         <img
           src="/assets/schemes/dailycollection.jpg"
           alt="Digi Gold"
@@ -290,7 +290,7 @@ const HeaderTwo = () => {
       </a>
     </li>
     <li>
-      <a href="/pocketgold">
+      <a href="/futureplus">
         <img
           src="/assets/schemes/fs.jpeg"
           alt="Digi Gold"
@@ -300,7 +300,7 @@ const HeaderTwo = () => {
       </a>
     </li>
     <li>
-      <a href="/pocketgold">
+      <a href="/flexigold">
         <img
           src="/assets/schemes/fg.jpeg"
           alt="Digi Gold"
@@ -310,23 +310,23 @@ const HeaderTwo = () => {
       </a>
     </li>
     <li>
-      <a href="/pocketgold">
+      <a href="/futuregold">
         <img
           src="/assets/schemes/fd.jpeg"
           alt="Digi Gold"
           className="dropdown-image"
         />
-     MKM Fixed Deposit
+     MKM Future Gold
       </a>
     </li>
   </ul>
 </li>
 <li className="nav-item">
-            <a href="/about" style={{ fontFamily: 'Playfair Display', fontWeight: 'bold' }}>ABOUT US</a>
+            <a href="/about" style={{ fontFamily: 'Poppins', fontWeight: 'bold' }}>ABOUT US</a>
          
           </li>
           <li className="nav-item">
-            <a href="/contact" style={{ fontFamily: 'Playfair Display', fontWeight: 'bold' }}>CONTACT US</a>
+            <a href="/enquiry" style={{ fontFamily: 'Poppins', fontWeight: 'bold' }}>CONTACT US</a>
          
           </li>
          

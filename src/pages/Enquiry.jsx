@@ -87,116 +87,131 @@ const Enquiry = () => {
   };
 
   return (
-    <div className="contact-container">
-      <div className="contact-form-wrapper">
-        <h2>Contact Us</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="fullName">Full Name</label>
-            <input
-              type="text"
-              id="fullName"
-              name="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="phone">Phone</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="category">Jewellery Category</label>
-            <select
-              id="category"
-              name="category"
-              value={formData.category}
-              onChange={handleChange}
-            >
-              <option value="gold">Gold</option>
-              <option value="silver">Silver</option>
-              <option value="diamond">Diamond</option>
-            </select>
-          </div>
-          <div className="form-group">
-            <label htmlFor="enquiryType">Enquiry Type</label>
-            <select
-              id="enquiryType"
-              name="enquiryType"
-              value={formData.enquiryType}
-              onChange={handleChange}
-            >
-              <option value="showroom">Showroom Related</option>
-              <option value="scheme">Scheme Related</option>
-              <option value="jewels">Jewels Related</option>
-              <option value="suggestions">Suggestions</option>
-              <option value="complaints">Complaints</option>
-            </select>
-          </div>
-          <div className="form-group">
-            <label htmlFor="location">Location</label>
-            <input
-              type="text"
-              id="location"
-              name="location"
-              value={formData.location}
-              readOnly
-              placeholder="Fetching your location..."
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="district">District</label>
-            <input
-              type="text"
-              id="district"
-              name="district"
-              value={formData.district}
-              onChange={handleChange}
-              placeholder="Enter your district"
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="comments">Comments</label>
-            <textarea
-              id="comments"
-              name="comments"
-              rows="4"
-              placeholder="Enter your comments or inquiries here..."
-              value={formData.comments}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="form-actions">
-            <button type="reset" className="cancel-button" onClick={handleEnquiryClick}>
-              Cancel
-            </button>
-            <button type="submit" className="submit-button">
-              Submit
-            </button>
-          </div>
-        </form>
-      </div>
+<div className="contact-container" style={{backgroundImage: "url(/assets/contactbg.jpg)"}}>
+
+    <div className="contact-form-wrapper">
+      <h2>Contact Us</h2>
+      <form onSubmit={handleSubmit}>
+  <div className="form-row">
+    <div className="form-group">
+      <label htmlFor="fullName">Full Name</label>
+      <input
+        type="text"
+        id="fullName"
+        name="fullName"
+        value={formData.fullName}
+        onChange={handleChange}
+        required
+      />
+    </div>
+    <div className="form-group">
+      <label htmlFor="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+      />
+    </div>
+  </div>
+  
+  <div className="form-row">
+    <div className="form-group">
+      <label htmlFor="phone">Phone</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        value={formData.phone}
+        onChange={handleChange}
+        required
+      />
+    </div>
+    <div className="form-group">
+      <label htmlFor="category">Jewellery Category</label>
+      <select
+        id="category"
+        name="category"
+        value={formData.category}
+        onChange={handleChange}
+      >
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="diamond">Diamond</option>
+      </select>
+    </div>
+  </div>
+  
+  <div className="form-row">
+    <div className="form-group">
+      <label htmlFor="enquiryType">Enquiry Type</label>
+      <select
+        id="enquiryType"
+        name="enquiryType"
+        value={formData.enquiryType}
+        onChange={handleChange}
+      >
+        <option value="showroom">Showroom Related</option>
+        <option value="scheme">Scheme Related</option>
+        <option value="jewels">Jewels Related</option>
+        <option value="suggestions">Suggestions</option>
+        <option value="complaints">Complaints</option>
+      </select>
+    </div>
+    <div className="form-group">
+      <label htmlFor="location">Location</label>
+      <input
+        type="text"
+        id="location"
+        name="location"
+        value={formData.location}
+        readOnly
+        placeholder="Fetching your location..."
+      />
+    </div>
+  </div>
+  
+  <div className="form-row">
+    <div className="form-group">
+      <label htmlFor="district">District</label>
+      <input
+        type="text"
+        id="district"
+        name="district"
+        value={formData.district}
+        onChange={handleChange}
+        placeholder="Enter your district"
+      />
+    </div>
+    <div className="form-group">
+      <label htmlFor="comments">Comments</label>
+      <textarea
+        id="comments"
+        name="comments"
+        rows="4"
+        placeholder="Enter your comments or inquiries here..."
+        value={formData.comments}
+        onChange={handleChange}
+      />
+    </div>
+  </div>
+
+  <div className="form-actions">
+    <button type="reset" className="cancel-button" onClick={handleEnquiryClick}>
+      Cancel
+    </button>
+    <button type="submit" className="submit-button">
+      Submit
+    </button>
+  </div>
+</form>
 
     </div>
+  </div>
+  
+ 
   );
 };
 

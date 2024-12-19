@@ -5,7 +5,7 @@ const Timeline = () => {
   return (
     <div className="timeline-container">
       <div className="two">
-      <h1 style={{ fontWeight: "bold" }}>A Legacy of Excellence: Our Journey Through the Years</h1>
+      <h1 style={{ fontWeight: "bold",fontFamily:"PlayfairDisplay" }}>A Legacy of Excellence: Our Journey Through the Years</h1>
 
       </div>
       <div className="timeline-image-container">

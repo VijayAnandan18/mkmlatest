@@ -35,25 +35,25 @@ export default function CustomBottomNavigation() {
     >
       <BottomNavigationAction
         value="home"
-        icon={<HomeIcon sx={{ color: '#b58a1c', fontSize: 30 }} />}
+        icon={<HomeIcon sx={{ color: '#c67e00', fontSize: 30 }} />}
         showLabel={false} // Hide the label
         onClick={() => handleNavigation('/')} // Navigate to home
       />
       <BottomNavigationAction
         value="gold"
-        icon={<AiFillGolden style={{ color: '#b58a1c', fontSize: 30 }} />} // Use style for consistent styling
+        icon={<AiFillGolden style={{ color: '#c67e00', fontSize: 30 }} />} // Use style for consistent styling
         showLabel={false} // Hide the label
         onClick={() => handleNavigation('/gold-jewellery')} // Navigate to gold jewellery
       />
       <BottomNavigationAction
         value="digi-gold"
-        icon={<GiReceiveMoney style={{ color: '#b58a1c', fontSize: 30 }} />} // Use style for consistent styling
+        icon={<GiReceiveMoney style={{ color: '#c67e00', fontSize: 30 }} />} // Use style for consistent styling
         showLabel={false} // Hide the label
         onClick={() => handleNavigation('/pocketgold')} // Navigate to digi gold
       />
       <BottomNavigationAction
         value="contact"
-        icon={<TbMessageUser style={{ color: '#b58a1c', fontSize: 30 }} />}
+        icon={<TbMessageUser style={{ color: '#c67e00', fontSize: 30 }} />}
         showLabel={false} // Hide the label
         onClick={() => handleNavigation('/contact')} // Navigate to contact page
       />

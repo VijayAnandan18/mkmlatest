@@ -54,30 +54,43 @@
   right: 10px;
 }
 
-/* Indicators */
+/* Carousel Indicators */
 .carousel-indicators {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   justify-content: center;
-}
-
-.indicator {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  margin: 0 2px;
+  gap: 10px;
   padding: 0;
-  color: rgba(255, 255, 255, 0.5);
-  transition: color 0.3s;
+  list-style: none;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  z-index: 10;
 }
 
-.indicator.active {
-  color: #fff;
+/* Style for the individual indicator buttons */
+.indicator {
+  width: 5px; /* Size of the circle */
+  height: 5px;
+  border-radius: 50%; /* Makes the button circular */
+  background-color: white; /* Default color for inactive indicators */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
 }
+
+/* Active indicator style */
+.indicator.active {
+  background-color: #c67e00; /* Color for the active indicator */
+}
+
+/* Hover effect for indicators */
+.indicator:hover {
+  background-color: white; /* Slightly darker when hovered */
+}
+
 
 /* Mobile View Adjustments */
 @media (max-width: 768px) {

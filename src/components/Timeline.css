@@ -5,7 +5,8 @@
     padding: 2rem;
     font-family: 'Poppins', sans-serif;
     color: #700B00;
-    background-color: #f8eed8f1;
+    background-color: rgb(230, 199, 101); /* 50% transparency */
+
   }
   
   .timeline {

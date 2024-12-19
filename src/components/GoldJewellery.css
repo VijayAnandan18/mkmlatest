@@ -109,6 +109,12 @@
     gap: 15px;
     padding: 10px;
   }
+.one h1{
+  font-size: 25px;
+}
+.features-description,.about-description {
+  font-size: 12px;
+}
 
   .goldcard {
     max-width: 100%;

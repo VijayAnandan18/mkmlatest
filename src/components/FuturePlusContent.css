@@ -1,0 +1,52 @@
+/* Main container */
+.future-plus-container {
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+  }
+  
+  /* Content container */
+  .future-plus-content {
+    width: 100%;
+    max-width: 1300px;
+  }
+  
+  /* Section styles */
+  .future-plus-section {
+    margin-bottom: 20px; /* Spacing between sections */
+  }
+  
+  /* Heading styles */
+  .future-plus-heading {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #544114;
+    border-bottom: 2px solid #c67e00;
+    margin-bottom: 10px;
+    text-align: left; /* Left-align the heading */
+    display: inline-block; /* Restrict the border to the text width */
+  }
+  
+  /* Paragraph styles */
+  .future-plus-section p {
+    text-align: justify;
+    font-size: 1em;
+    line-height: 1.5;
+    color: black;
+  }
+  
+  /* Unordered list styles */
+  .future-plus-section ul {
+    padding-left: 20px;
+  }
+  
+  .future-plus-section ul li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: black;
+  }
+  

@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Let us help you</h3>
           <ul className="footer-links">
-            <li><a href="/contact">Contact us</a></li>
+            <li><a href="/enquiry">Contact us</a></li>
             <li><a href="/enquiry">Enquiry Form</a></li>
           </ul>
         </div>
@@ -26,10 +26,11 @@ const Footer = () => {
           <h3>Schemes</h3>
           <ul className="footer-links">
             <li><a href="/digigold">Digi Gold</a></li>
-            <li><a href="/digigold">Fixed deposit</a></li>
-            <li><a href="/digigold">Future Plus</a></li>
-            <li><a href="/digigold">Future gold</a></li>
-            <li><a href="/digigold"> MKM Daily collections</a></li>
+            <li><a href="/dailycollection"> MKM Daily collections</a></li>
+            <li><a href="/futuregold">Future Gold</a></li>
+            <li><a href="/flexigold">Flexi Gold</a></li>
+            <li><a href="/futureplus">Future Plus</a></li>
+
           </ul>
         </div>
         <div className="footer-section">
