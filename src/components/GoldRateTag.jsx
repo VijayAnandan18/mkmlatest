@@ -52,52 +52,54 @@ const GoldRateTag = () => {
       {showRates && (
         <div className="gold-rate-dropdown">
           {goldRates ? (
-            <table className="gold-rate-table">
-              <thead>
-                <tr>
-                  <th colSpan="2" style={{ textAlign: "center" }}>Today's Gold Rate</th>
-                </tr>
-                <tr>
-  <th
-    colSpan="2"
-    style={{ background: "#700B00", color: "white", textAlign: "center" }}
-  >
-    Updated on: {`${new Date().toLocaleDateString("en-GB", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-    })} 10:05 AM`} {/* Fixed time */}
-  </th>
+             <table className="gold-rate-table">
+             <thead>
+               <tr>
+                 <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>Today's Gold Rate</th>
+               </tr>
+               <tr>
+<th
+ colSpan="2"
+ style={{ background: "#700B00", color: "white", textAlign: "center" }}
+>
+ Updated on: {`${new Date().toLocaleDateString("en-GB", {
+   day: "2-digit",
+   month: "2-digit",
+   year: "numeric",
+ })} 10:05 AM`} {/* Fixed time */}
+</th>
 </tr>
+               <tr>
+                 <th style={{ background: "#700B00", color: "white" }}>Gold Type</th>
+                 <th style={{ background: "#700B00", color: "white" }}>Price (₹)</th>
+               </tr>
+             </thead>
+<tbody>
+<tr>
+ <td>24k</td>
+ <td>₹{goldRates?.price_gram_24k ? goldRates.price_gram_24k.toFixed(2) : "N/A"}</td>
+</tr>
+<tr>
+ <td>22k</td>
+ <td>₹{goldRates?.price_gram_22k ? goldRates.price_gram_22k.toFixed(2) : "N/A"}</td>
+</tr>
+<tr>
+ <td>21k</td>
+ <td>₹{goldRates?.price_gram_21k ? goldRates.price_gram_21k.toFixed(2) : "N/A"}</td>
+</tr>
+<tr>
+ <td>20k</td>
+ <td>₹{goldRates?.price_gram_20k ? goldRates.price_gram_20k.toFixed(2) : "N/A"}</td>
+</tr>
+<tr>
+ <td>18k</td>
+ <td>₹{goldRates?.price_gram_18k ? goldRates.price_gram_18k.toFixed(2) : "N/A"}</td>
+</tr>
+</tbody>
 
-                <tr>
-                  <th>Gold Type</th>
-                  <th>Price (₹)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>24k</td>
-                  <td>₹{goldRates.price_gram_24k.toFixed(2)}</td>
-                </tr>
-                <tr>
-                  <td>22k</td>
-                  <td>₹{goldRates.price_gram_22k.toFixed(2)}</td>
-                </tr>
-                <tr>
-                  <td>21k</td>
-                  <td>₹{goldRates.price_gram_21k.toFixed(2)}</td>
-                </tr>
-                <tr>
-                  <td>20k</td>
-                  <td>₹{goldRates.price_gram_20k.toFixed(2)}</td>
-                </tr>
-                <tr>
-                  <td>18k</td>
-                  <td>₹{goldRates.price_gram_18k.toFixed(2)}</td>
-                </tr>
-              </tbody>
-            </table>
+
+
+           </table>
           ) : (
             <p>Loading...</p>
           )}
