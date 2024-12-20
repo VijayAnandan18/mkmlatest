@@ -4,6 +4,11 @@ import "./Abouthero.css";
 const AboutHero = () => {
   return (
     <div className="about-hero-container">
+      {/* Image Section */}
+      <div className="about-hero-image" >
+        <img src="/assets/aboutimage.png" alt="About Us" className="about-hero-img" />
+      </div>
+
       <div className="about-hero-content">
         {/* About Us Section */}
         <div className="about-section">

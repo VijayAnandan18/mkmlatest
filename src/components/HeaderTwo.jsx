@@ -274,7 +274,7 @@ const HeaderTwo = () => {
          
           </li>
 <li className="nav-item">
-  <a href="/digigold" style={{ fontFamily: 'Poppins', fontWeight: 'bold' }}>SCHEMES  ▾</a>
+  <a href="/schemes" style={{ fontFamily: 'Poppins', fontWeight: 'bold' }}>SCHEMES  ▾</a>
   <ul className="dropdown">
    
  

@@ -104,7 +104,7 @@
 
 @media (max-width: 480px) {
   .orb {
-    --size:  90px; /* Further reduce size on smaller screens */
+    --size:  70px; /* Further reduce size on smaller screens */
   }
 
   /* Add margin to the first orb and its label for smaller screens */

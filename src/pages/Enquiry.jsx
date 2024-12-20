@@ -56,7 +56,7 @@ const Enquiry = () => {
   };
 
   const handleEnquiryClick = () => {
-    navigate('/contact');
+    navigate('/');
   };
 
   const handleSubmit = (e) => {

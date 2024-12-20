@@ -1,9 +1,10 @@
 /* Header Styles */
 .header-two {
   width: 100%;
+  max-width: 1329px;
   background-color: #fff;
   margin-top: 0.5px;
-  border-top: 1px solid #c67e00; /* Adds a border at the top */
+
   position: relative;
   z-index: 10; /* Ensure it is above other content */
   padding: 0px; /* Reduce top and bottom padding */
@@ -26,8 +27,9 @@
   display: none; /* Shown only on mobile */
   font-size: 30px;
   background: none;
+left: 0px;
   border: none;
-  color: black;
+  color: goldenrod;
   cursor: pointer;
 }
 
@@ -60,6 +62,8 @@ color:goldenrod;}
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
   box-sizing: border-box;
+
+  overflow-x: hidden;
   z-index: 20;
 }
 

@@ -1,8 +1,20 @@
+/* Wrapper to prevent vertical overflow */
+.new-arrivals-wrapper {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-y: hidden; /* Prevent vertical overflow */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Main New Arrivals Section */
 .new-arrivals {
   text-align: center;
   background: var(--bg);
   padding: 20px;
-  margin-left: 10px;
+  margin: auto;
+  max-width: 1250px;
+  box-sizing: border-box;
 }
 
 .new-arrivals h1 {
@@ -10,74 +22,45 @@
   font-size: 2rem;
   margin-bottom: 20px;
 }
-/* Ensure the caption text is styled appropriately */
+
 .image-caption {
   font-size: 1rem;
   color: var(--text);
   margin-top: 3px;
   text-align: flex-start;
-
   font-weight: bold;
-  background-color: antiquewhite;
+  background-color: #c67e00;
+  padding: 5px;
 }
 
-
+/* Ensure card and slider content fits within the parent container */
 .slider .card {
   background: var(--card-bg);
   border: var(--border);
   border-radius: 16px;
   overflow: hidden;
-}
-
-.slider .card .img {
-  height: 200px;
-  margin: 16px;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: all 0.2s ease;
-}
-
-.slider .card .img img {
-  width: 100%;
   height: 100%;
+}
+
+.slider .card .card-image {
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
   object-fit: cover;
   transition: transform 0.2s ease-in-out;
 }
 
-.slider .card .img:hover img {
+.slider .card:hover .card-image {
   transform: scale(1.1);
 }
 
-.slider .card .content {
-  padding: 10px 20px;
-}
+/* Responsive adjustments */
+@media (max-height: 768px) {
+  .new-arrivals {
+    padding: 10px;
+  }
 
-.card .content .title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--text);
+  .slider .card .card-image {
+    height: 150px;
+  }
 }
-
-.card .content .sub-title {
-  font-size: 1rem;
-  color: var(--sub-text);
-  margin-bottom: 10px;
-}
-
-.card .content p {
-  color: var(--sub-text);
-  text-align: justify;
-}
-
-.card .content button {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #fff;
-  cursor: pointer;
-}
-@media (max-width: 768px) {
-.new-arrivals {
-
-  margin-left: 0px;
-}}

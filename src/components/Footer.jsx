@@ -19,7 +19,7 @@ const Footer = () => {
           <h3>Let us help you</h3>
           <ul className="footer-links">
             <li><a href="/enquiry">Contact us</a></li>
-            <li><a href="/enquiry">Enquiry Form</a></li>
+          
           </ul>
         </div>
         <div className="footer-section">

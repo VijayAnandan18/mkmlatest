@@ -37,15 +37,17 @@ const Testimonials = () => {
   }, [slideIndex]);
 
   return (
+    < div className='testimonials-justheading'>
+    <div className="one">
+    <h1 className="main-heading" >Testimonials</h1>
+  </div>
     <section className="testimonials-section" style={{ backgroundImage: "url(/assets/testmonialbg.jpg)" }}>
-      <div className="testimonials-rectangle"></div>
-      <div className="testimonials-slideshow-container">
-        <div className="one">
-          <h1 className="main-heading" style={{color:"goldenrod"}}>Testimonials</h1>
-        </div>
+      <div className="testimonials-rectangle" ></div>
+      <div className="testimonials-slideshow-container"  >
+    
 
         {/* Testimonial Slides */}
-        <div className="testimonial-slide">
+        <div className="testimonial-slide" >
           <div className="testimonial-content">
             <q style={{ color: "white" }}>
               Wonderful gesture while purchasing and Creative collections on MKM Thangamaligai..I would personally recommend this shop to your Gold & Diamond Purchase collections!
@@ -83,6 +85,7 @@ const Testimonials = () => {
         <span className="testimonial-dot"></span>
       </div>
     </section>
+    </ div>
   );
 };
 

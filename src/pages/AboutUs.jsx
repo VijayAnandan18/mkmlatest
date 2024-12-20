@@ -10,6 +10,8 @@ import GridLayout from "../components/GridLayout";
 import CustomBottomNavigation from "../components/BottomNavbar"; // Ensure this path is correct
 import AboutBack from "../components/AboutBack";
 import Owner from "../components/Owner";
+import Sidebar from "../components/Sidebar"; // Ensure Sidebar is imported
+
 const AboutUs = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -31,12 +33,11 @@ const AboutUs = () => {
     <div className="AboutUs-container">
       <Marquee />
       <Header />
-      <HeaderTwo />
-      <AboutBack/>
-        
-      <Abouthero />
-      <Owner/>
+      {isMobile ? <Sidebar /> : <HeaderTwo />}
+      <AboutBack />
  
+      <Abouthero />
+      <Owner />
       <Timeline />
       <Footer />
       {/* Display the bottom navigation only if it's a mobile screen */}

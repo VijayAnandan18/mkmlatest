@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import SilverCollection from "../components/SilverCollection";
 import SilverBack from "../components/SilverBack";
 import BottomNavbar from "../components/BottomNavbar"; // Ensure this path is correct
+import Sidebar from "../components/Sidebar"; // Ensure Sidebar is imported
 
 const SilverPage = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -29,7 +30,7 @@ const SilverPage = () => {
     <div className="home-container">
       <Marquee />
       <Header />
-      <HeaderTwo />
+      {isMobile ? <Sidebar /> : <HeaderTwo />}
 
       <SilverHero />
       <SilverBack />

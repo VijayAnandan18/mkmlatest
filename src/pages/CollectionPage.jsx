@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import CustomBottomNavigation from "../components/BottomNavbar"; // Make sure this path is correct
 import GoldRateTag from "../components/GoldRateTag";
 import GoldBack from "../components/GoldBack";
+import Sidebar from "../components/Sidebar"; // Ensure Sidebar is imported
 const CollectionPage = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -29,7 +30,7 @@ const CollectionPage = () => {
     <div className="home-container">
       <Marquee />
       <Header />
-      <HeaderTwo />
+      {isMobile ? <Sidebar /> : <HeaderTwo />}
 
       
       {isMobile ? (

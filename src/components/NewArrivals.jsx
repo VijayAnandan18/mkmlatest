@@ -42,27 +42,28 @@ const NewArrivals = () => {
     { src: "assets/newarrivals8.webp", name: "Mangalasutra" },
     { src: "assets/newarrivals9.webp", name: "Gold Emerald Necklace" },
     { src: "assets/newarrivals10.webp", name: "Gold Stud Chain" },
-
   ];
 
   return (
-    <div className="new-arrivals">
-      <div className="one">
-        <h1>Sparkling Trends</h1>
-        <p>Stay ahead with jewellery that sparkles with style.</p>
+    <div className="new-arrivals-wrapper">
+      <div className="new-arrivals">
+        <div className="one">
+          <h1>Sparkling Trends</h1>
+          <p>Stay ahead with jewellery that sparkles with style.</p>
+        </div>
+        <Slider {...settings}>
+          {images.map((item, index) => (
+            <div className="card" key={index}>
+              <img
+                src={item.src}
+                alt={`New Arrival ${index + 1}`}
+                className="card-image"
+              />
+              <p className="image-caption">{item.name}</p>
+            </div>
+          ))}
+        </Slider>
       </div>
-      <Slider {...settings}>
-        {images.map((item, index) => (
-          <div className="card" key={index}>
-            <img
-              src={item.src}
-              alt={`New Arrival ${index + 1}`}
-              className="card-image"
-            />
-            <p className="image-caption">{item.name}</p>
-          </div>
-        ))}
-      </Slider>
     </div>
   );
 };

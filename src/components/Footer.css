@@ -3,6 +3,7 @@
   background-color: white;
   color: black;
   padding: 40px 0;
+  font-family: "Playfairdisplay", sans-serif; /* Apply Poppins globally */
   border-top: 1px solid #444;
 }
 

@@ -88,7 +88,7 @@ const Header = () => {
     <header className="header">
       <div className="logo-container">
       
-        <img src="assets/spinner.png" alt="Logo" className="logo" style={{ width: "190px", height:"70px"}} />
+        <img src="assets/spinner.png" alt="Logo" className="logo" style={{ width: "140px", height:"50px"}} />
       </div>
 
     

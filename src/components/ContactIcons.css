@@ -60,10 +60,10 @@
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
   .whatsapp-button  {
-    bottom: 450px; /* Reduced bottom margin for mobile */
+    bottom: 400px; /* Reduced bottom margin for mobile */
   }
   .enquiryfloat-button{
-    bottom: 390px;
+    bottom: 340px;
   }
   .whatsapp-button,.enquiryfloat-button  {
     right: 30px;

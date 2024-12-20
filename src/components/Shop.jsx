@@ -8,9 +8,10 @@ const Shop = () => {
 
   const jewelryImages = {
     womens: [
-      { id: 2, url: "assets/men1.webp",  section: "necklaces" },
- { id: 1, url: "assets/women1.webp", section: "bracelets" },
- { id: 3, url: "assets/kid1.webp", section: "chains" },
+   
+ { id: 1, url: "assets/women.jpg", section: "necklaces" },
+ { id: 2, url: "assets/men.png",  section: "rings" },
+ { id: 3, url: "assets/kid.png", section: "chains" },
     
     ],
   };
@@ -31,9 +32,9 @@ const Shop = () => {
         <p>Find Jewellery for Women, Men, and Kids</p>
       </div>
       <nav className="shop-nav">
-        <button onClick={() => handleCategorySelect("womens")}>Women's Jewellery</button>
-        <button onClick={() => handleCategorySelect("mens")}>Men's Jewellery</button>
-        <button onClick={() => handleCategorySelect("kids")}>Kids' Jewellery</button>
+        <button>Women's Jewellery</button>
+        <button >Men's Jewellery</button>
+        <button >Kids' Jewellery</button>
       </nav>
       {/* Grid of Images */}
       <div className="shop-grid">

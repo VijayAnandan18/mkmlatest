@@ -20,6 +20,23 @@
   margin-bottom: 20px; /* Spacing between sections */
 }
 
+.about-hero-image {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%; /* Ensure the image container doesn't overflow */
+}
+
+.about-hero-img {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block; /* Prevent image from overflowing its container */
+  margin: 0 auto;
+}
+
 /* Heading styles */
 .about-hero-heading {
   font-size: 1.5em;
@@ -31,11 +48,42 @@
   display: inline-block; /* Restrict the border to the text width */
 }
 
-
 /* Paragraph styles */
 .about-section p {
   text-align: justify;
   font-size: 1em;
   line-height: 1.5;
   color: black;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .about-hero-container {
+    padding: 10px;
+  }
+
+  .about-hero-img {
+    max-height: 250px;  /* Reduce the image height for mobile */
+    object-fit: cover;
+    border-radius: 5px;  /* Optional: adjust border radius for mobile */
+    width: 100%; /* Ensure image is fully responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .about-hero-heading {
+    font-size: 1.5rem;  /* Make the heading font smaller on mobile */
+    text-align: center;
+  }
+
+  .about-section {
+    padding: 0 10px;
+  }
+
+  .about-hero-content {
+    padding: 10px;
+  }
+
+  .about-section p {
+    font-size: 0.9rem;  /* Adjust font size for mobile */
+  }
 }

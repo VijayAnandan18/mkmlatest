@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Marquee from "../components/Marquee";
 import Header from "../components/Header";
-import DigiHero from "../components/DigiHero";
+
 import HeaderTwo from "../components/HeaderTwo";
 import FlexiGoldContent from "../components/FlexiGoldContent";
+
 import CustomBottomNavigation from "../components/BottomNavbar";
 import Footer from "../components/Footer";
-import DigiGoldBack from "../components/DigiGoldBack";
+import FlexiGoldBack from "../components/FlexiGoldBack";
+import Sidebar from "../components/Sidebar"; // Ensure Sidebar is imported
+import FlexiImage from "../components/FlexiImage";
 const   FlexiGold = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -26,12 +29,12 @@ const   FlexiGold = () => {
     <div className="home-container">
       <Marquee />
       <Header />
-      <HeaderTwo />
-  <DigiHero/>
-    
+      {isMobile ? <Sidebar /> : <HeaderTwo />}
+
+    <FlexiImage/>
 
    
-      <DigiGoldBack/>
+      <FlexiGoldBack/>
  <FlexiGoldContent/>
       <Footer />
 

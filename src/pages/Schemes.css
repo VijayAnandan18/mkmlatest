@@ -1,0 +1,116 @@
+/* Main container */
+.schemes-container {
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+  }
+  
+  /* Content container */
+  .schemes-content {
+    width: 100%;
+    max-width: 1300px;
+  }
+  
+  /* Section styles */
+  .schemes-section {
+    margin-bottom: 20px; /* Spacing between sections */
+  }
+  
+  /* Heading styles */
+  .schemes-heading {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #544114;
+    border-bottom: 2px solid #c67e00;
+    margin-bottom: 10px;
+    text-align: left;
+    display: inline-block;
+  }
+  
+  /* Subheading styles */
+  .schemes-subheading {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #544114;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  /* Scheme item styles */
+  .schemes-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .scheme-item {
+    background-color: white;
+    border: 2px solid #c67e00;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .scheme-item-content {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .scheme-item-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .scheme-item-text {
+    flex: 1;
+  }
+  
+  .scheme-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #c67e00;
+  }
+  
+  .scheme-description {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify;
+  }
+  
+  .read-more-link {
+    font-size: 1em;
+    color: #c67e00;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .schemes-list {
+      grid-template-columns: 1fr; /* Single card per row on small screens */
+    }
+  
+    .scheme-item-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .scheme-item-image img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  

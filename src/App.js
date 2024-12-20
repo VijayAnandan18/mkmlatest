@@ -11,9 +11,11 @@ import DigiGold from "./pages/DigiGold";
 import Spinner from "./pages/Spinner"; // Import the Spinner component
 import AOS from "aos";
 import "aos/dist/aos.css";
+import SchemesPage from "./pages/SchemesPage";
 import FuturePlus from "./pages/FuturePlus";
 import FutureGold from "./pages/FutureGold";
 import FlexiGold from "./pages/FlexiGold";
+import ScrollToTop from "./pages/ScrollToTop";
 import DailyCollection from "./pages/DailyCollection";
 function App() {
   const [loading, setLoading] = useState(true);
@@ -33,8 +35,10 @@ function App() {
   }, []);
   return (
     <Router>
+        <ScrollToTop /> 
       {loading ? (
-        <Spinner /> // Show spinner while loading
+        <Spinner /> 
+      // Show spinner while loading
       ) : (
         <Routes>
           <Route path="/" element={<Home />} />
@@ -44,6 +48,7 @@ function App() {
           <Route path="/gold-jewellery" element={<CollectionPage />} />
           <Route path="/diamond-jewellery" element={<DiamondPage />} />
           <Route path="/silver-collection" element={<SilverPage />} />
+          <Route path="/schemes" element={<SchemesPage/>} />
           <Route path="/digigold" element={<DigiGold />} />
           <Route path="/futureplus" element={<FuturePlus/>} />
           <Route path="/futuregold" element={<FutureGold/>} />

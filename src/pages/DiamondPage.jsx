@@ -7,6 +7,7 @@ import DiamondHero from "../components/DiamondHero";
 import Footer from "../components/Footer";
 import DiamondCollection from "../components/DiamondCollection";
 import DiamondBack from "../components/DiamondBack";
+import Sidebar from "../components/Sidebar"; // Ensure Sidebar is imported
 const DiamondPage = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -28,7 +29,7 @@ const DiamondPage = () => {
     <div className="home-container">
       <Marquee />
       <Header />
-      <HeaderTwo />
+      {isMobile ? <Sidebar /> : <HeaderTwo />}
       
       <DiamondHero />
       <DiamondBack/>

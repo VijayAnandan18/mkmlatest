@@ -49,13 +49,13 @@ export default function CustomBottomNavigation() {
         value="digi-gold"
         icon={<GiReceiveMoney style={{ color: '#c67e00', fontSize: 30 }} />} // Use style for consistent styling
         showLabel={false} // Hide the label
-        onClick={() => handleNavigation('/pocketgold')} // Navigate to digi gold
+        onClick={() => handleNavigation('/schemes')} // Navigate to digi gold
       />
       <BottomNavigationAction
         value="contact"
         icon={<TbMessageUser style={{ color: '#c67e00', fontSize: 30 }} />}
         showLabel={false} // Hide the label
-        onClick={() => handleNavigation('/contact')} // Navigate to contact page
+        onClick={() => handleNavigation('/enquiry')} // Navigate to contact page
       />
     </BottomNavigation>
   );

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Marquee from "../components/Marquee";
 import Header from "../components/Header";
-import DigiHero from "../components/DigiHero";
+import SchemeHero from "../components/SchemeHero";
 import HeaderTwo from "../components/HeaderTwo";
-import DigiGoldContent from "../components/DigiGoldContent";
+import Schemes from "./Schemes";
 import CustomBottomNavigation from "../components/BottomNavbar";
 import Footer from "../components/Footer";
-import DigiGoldBack from "../components/DigiGoldBack";
+import SchemesBack from "../components/SchemesBack";
 import Sidebar from "../components/Sidebar"; // Ensure Sidebar is imported
-const  DigiGold = () => {
+const  SchemesPage = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
@@ -28,12 +28,12 @@ const  DigiGold = () => {
       <Marquee />
       <Header />
       {isMobile ? <Sidebar /> : <HeaderTwo />}
-  <DigiHero/>
+  <SchemeHero/>
     
 
    
-      <DigiGoldBack/>
-   <DigiGoldContent/>
+      <SchemesBack/>
+   <Schemes/>
       <Footer />
 
       {isMobile && <CustomBottomNavigation />}
@@ -43,4 +43,4 @@ const  DigiGold = () => {
   );
 };
 
-export default DigiGold;
+export default SchemesPage;

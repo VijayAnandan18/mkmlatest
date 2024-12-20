@@ -23,8 +23,12 @@ const CustomDropdown = () => {
     { value: "/silver-collection#bangles", label: "Silver bangles" },
     { value: "/contact", label: "Contact us" },
     { value: "/about", label: "About us" },
-    { value: "/Pocketgold", label: "Schemes (PocketGold)" },
-    
+    { value: "/schemes", label: "Schemes" },
+    { value: "/dailycollection", label: "MKM Daily collection" },
+    { value: "/flexigold", label: "Flexi Gold" },
+    { value: "/futuregold", label: "Future Gold" },
+    { value: "/futureplus", label: "Future Plus" },
+    { value: "/digigold", label: "DigiGold" },
   ];
 
   const toggleDropdown = () => {

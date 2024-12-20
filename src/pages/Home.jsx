@@ -19,8 +19,8 @@ import CustomBottomNavigation from "../components/BottomNavbar";
 import GoldRateTag from "../components/GoldRateTag";
 import Scheme from "../components/Scheme";
 import ContactIcons from "../components/ContactIcons";
-
-
+import Sidebar from "../components/Sidebar";
+import CustomDropdown from "../components/CustomDropdown";
 
 const Home = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -41,35 +41,38 @@ const Home = () => {
     <div className="home-container">
       <Marquee />
       <Header />
-      <HeaderTwo />
-      
       {isMobile ? (
         <>
+          <Sidebar />
+          <div
+            style={{
+             
+              borderBottom: "1px solid #c67e00",
+             
+            }}
+          >
+            <CustomDropdown />
+          </div>
           <FeaturesCircular />
           <GoldRateTag />
         </>
-      ) : null}
+      ) : (
+        <HeaderTwo />
+      )}
 
       <HeroCarousel />
       <Features />
-
       <GridLayout />
-
-      {/* Display FeaturesCircular only on desktop */}
       {!isMobile && <FeaturesCircular />}
-
       <Shop />
       <NewArrivals />
       <GoldJewellery />
-      {/*<Reels />*/}
       <Diamond />
       <SilverCards />
-      <Scheme/>
-      {/*<Gifts/>*/}
-      <Testimonials/>
-      <ContactIcons/>
+      <Scheme />
+      <Testimonials />
+      <ContactIcons />
       <Footer />
-
       {isMobile && <CustomBottomNavigation />}
     </div>
   );
