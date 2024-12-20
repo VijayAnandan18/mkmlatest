@@ -156,7 +156,7 @@ const Sidebar = () => {
               )}
             </li>
             <li onClick={() => handleNavigation("/about")}>About Us</li>
-            <li onClick={() => handleNavigation("/contact")}>Contact Us</li>
+            <li onClick={() => handleNavigation("/enquiry")}>Contact Us</li>
           </ul>
         </nav>
       </div>

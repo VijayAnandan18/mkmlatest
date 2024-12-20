@@ -43,8 +43,8 @@
   /* Scheme item styles */
   .schemes-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two items per row */
-    gap: 15px;
+    grid-template-columns: repeat(4, 1fr); /* Four items per row */
+    gap: 20px; /* Increase gap for better spacing */
     width: 100%;
     margin-top: 20px;
   }
@@ -58,12 +58,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 250px; /* Set a max-width for the cards */
+    margin: 0 auto; /* Center the cards */
   }
   
   .scheme-item-content {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
     align-items: center;
+    gap: 15px;
   }
   
   .scheme-item-image img {
@@ -74,7 +77,7 @@
   }
   
   .scheme-item-text {
-    flex: 1;
+    text-align: center;
   }
   
   .scheme-title {
@@ -83,13 +86,7 @@
     color: #c67e00;
   }
   
-  .scheme-description {
-    font-size: 1em;
-    line-height: 1.5;
-    color: #333;
-    text-align: justify;
-  }
-  
+  /* Link style */
   .read-more-link {
     font-size: 1em;
     color: #c67e00;
@@ -98,14 +95,19 @@
   }
   
   /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .schemes-list {
+      grid-template-columns: repeat(2, 1fr); /* Two cards per row for medium screens */
+    }
+  }
+  
   @media (max-width: 768px) {
     .schemes-list {
       grid-template-columns: 1fr; /* Single card per row on small screens */
     }
   
     .scheme-item-content {
-      flex-direction: column;
-      align-items: flex-start;
+      align-items: center; /* Align items at the center */
     }
   
     .scheme-item-image img {

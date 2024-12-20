@@ -1,16 +1,17 @@
-
+/* Global styles for contact container */
 .contact-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  font-family: 'Playfairdisplay','sans-serif';
+  font-family: 'Playfairdisplay', 'sans-serif';
   padding: 20px;
   box-sizing: border-box;
   overflow: hidden;
-  position: relative; /* Set position relative to position the overlay */
+  position: relative;
 }
 
+/* Overlay for the background */
 .contact-container::before {
   content: '';
   position: absolute;
@@ -19,31 +20,44 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Transparent black overlay */
-  z-index: 1; /* Ensure it is above the background but below the content */
+  z-index: 1;
 }
 
+/* Ensures content appears above the overlay */
 .contact-container > * {
-  z-index: 2; /* Ensure content is above the overlay */
+  z-index: 2;
 }
 
-/* Ensure the background image is properly set */
+/* Background image settings */
 .contact-container {
-
   background-size: cover;
   background-position: center;
 }
 
-/* Form wrapper */
+/* Form wrapper with zoom-out animation */
 .contact-form-wrapper {
   width: 100%;
-  max-width: 800px; /* Increased max-width for 2-column layout */
-  background-color: rgba(238, 198, 100, 0.4); /* Semi-transparent background */
-  backdrop-filter: blur(0.5px); /* Apply blur to the background */
+  max-width: 800px;
+  background-color: rgba(238, 198, 100, 0.4);
+  backdrop-filter: blur(0.5px);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
   box-sizing: border-box;
+  animation: zoomOut 0.8s ease-out; /* Apply zoom-out animation */
+}
+
+/* Zoom-out animation keyframes */
+@keyframes zoomOut {
+  0% {
+    transform: scale(1.2); /* Start with a slightly bigger size */
+    opacity: 0; /* Start with opacity 0 */
+  }
+  100% {
+    transform: scale(1); /* End at the normal size */
+    opacity: 1; /* Fully visible */
+  }
 }
 
 /* Form heading */
@@ -53,22 +67,21 @@
   font-family: 'Mier demi', sans-serif;
 }
 
-/* Form row for 2-column layout */
+/* Form row layout */
 .form-row {
   display: flex;
   justify-content: space-between;
-  gap: 20px; /* Gap between columns */
+  gap: 20px;
   margin-bottom: 15px;
 }
 
 .form-group {
-  flex: 1; /* Equal width for columns */
-  min-width: 0; /* Allow shrinking in small screens */
+  flex: 1;
+  min-width: 0;
 }
 
 label {
   display: block;
- 
   margin-bottom: 5px;
   font-weight: bold;
 }
@@ -97,7 +110,7 @@ textarea {
   resize: none;
 }
 
-/* Form actions */
+/* Form action buttons */
 .form-actions {
   display: flex;
   justify-content: space-between;
@@ -131,14 +144,14 @@ textarea {
   background-color: #500800;
 }
 
-/* Responsive design */
+/* Mobile responsive design */
 @media (max-width: 768px) {
   .contact-form-wrapper {
     padding: 15px;
   }
 
   .form-row {
-    flex-direction: column; /* Stack columns on mobile */
+    flex-direction: column;
   }
 
   .form-actions {

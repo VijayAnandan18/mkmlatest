@@ -23,9 +23,7 @@ const Schemes = () => {
                 </div>
                 <div className="scheme-item-text">
                   <h4 className="scheme-title">MKM Flexi Gold Scheme</h4>
-                  <p className="scheme-description">
-                    A flexible and structured investment option where you contribute a fixed amount monthly for 11 months. At the end of the period, you can redeem your savings as a beautiful gold jewel, making it a cost-effective way to build your gold reserves while benefiting from monthly gold price fluctuations.
-                  </p>
+                
                   <Link to="/flexigold" className="read-more-link">Read More</Link>
                 </div>
               </div>
@@ -38,9 +36,7 @@ const Schemes = () => {
                 </div>
                 <div className="scheme-item-text">
                   <h4 className="scheme-title">MKM Future Gold Scheme</h4>
-                  <p className="scheme-description">
-                    Designed for individuals looking to invest in gold at a fixed monthly rate of ₹10,000, this scheme accumulates gold at the current market price over 11 months. At the end of the term, the accumulated gold is redeemed as a gold jewel, offering a structured and affordable way to invest in gold.
-                  </p>
+               
                   <Link to="/futuregold" className="read-more-link">Read More</Link>
                 </div>
               </div>
@@ -53,9 +49,7 @@ const Schemes = () => {
                 </div>
                 <div className="scheme-item-text">
                   <h4 className="scheme-title">MKM Future Plus Scheme</h4>
-                  <p className="scheme-description">
-                    A unique savings plan where you invest a fixed amount monthly for 11 months. Upon completing the cycle, you receive your total investment along with an additional increment, providing an excellent opportunity to save systematically and purchase jewelry at the end of the term.
-                  </p>
+            
                   <Link to="/futureplus" className="read-more-link">Read More</Link>
                 </div>
               </div>
@@ -68,9 +62,7 @@ const Schemes = () => {
                 </div>
                 <div className="scheme-item-text">
                   <h4 className="scheme-title">MKM Daily Collection Scheme</h4>
-                  <p className="scheme-description">
-                    A daily investment option where you can save money consistently and accumulate it as gold. This plan is ideal for those who prefer small, frequent contributions to build their gold reserves gradually.
-                  </p>
+                
                   <Link to="/dailycollection" className="read-more-link">Read More</Link>
                 </div>
               </div>
