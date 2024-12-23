@@ -5,7 +5,7 @@ const DigiHero = () => {
   return (
     <div className="digihero-container">
       <img
-        src="assets/digi.png"
+        src="assets/golddigi.png"
         alt="Digi Hero"
         className="digihero-image"
       />

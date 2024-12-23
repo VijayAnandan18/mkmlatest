@@ -15,7 +15,7 @@ const HeroCarousel = () => {
     { type: 'image', src: "assets/hero10.webp" },
     { type: 'image', src: "assets/hero11.webp" },
     { type: 'image', src: "assets/hero12.webp" },
-    
+    { type: 'image', src: "assets/hero13.png" },
   ];
 
   const mobileMedia = [

@@ -6,13 +6,16 @@ const Schemes = () => {
   return (
     <div className="schemes-container">
       <div className="schemes-content">
+        
         <section className="schemes-section">
           <h2 className="schemes-heading">Saving Schemes: Your Path to Systematic Gold Investment</h2>
           <p className="schemes-description">
             The MKM Saving Schemes offer a range of flexible and structured plans designed to help individuals invest in gold systematically and affordably. With these schemes, you can contribute a fixed amount periodically and accumulate gold over time, taking advantage of price fluctuations in the market. These plans not only make saving for gold easy but also allow you to redeem your savings as exquisite gold jewelry after completing the investment cycle.
           </p>
         </section>
-
+        <div className="shop-explore-more">
+        <a href="/digigold"><button>Explore DigiGold...</button></a>
+      </div>
         <section className="schemes-section">
           <h3 className="schemes-subheading">Available Saving Schemes:</h3>
           <div className="schemes-list">
@@ -76,6 +79,16 @@ const Schemes = () => {
             All these schemes can be managed effortlessly using the MKM app, making it easier for you to track your investments, manage contributions, and stay updated on gold prices. Invest smartly and securely with the MKM Saving Schemes and turn your dreams of owning gold into a reality!
           </p>
         </section>
+            {/* Contact Section */}
+            <div className="flexi-gold-section flexi-gold-contact">
+          <h2 className="flexi-gold-heading">For Any Scheme Related Query</h2>
+          <p className="flexi-gold-text">
+            <strong>Contact Us @:</strong> <br />
+            <strong>Mail-Id:</strong> <a href="mailto:mkmthangamaligai@gmail.com">mkmthangamaligai@gmail.com</a> <br />
+            <strong>Toll-Free No.:</strong> +0462 4055001
+          </p>
+        </div>
+    
       </div>
     </div>
   );

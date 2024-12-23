@@ -3,32 +3,36 @@ import './DigiGoldContent.css'; // Import the CSS file
 
 const DigiGoldContent = () => {
   return (
-    <div className="digi-gold-container">
+    <div className="digi-gold-container" style={{ backgroundColor: "#daa5208f" }}>
       <div className="content-section one">
-        <h1>MKM Gold Schemes Overview</h1>
-        <p>Explore our exclusive gold schemes designed to help you grow your wealth securely.</p>
-      </div>
-      <div className="image-section scheme-image">
-        <img src="/assets/scheme.webp" alt="Gold Scheme" className="scheme-img" />
-      </div>
-      
-      <div className="content-section one">
-        <h1>Download and Install the MKM App </h1>
-        <p>
-          Unlock the power of gold savings with the MKM Thangamaligai Digigold! Simply download the app, register with your KYC details, choose your preferred gold scheme, and start building your wealth today! It's that easy.
+        <h1>Download and Install the MKM App</h1>
+        <p style={{ color: "black",  }}>
+          Unlock the power of gold savings with the MKM Thangamaligai Digigold! Simply download the app, register with your KYC details,below we have also provided a video tutorial on downloading the Digi Gold app and applying for schemes.
         </p>
       </div>
+
+      {/* App Store Button */}
       <a
-              href="https://play.google.com/store/apps/details?id=com.ri.zinger.mkmthangamaligai"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="app-store-buttons">
-                <img src="assets/googleplay.webp" alt="Google Play" className="store-icon" />
-              </div>
-            </a>
+        href="https://play.google.com/store/apps/details?id=com.ri.zinger.mkmthangamaligai"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div className="app-store-buttons">
+          <img src="assets/googleplay.webp" alt="Google Play" className="store-icon" />
+        </div>
+      </a>
+
+      {/* Image Section */}
       <div className="image-section schemes2-image">
-        <img src="/assets/schemes2.png" alt="Gold Schemes 2" className="schemes2-img" />
+        <img src="/assets/playy.png" alt="Gold Schemes 2" className="schemes2-img" />
+      </div>
+
+      {/* Video Section */}
+      <div className="video-section">
+        <video className="scheme-video"  controls autoPlay muted loop>
+          <source src="/assets/scheme.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   );

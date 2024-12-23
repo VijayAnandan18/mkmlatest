@@ -1,0 +1,93 @@
+/* Main container */
+.goldcontent-section {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Card for Why Image */
+  .why-image-card {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    /* Box shadow for the card */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    border-radius: 10px; /* Add rounded corners to the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .why-image-card-img {
+    width: 100%;
+    max-width: 2480px; /* Set max-width according to image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+    overflow: hidden; /* Ensure image doesn't overflow card */
+  }
+  
+  /* Hover effect for the card */
+  .why-image-card:hover {
+    transform: translateY(-10px); /* Slight upward movement on hover */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* Stronger shadow effect on hover */
+  }
+  
+  /* Heading section */
+  .festive-gifting-heading {
+    margin-bottom: 20px;
+  }
+  
+  /* Main heading styling */
+  .festive-main-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Description styling */
+  .festive-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Image Section */
+  .festive-gifting-image-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Image styling */
+  .festive-gifting-image {
+    width: 100%;
+    max-width: 2480px; /* Set max-width according to image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .goldcontent-section {
+      max-width: 350px;
+      padding: 10px;
+    }
+  
+    .festive-main-heading {
+      font-size: 1.8rem;
+    }
+  
+    .festive-description {
+      font-size: 1rem;
+    }
+  
+    .festive-gifting-image {
+      width: 90%; /* Adjust image size for smaller screens */
+    }
+  
+    .why-image-card-img {
+      width: 100%; /* Adjust image size to fit smaller screens */
+      max-width: 100%; /* Ensure it fits within the container */
+    }
+  }
+  

@@ -69,7 +69,7 @@ const FeaturesCircular = () => {
       imageUrl: "/assets/jewels/silver/idols/idol1.webp",
       href: "silver-collection#idols",
     },
-    { id: 8, name: "Purity Carat Meter", imageUrl: "/assets/Meter.png", href: "#" },
+    { id: 8, name: "Purity Carat Meter", imageUrl: "/assets/puritymeter.jpg", href: "#" },
     {
       id: 9,
       name: "Mobile App",

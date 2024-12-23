@@ -69,7 +69,15 @@ const DailyContent = () => {
             The MKM Flexi Gold Scheme offers a convenient and affordable way to invest in gold. By making monthly contributions, individuals can accumulate gold over 11 months and redeem it as a jewel, free from labor and wastage charges. This scheme offers the dual benefits of investing in gold and receiving a tangible asset after a short-term investment period, making it a popular choice for those looking to secure their financial future with precious metals.
           </p>
         </div>
-
+      {/* Contact Section */}
+      <div className="flexi-gold-section flexi-gold-contact">
+          <h2 className="flexi-gold-heading">For Any Scheme Related Query</h2>
+          <p className="flexi-gold-text">
+            <strong>Contact Us @:</strong> <br />
+            <strong>Mail-Id:</strong> <a href="mailto:mkmthangamaligai@gmail.com">mkmthangamaligai@gmail.com</a> <br />
+            <strong>Toll-Free No.:</strong> +0462 4055001
+          </p>
+        </div>
       </div>
     </div>
   );

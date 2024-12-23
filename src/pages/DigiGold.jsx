@@ -8,6 +8,8 @@ import CustomBottomNavigation from "../components/BottomNavbar";
 import Footer from "../components/Footer";
 import DigiGoldBack from "../components/DigiGoldBack";
 import Sidebar from "../components/Sidebar"; // Ensure Sidebar is imported
+import Scheme from "../components/Scheme"
+import DigiSecond from "../components/DigiSecond";
 const  DigiGold = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -33,7 +35,10 @@ const  DigiGold = () => {
 
    
       <DigiGoldBack/>
-   <DigiGoldContent/>
+      <DigiGoldContent/>
+<DigiSecond/>
+  
+  
       <Footer />
 
       {isMobile && <CustomBottomNavigation />}

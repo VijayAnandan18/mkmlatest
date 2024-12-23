@@ -1,71 +1,82 @@
 .digi-gold-container {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    padding: 20px;
+  width: 100%; /* Make the container take full width */
+  max-width: 90%; /* Limit the width for larger screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.content-section {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px; /* Space between sections */
+}
+
+.image-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Add some space between images */
+}
+
+.scheme-image img {
+  width: 100%;
+  max-width: 100%; /* Ensure images do not exceed container width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.schemes2-image img {
+  width: 100%;
+  max-width: 100%; /* Ensure images do not exceed container width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.video-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.scheme-video {
+  width: 100%;
+  max-width: 100%; /* Ensure the video scales properly */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .digi-gold-container {
+    padding: 10px; /* Reduce padding for smaller screens */
   }
-  
+
+  .scheme-image img, .schemes2-image img {
+    width: 100%; /* Ensure full width for mobile screens */
+  }
+
+  .scheme-video {
+    width: 100%; /* Ensure the video scales properly */
+  }
+
   .content-section {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px; /* Space between sections */
+    padding: 0 10px; /* Add some padding to the content */
   }
-  
+
   .heading {
-    font-size: 2rem; /* Adjust size as needed */
-    font-weight: bold;
-    margin-bottom: 10px; /* Space below heading */
+    font-size: 1.5rem; /* Adjust heading size for mobile */
   }
-  
+
   .subheading {
-    font-size: 1.2rem; /* Adjust size as needed */
-    color: #555; /* Light color for better readability */
-    margin-bottom: 20px; /* Space before next section */
+    font-size: 1rem; /* Adjust subheading size for mobile */
   }
-  
-  .image-section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px; /* Add some space between images */
+
+  .content-section p {
+    text-align: justify; /* Justify the paragraph text in mobile view */
   }
-  
-  .scheme-image img {
-    width: 100%;
-    max-width: 2200px;
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  .schemes2-image img {
-    width: 100%;
-    max-width: 5400px;
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .scheme-image img, .schemes2-image img {
-      width: 90%; /* Reduce the size of the images for smaller screens */
-      max-width: none; /* Remove max-width to allow image scaling */
-      height: auto; /* Maintain aspect ratio */
-    }
-  
-    .content-section {
-      padding: 0 10px; /* Add some padding to the content */
-    }
-  
-    .heading {
-      font-size: 1.5rem; /* Adjust heading size for mobile */
-    }
-  
-    .subheading {
-      font-size: 1rem; /* Adjust subheading size for mobile */
-    }
-  
-    .content-section p {
-      text-align: justify; /* Justify the paragraph text in mobile view */
-    }
-  }
-  
+}

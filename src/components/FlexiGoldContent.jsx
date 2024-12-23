@@ -1,4 +1,3 @@
-
 import React from 'react';
 import './FlexiGoldContent.css'; // Import the CSS for styling
 
@@ -6,7 +5,7 @@ const FlexiGoldContent = () => {
   return (
     <div className="flexi-gold-hero-container">
       <div className="flexi-gold-hero-content">
-        
+
         {/* Introduction Section */}
         <div className="flexi-gold-section">
           <h2 className="flexi-gold-heading">Introduction</h2>
@@ -70,9 +69,19 @@ const FlexiGoldContent = () => {
           </p>
         </div>
 
+        {/* Contact Section */}
+        <div className="flexi-gold-section flexi-gold-contact">
+          <h2 className="flexi-gold-heading">For Any Scheme Related Query</h2>
+          <p className="flexi-gold-text">
+            <strong>Contact Us @:</strong> <br />
+            <strong>Mail-Id:</strong> <a href="mailto:mkmthangamaligai@gmail.com">mkmthangamaligai@gmail.com</a> <br />
+            <strong>Toll-Free No.:</strong> +0462 4055001
+          </p>
+        </div>
+        
       </div>
     </div>
   );
-}
+};
 
 export default FlexiGoldContent;
