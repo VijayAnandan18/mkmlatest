@@ -3,11 +3,12 @@ import Marquee from "../components/Marquee";
 import Header from "../components/Header";
 import DailyHero from "../components/DailyHero";
 import HeaderTwo from "../components/HeaderTwo";
-import DigiGoldContent from "../components/DigiGoldContent";
+import DailyContent from "../components/DailyContent";
 import CustomBottomNavigation from "../components/BottomNavbar";
 import Footer from "../components/Footer";
 import DigiGoldBack from "../components/DigiGoldBack";
 import Sidebar from "../components/Sidebar"; // Ensure Sidebar is imported
+import DailyBack from "../components/DailyBack";
 const  DailyCollection = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -30,10 +31,10 @@ const  DailyCollection = () => {
       {isMobile ? <Sidebar /> : <HeaderTwo />}
   <DailyHero/>
     
-
+<DailyBack/>
    
-      <DigiGoldBack/>
-   <DigiGoldContent/>
+   
+   <DailyContent/>
       <Footer />
 
       {isMobile && <CustomBottomNavigation />}

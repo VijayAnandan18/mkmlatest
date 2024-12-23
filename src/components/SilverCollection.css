@@ -1,6 +1,9 @@
+.silvercollection{
+  overflow-x: hidden;
+}
 .one {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
   
   .main-heading {

@@ -76,7 +76,7 @@ const Gold = () => {
   ];
 
   return (
-    <div>
+    <div className="goldcontent"> 
       <div className="one">
         <h1 className="main-heading">Gold Jewellery</h1>
         <p>Embrace the golden glow this festive season</p>

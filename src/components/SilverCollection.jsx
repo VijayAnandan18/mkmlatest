@@ -52,7 +52,7 @@ const SilverCollection = () => {
   }, [location]);
 
   return (
-    <div>
+    <div className='silvercollection'>
       <div className="one">
         <h1 className="main-heading">Silver Collections</h1>
         <p>Shine with the brilliance of our exquisite silver designs.</p>

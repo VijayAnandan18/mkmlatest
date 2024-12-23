@@ -11,7 +11,7 @@
 /* === BASE HEADING === */ 
 .one {
   text-align: center;
-  margin-bottom: 20px; /* Adds space between the heading and cards */
+  margin-bottom: 10px; /* Adds space between the heading and cards */
 }
 
 .one h1 {
@@ -56,7 +56,7 @@
   display: block;
   content: "";
   position: relative;
-  margin-top: 25px;
+  margin-top: 15px;
   left: 50%;
   margin-left: -50px;
   background-color: #700B00;
@@ -67,7 +67,7 @@
   font-size: 16px;
   font-weight: 400;
   color: #444;
-  margin-top: 10px;
+  margin-top: 2px;
   font-family: 'Playfair Display', serif; /* Font applied */
 }
 

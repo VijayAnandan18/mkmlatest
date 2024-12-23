@@ -31,13 +31,15 @@
     display: inline-block; /* Restrict the border to the text width */
   }
   
-  /* Paragraph styles */
-  .future-gold-text {
-    text-align: justify;
-    font-size: 1em;
-    line-height: 1.5;
-    color: black;
-  }
+/* Paragraph styles */
+.future-gold-text {
+  text-align: justify; /* Ensures text is justified */
+  font-size: 1em;
+  line-height: 1.5;
+  color: black;
+  margin: 0; /* Optional: Remove default margins for uniformity */
+}
+
   
   /* List styles */
   .future-gold-list {

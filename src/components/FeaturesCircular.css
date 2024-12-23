@@ -3,8 +3,8 @@
   flex-wrap: nowrap;
   justify-content: center;
   margin: 10px auto;
-  gap: 20px;
-  padding: 20px;
+  gap: 30px;
+  padding: 5px;
   overflow-x: auto; /* Allow horizontal scrolling */
   -webkit-overflow-scrolling: touch;
   white-space: nowrap;
@@ -25,13 +25,14 @@
 .features-circular-container::-webkit-scrollbar-track {
   background-color: transparent; /* Track color */
 }
-
 .orb-wrapper {
-  text-align: center;
-  flex-shrink: 0;
-  width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
   text-decoration: none;
 }
+
 
 .orb {
   --size: 90px;
@@ -70,7 +71,6 @@
   object-fit: cover;
   border-radius: 50%;
 }
-
 .orb-label {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
@@ -78,8 +78,12 @@
   margin-top: 10px;
   color: #333;
   font-size: 0.9rem;
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Break long words */
+  overflow-wrap: break-word; /* Ensure proper wrapping for long words */
+  max-width: 100px; /* Limit label width */
+  margin: 0 auto; /* Center align text */
 }
-
 /* Keyframes */
 @keyframes change-color {
   0% { --color: #F0E68C; }
@@ -100,11 +104,25 @@
   .orb-wrapper:first-child {
     margin-left: 80px; /* Ensure both the circle and label align */
   }
+  .orb-label {
+    font-size: 0.8rem; /* Slightly smaller font size for mobile */
+    max-width: 80px; /* Reduce maximum width */
+  }
+.features-circular-container {
+  margin: 5px auto;
+  gap: 10px;
+  padding: 5px;
+
+  }
 }
 
 @media (max-width: 480px) {
   .orb {
     --size:  70px; /* Further reduce size on smaller screens */
+  }
+  .orb-label {
+    font-size: 0.75rem; /* Further reduce font size on smaller screens */
+    max-width: 70px; /* Adjust maximum width for small screens */
   }
 
   /* Add margin to the first orb and its label for smaller screens */

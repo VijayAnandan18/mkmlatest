@@ -1,20 +1,16 @@
 
-
-
- 
-
 .header {
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-family: "Playfairdisplay", sans-serif; /* Apply Poppins globally */
-  padding: 4px ;
+  padding: 2px ;
   border-bottom: 1px solid #c67e00; /* Adds a border at the top */
   background-color: #fff;
  /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);  Adjusted shadow */
   flex-wrap: wrap;
   gap: 15px; /* Reduced gap */
-  height: 60px; /* Set a fixed height */
+  height: 50px; /* Set a fixed height */
   position: relative;
 }
 
@@ -254,7 +250,7 @@
     flex-wrap: wrap;
     justify-content: center; /* Center content horizontally */
     gap: 10px;
-    
+ 
   }
  
   /* Dropdown styling */

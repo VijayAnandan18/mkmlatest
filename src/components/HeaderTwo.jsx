@@ -282,7 +282,7 @@ const HeaderTwo = () => {
     <li>
       <a href="/dailycollection" >
         <img
-          src="/assets/schemes/dailycollection.jpg"
+          src="/assets/schemes/dailycollection.png"
           alt="Digi Gold"
           className="dropdown-image"
         />
@@ -302,7 +302,7 @@ const HeaderTwo = () => {
     <li>
       <a href="/flexigold">
         <img
-          src="/assets/schemes/fg.jpeg"
+          src="/assets/schemes/fg.png"
           alt="Digi Gold"
           className="dropdown-image"
         />
@@ -312,7 +312,7 @@ const HeaderTwo = () => {
     <li>
       <a href="/futuregold">
         <img
-          src="/assets/schemes/fd.jpeg"
+          src="/assets/schemes/fd.png"
           alt="Digi Gold"
           className="dropdown-image"
         />

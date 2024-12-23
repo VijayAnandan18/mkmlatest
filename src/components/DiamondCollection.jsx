@@ -64,7 +64,7 @@ const DiamondCollection = () => {
   ];
 
   return (
-    <div>
+    <div className='diamondcontent'>
       <div className="one">
         <h1 className="main-heading">Diamond Jewellery</h1>
         <p>Sparkle through the festive nights with timeless diamonds</p>

@@ -32,7 +32,7 @@ const Schemes = () => {
             <div className="scheme-item">
               <div className="scheme-item-content">
                 <div className="scheme-item-image">
-                  <img src="/assets/schemes/fg.jpeg" alt="MKM Future Gold Scheme" />
+                  <img src="/assets/schemes/fg.png" alt="MKM Future Gold Scheme" />
                 </div>
                 <div className="scheme-item-text">
                   <h4 className="scheme-title">MKM Future Gold Scheme</h4>
@@ -45,7 +45,7 @@ const Schemes = () => {
             <div className="scheme-item">
               <div className="scheme-item-content">
                 <div className="scheme-item-image">
-                  <img src="/assets/schemes/fd.jpeg" alt="MKM Future Plus Scheme" />
+                  <img src="/assets/schemes/fd.png" alt="MKM Future Plus Scheme" />
                 </div>
                 <div className="scheme-item-text">
                   <h4 className="scheme-title">MKM Future Plus Scheme</h4>
@@ -58,7 +58,7 @@ const Schemes = () => {
             <div className="scheme-item">
               <div className="scheme-item-content">
                 <div className="scheme-item-image">
-                  <img src="/assets/schemes/dailycollection.jpg" alt="MKM Daily Collection Scheme" />
+                  <img src="/assets/schemes/dailycollection.png" alt="MKM Daily Collection Scheme" />
                 </div>
                 <div className="scheme-item-text">
                   <h4 className="scheme-title">MKM Daily Collection Scheme</h4>

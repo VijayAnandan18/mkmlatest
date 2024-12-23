@@ -1,3 +1,6 @@
+.goldcontent{
+  overflow-x: hidden;
+}
 .one {
   text-align: center;
   margin-bottom: 20px;
@@ -145,7 +148,7 @@
 
   .collection-card {
     width: 90%; /* Reduce the card width */
-    max-width: 300px; /* Set a max-width for more control */
+    max-width: 290px; /* Set a max-width for more control */
     border-radius: 15px;
   }
 

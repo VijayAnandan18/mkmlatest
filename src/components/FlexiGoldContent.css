@@ -1,67 +1,69 @@
 /* Main container */
 .flexi-gold-hero-container {
-    margin: 0 auto;
-    padding: 20px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-  }
-  
-  /* Content container */
-  .flexi-gold-hero-content {
-    width: 100%;
-    max-width: 1300px;
-  }
-  
-  /* Section styles */
-  .flexi-gold-section {
-    margin-bottom: 20px; /* Spacing between sections */
-  }
-  
-  /* Heading styles */
+  margin: 0 auto;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+/* Content container */
+.flexi-gold-hero-content {
+  width: 100%;
+  max-width: 1300px;
+}
+
+/* Section styles */
+.flexi-gold-section {
+  margin-bottom: 20px; /* Spacing between sections */
+}
+
+/* Heading styles */
+.flexi-gold-heading {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #544114;
+  border-bottom: 2px solid #c67e00;
+  margin-bottom: 10px;
+  text-align: left; /* Left-align the heading */
+  display: inline-block; /* Restrict the border to the text width */
+}
+
+/* Paragraph and list styles */
+.flexi-gold-text {
+  text-align: justify;
+  font-size: 1em;
+  line-height: 1.5;
+  color: black;
+  margin-bottom: 10px; /* Add margin for better spacing */
+}
+
+/* Ensure list items align well within text containers */
+.flexi-gold-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: justify; /* Ensure list items are justified */
+}
+
+.flexi-gold-item {
+  font-size: 1em;
+  color: black;
+  margin-bottom: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
   .flexi-gold-heading {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #544114;
-    border-bottom: 2px solid #c67e00;
-    margin-bottom: 10px;
-    text-align: left; /* Left-align the heading */
-    display: inline-block; /* Restrict the border to the text width */
+    font-size: 1.2em;
   }
-  
-  /* Paragraph and list styles */
-  .flexi-gold-text {
-    text-align: justify;
-    font-size: 1em;
-    line-height: 1.5;
-    color: black;
+
+  .flexi-gold-text, .flexi-gold-item {
+    font-size: 0.9em;
   }
-  
+
   .flexi-gold-list {
-    list-style-type: disc;
-    padding-left: 20px;
+    padding-left: 15px;
   }
-  
-  .flexi-gold-item {
-    font-size: 1em;
-    color: black;
-    margin-bottom: 10px;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .flexi-gold-heading {
-      font-size: 1.2em;
-    }
-  
-    .flexi-gold-text, .flexi-gold-item {
-      font-size: 0.9em;
-    }
-  
-    .flexi-gold-list {
-      padding-left: 15px;
-    }
-  }
-  
+}
