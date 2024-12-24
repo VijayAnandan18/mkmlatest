@@ -19,7 +19,7 @@ const SilverCards = () => {
       {/* Heading Section */}
       <div className="one">
         <h1>Silver Collections</h1>
-        <p>Shine with the brilliance of our exquisite silver designs.</p>
+        <p style={{fontFamily:"PlayfairDisplay"}}>Shine with the brilliance of our exquisite silver designs.</p>
       </div>
 
       {/* Cards Section */}

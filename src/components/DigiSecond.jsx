@@ -11,7 +11,7 @@ const DigiSecond = () => {
 
       <div className="one">
         <h1 className="festive-main-heading"> Giftings</h1>
-        <p className="festive-description">Celebrate the completion of your gold schemes with exclusive gifts!</p>
+        <p className="festive-description" style={{ fontFamily:"Playfairdisplay"}}>Celebrate the completion of your gold schemes with exclusive gifts!</p>
       </div>
 
       {/* Image Section */}

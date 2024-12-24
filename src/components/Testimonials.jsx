@@ -41,6 +41,7 @@ const Testimonials = () => {
     <div className='testimonials-justheading'>
       <div className="one">
         <h1 className="main-heading" style={{textTransform:"capitalize"}}>Testimonials & Reviews</h1>
+       
       </div>
       <section className="testimonials-section" style={{ backgroundImage: "url(/assets/testmonialbg.jpg)" }}>
         <div className="testimonials-rectangle"></div>

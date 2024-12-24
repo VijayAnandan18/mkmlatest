@@ -36,7 +36,7 @@ const GridLayout = () => {
       <div className="one">
         <h1>Our Sparkling Heritage</h1>
       </div>
-      <p className="about-description">
+      <p className="about-description" style={{fontFamily:"PlayfairDisplay"}}>
         Get in touch with us for a complete jewellery shopping experience!
       </p>
 

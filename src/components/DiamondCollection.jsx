@@ -64,10 +64,10 @@ const DiamondCollection = () => {
   ];
 
   return (
-    <div className='diamondcontent'>
+    <div className='diamondcontent' >
       <div className="one">
         <h1 className="main-heading">Diamond Jewellery</h1>
-        <p>Sparkle through the festive nights with timeless diamonds</p>
+        <p  style={{fontFamily:"PlayfairDisplay"}}>Sparkle through the festive nights with timeless diamonds</p>
       </div>
       {productGroups.map((group, index) => (
         <div

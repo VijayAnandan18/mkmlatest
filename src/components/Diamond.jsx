@@ -13,7 +13,7 @@ const Diamond = () => {
     <div className="diamond-page">
       <div className="one">
         <h1>Diamond Jewellery</h1>
-        <p>Sparkle through the festive nights with timeless diamonds</p>
+        <p style={{fontFamily:"PlayfairDisplay"}}>Sparkle through the festive nights with timeless diamonds</p>
       </div>
       <div className="diamond-container">
         <div

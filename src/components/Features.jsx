@@ -8,7 +8,7 @@ const Features = () => {
       <div className="one">
         <h1>Pure Elegance</h1>
       </div>
-      <p className="features-description">
+      <p className="features-description" style={{fontFamily:"PlayfairDisplay"}}>
         We assure you that you will get what you can trust. Always!
       </p>
 

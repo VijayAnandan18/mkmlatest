@@ -79,7 +79,7 @@ const Gold = () => {
     <div className="goldcontent"> 
       <div className="one">
         <h1 className="main-heading">Gold Jewellery</h1>
-        <p>Embrace the golden glow this festive season</p>
+        <p style={{fontFamily:"PlayfairDisplay"}}>Embrace the golden glow this festive season</p>
       </div>
       {productGroups.map((group) => (
         <div id={group.id} key={group.id}>

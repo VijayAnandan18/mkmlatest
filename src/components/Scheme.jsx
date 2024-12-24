@@ -6,6 +6,8 @@ const Scheme = () => {
     <div className="scheme-container">
       <div className="one">
         <h1 style={{textTransform:"capitalize"}}>MKM THANGAMALIGAI Schemes</h1>
+        <p style={{fontFamily:"PlayfairDisplay"}}>Explore our exclusive gold schemes and secure your future with MKM Thangamaligai.</p>
+
         <div className="shop-explore-more">
         <a href="/schemes"><button>Explore More...</button></a>
       </div>

@@ -29,7 +29,7 @@ const Shop = () => {
       {/* Heading Section */}
       <div className="one">
         <h1>Our Collections</h1>
-        <p>Find Jewellery for Women, Men, and Kids</p>
+        <p style={{fontFamily:"PlayfairDisplay"}}>Find Jewellery for Women, Men, and Kids</p>
       </div>
       <nav className="shop-nav">
         <button>Women's Jewellery</button>
