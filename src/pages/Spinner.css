@@ -7,7 +7,7 @@
 }
 
 .spinner {
-  width: 350px; /* Increase the size as needed */
+  width: 150px; /* Default size for larger screens */
   animation: fade 1s ease-in-out infinite; /* Continuous fade effect */
 }
 
@@ -21,5 +21,12 @@
   }
   100% {
     opacity: 1; /* Fully visible again */
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .spinner {
+    width: 80px; /* Reduced size for mobile screens */
   }
 }
