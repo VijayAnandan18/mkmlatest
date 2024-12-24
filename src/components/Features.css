@@ -8,10 +8,7 @@
   display: flex;
   justify-content: center;
 }
-.sub-heading{
-  font-size:16px;
 
-}
 .features-row {
   display: flex;
   flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
