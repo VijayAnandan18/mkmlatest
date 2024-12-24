@@ -128,7 +128,13 @@ overflow-x: hidden;
     margin: 5px 0;
     text-align: center; /* Center the text */
   }
-  
+  @media (max-width: 1024px) {
+    .collection-card {
+      max-width: 80%; /* Reduce the width */
+      overflow: hidden;
+ 
+    }
+  }
   /* Mobile responsive styles */
   @media (max-width: 768px) {
     .collection-container {

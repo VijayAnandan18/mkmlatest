@@ -49,3 +49,13 @@
   font-size: 1em;
   color: black;
 }
+@media (max-width: 1024px) {
+  .future-plus-section p {
+    font-size: 0.8em;
+  }
+  .future-plus-section ul li {
+    font-size: 0.8em;
+  }
+  
+
+}

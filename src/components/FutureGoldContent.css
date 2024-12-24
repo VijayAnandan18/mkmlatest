@@ -50,7 +50,16 @@
   .future-gold-list li {
     margin-bottom: 8px;
   }
+  @media (max-width: 1024px) {
+    .future-gold-text {
+      font-size: 0.8em;
+    }
+    .future-gold-text {
+      font-size: 0.8em;
+    }
+    
   
+  }
   /* Responsive design */
   @media (max-width: 768px) {
     .future-gold-heading {

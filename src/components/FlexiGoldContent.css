@@ -49,7 +49,14 @@
     color: black;
     margin-bottom: 10px;
   }
-  
+  @media (max-width: 1024px) {
+    .flexi-gold-text {
+      font-size: 0.8em;
+    }
+    .flexi-gold-item {
+      font-size: 0.8em;}
+
+  }
   /* Responsive design */
   @media (max-width: 768px) {
     .flexi-gold-heading {

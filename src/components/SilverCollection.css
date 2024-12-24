@@ -150,6 +150,13 @@
       font-size: 16px; /* Adjust font size */
     }
   }
+  @media (max-width: 1024px) {
+    .collection-card {
+      max-width: 80%; /* Reduce the width */
+      overflow: hidden;
+ 
+    }
+  }
   
   @media (max-width: 480px) {
     .collection-container {
