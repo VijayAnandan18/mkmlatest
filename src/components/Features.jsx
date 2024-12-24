@@ -8,7 +8,7 @@ const Features = () => {
       {/* Heading Section */}
       <div className="one">
         <h1 className="main-heading" style={{textTransform:"capitalize"}}>Pure Elegance</h1>
- <p className="sub-heading" style={{fontFamily:"PlayfairDisplay"}}> We assure you that you will get what you can trust. Always!</p>
+ <p className="sub-heading" style={{fontFamily:"PlayfairDisplay", fontSize:"10px"}}> We assure you that you will get what you can trust. Always!</p>
       </div>
 
       {/* Features Cards */}
