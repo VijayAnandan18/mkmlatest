@@ -16,6 +16,8 @@ const Footer = () => {
             <li><a href="/about">Our Policies</a></li>
           </ul>
         </div>
+        
+
         <div className="footer-section">
           <h3>Let us help you</h3>
           <ul className="footer-links">
@@ -43,7 +45,20 @@ const Footer = () => {
             <li><a href="/gold-jewellery#coins">Gold Coins</a></li>
           </ul>
         </div>
+        <div className="footer-section">
+  <h3>Contact Us</h3>
+  <ul className="footer-links">
+ <li>Mr. MKM SYED AHAMED KABEER</li> 
+    <li>
+      <a href="mailto:mkmthangamaligai@gmail.com">mkmthangamaligai@gmail.com</a>
+    </li>
+    <li>
+      <a href="tel:+04624055001">+0462 4055001</a>
+    </li>
+  </ul>
+</div>
       </div>
+      
       <div className="footer-about-row">
         <div className="footer-about" >
           <div className="footer-logo">

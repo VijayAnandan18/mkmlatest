@@ -1,55 +1,98 @@
-.uk-section {
-    background-color: #666;
+/* Mobile Features Section */
+.mobile-features-section {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.mobile-one {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mobile-main-heading {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.mobile-sub-heading {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Features Cards Section */
+.mobile-features-container {
+  display: flex;
+  overflow: hidden; /* Hide the scrollbar */
+  white-space: nowrap;
+  gap: 10px; /* Gap between cards */
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+}
+
+.mobile-features-card {
+  flex: 0 0 auto; /* Prevent shrinking */
+  width: 250px; /* Default width for larger devices */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f8f1b1;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-right: 10px; /* Adds additional space between cards */
+  overflow: hidden; /* Ensure content doesn't overflow the card */
+}
+
+.mobile-features-card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.mobile-features-card-image {
+  width: 100%;
+  max-width: 100px; /* Adjust image size */
+  margin: 0 auto 15px;
+}
+
+.mobile-features-card-title {
+  font-size: 0.9rem; /* Smaller font size */
+  font-weight: bold;
+  color: #313131;
+  margin-bottom: 10px;
+  white-space: normal; /* Allow wrapping */
+  word-wrap: break-word; /* Wrap long words */
+}
+
+.mobile-features-card-description {
+  font-size: 0.8rem; /* Smaller font size */
+  color: #2c2b2b;
+  white-space: normal; /* Allow wrapping */
+  word-wrap: break-word; /* Wrap long words */
+}
+
+/* Responsive Styles for Mobile View */
+@media (max-width: 768px) {
+  .mobile-features-card {
+    width: 180px; /* Reduce card width */
+    padding: 10px; /* Reduce padding */
   }
-  
-  .owl-carousel {
-    position: relative;
-    margin-top: 30px;
+
+  .mobile-features-card-image {
+    max-width: 80px; /* Smaller image size */
   }
-  
-  .owl-nav {
-    position: absolute;
-    top: -60px;
-    left: 10px;
+
+  .mobile-features-card-title {
+    font-size: 0.8rem; /* Smaller title font size */
   }
-  
-  .uk-card-primary {
-    border-radius: 8px;
+
+  .mobile-features-card-description {
+    font-size: 0.7rem; /* Smaller description font size */
   }
-  
-  h3 {
-    margin-top: 10px;
+
+  .mobile-main-heading {
+    font-size: 1.2rem; /* Adjust heading size */
   }
-  
-  .uk-card > :last-child {
-    margin-top: 0;
-    margin-bottom: 10px;
+
+  .mobile-sub-heading {
+    font-size: 0.9rem; /* Adjust sub-heading size */
   }
-  
-  p {
-    margin-top: 30px;
-    margin-bottom: 0;
-  }
-  
-  .owl-next {
-    background: #3286f0;
-  }
-  
-  .owl-theme .owl-nav [class*='owl-'] {
-    background: #383838;
-  }
-  
-  .owl-dots {
-    margin-top: 30px;
-  }
-  
-  .uk-card-title {
-    padding-bottom: 20px;
-  }
-  
-  @media (max-width: 640px) {
-    .owl-carousel {
-      padding: 0 10px; /* Add some padding on small screens */
-    }
-  }
-  
+}

@@ -21,6 +21,7 @@ import Scheme from "../components/Scheme";
 import ContactIcons from "../components/ContactIcons";
 import Sidebar from "../components/Sidebar";
 import CustomDropdown from "../components/CustomDropdown";
+import MobileFeatures from "../components/MobileFeatures";
 
 const Home = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -61,7 +62,7 @@ const Home = () => {
       )}
 
       <HeroCarousel />
-      <Features />
+      <MobileFeatures />
       <GridLayout />
       {!isMobile && <FeaturesCircular />}
       <Shop />
