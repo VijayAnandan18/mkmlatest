@@ -32,13 +32,10 @@ const GridLayout = () => {
 
   return (
     <div className="Gridlayout">
-      {/* Heading Section */}
       <div className="one">
-        <h1>Our Sparkling Heritage</h1>
+        <h1 className="main-heading"  style={{textTransform:"capitalize"}}>Our Sparkling Heritage</h1>
+      <p className="sub-heading" style={{fontFamily:"PlayfairDisplay"}}> Get in touch with us for a complete jewellery shopping experience! </p>
       </div>
-      <p className="about-description" style={{fontFamily:"PlayfairDisplay"}}>
-        Get in touch with us for a complete jewellery shopping experience!
-      </p>
 
       {/* Full-Width Image Section */}
       <div className={`about-image ${isImageVisible ? "visible" : ""}`} onClick={handleImageClick}>

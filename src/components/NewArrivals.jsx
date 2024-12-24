@@ -47,9 +47,10 @@ const NewArrivals = () => {
   return (
     <div className="new-arrivals-wrapper">
       <div className="new-arrivals">
-        <div className="one">
-          <h1>Sparkling Trends</h1>
-          <p style={{fontFamily:"PlayfairDisplay"}}>Stay ahead with jewellery that sparkles with style.</p>
+  
+      <div className="one">
+          <h1 className="main-heading"  style={{textTransform:"capitalize"}}>Sparkling Trends</h1>
+          <p className="sub-heading" style={{fontFamily:"PlayfairDisplay"}}>Stay ahead with jewellery that sparkles with style.</p>
         </div>
         <Slider {...settings}>
           {images.map((item, index) => (

@@ -54,8 +54,8 @@ const SilverCollection = () => {
   return (
     <div className='silvercollection'>
       <div className="one">
-        <h1 className="main-heading">Silver Collections</h1>
-        <p style={{fontFamily:"PlayfairDisplay"}}>Shine with the brilliance of our exquisite silver designs.</p>
+        <h1 className="main-heading"  style={{textTransform:"capitalize"}}>Silver Collections</h1>
+        <p className="sub-heading" style={{fontFamily:"PlayfairDisplay"}}>Shine with the brilliance of our exquisite silver designs.</p>
       </div>
       {productGroups.map((group, index) => (
         <div id={group.id} key={index}>

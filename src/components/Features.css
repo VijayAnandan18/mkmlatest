@@ -3,14 +3,6 @@
   margin: 20px auto;
 }
 
-.features-description {
-  font-family: "Mier demi", sans-serif;
-  font-weight: 400;
-  font-size: 17px;
-  color: #333;
-  margin-bottom: 30px;
-}
-
 .features-container {
   width: 100%;
   display: flex;
@@ -83,6 +75,11 @@
     width: 160px;
     height: 140px;
   }
+  .sub-heading{
+    font-size:12px;
+  
+  }
+  
 }
 
 @media (max-width: 480px) {
@@ -90,7 +87,11 @@
     width: 140px;
     height: 120px;
   }
-
+  .sub-heading{
+    font-size:12px;
+  
+  }
+  
   .features-card-image {
     margin-bottom: -10px;
     height: 40px;

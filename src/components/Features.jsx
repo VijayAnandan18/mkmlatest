@@ -1,16 +1,15 @@
 import React from "react";
 import "./Features.css"; // Ensure to import the updated CSS file
+import { capitalize } from "@mui/material";
 
 const Features = () => {
   return (
     <div className="features-section">
       {/* Heading Section */}
       <div className="one">
-        <h1>Pure Elegance</h1>
+        <h1 className="main-heading" style={{textTransform:"capitalize"}}>Pure Elegance</h1>
+ <p className="sub-heading" style={{fontFamily:"PlayfairDisplay"}}> We assure you that you will get what you can trust. Always!</p>
       </div>
-      <p className="features-description" style={{fontFamily:"PlayfairDisplay"}}>
-        We assure you that you will get what you can trust. Always!
-      </p>
 
       {/* Features Cards */}
       <div className="features-container">

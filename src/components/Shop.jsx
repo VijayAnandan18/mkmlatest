@@ -26,10 +26,9 @@ const Shop = () => {
 
   return (
     <div className="shop-container">
-      {/* Heading Section */}
-      <div className="one">
-        <h1>Our Collections</h1>
-        <p style={{fontFamily:"PlayfairDisplay"}}>Find Jewellery for Women, Men, and Kids</p>
+    <div className="one">
+        <h1 className="main-heading" style={{textTransform:"capitalize"}}>Our Collections</h1>
+        <p className="sub-heading" style={{fontFamily:"PlayfairDisplay"}}>Find Jewellery for Women, Men, and Kids</p>
       </div>
       <nav className="shop-nav">
         <button>Women's Jewellery</button>

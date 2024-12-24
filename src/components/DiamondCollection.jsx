@@ -65,9 +65,9 @@ const DiamondCollection = () => {
 
   return (
     <div className='diamondcontent' >
-      <div className="one">
-        <h1 className="main-heading">Diamond Jewellery</h1>
-        <p  style={{fontFamily:"PlayfairDisplay"}}>Sparkle through the festive nights with timeless diamonds</p>
+       <div className="one">
+        <h1 className="main-heading" style={{textTransform:"capitalize"}}>Diamond Jewellery</h1>
+        <p  className="sub-heading" style={{fontFamily:"PlayfairDisplay"}}>Sparkle through the festive nights with timeless diamonds</p>
       </div>
       {productGroups.map((group, index) => (
         <div

@@ -11,9 +11,9 @@ const Diamond = () => {
 
   return (
     <div className="diamond-page">
-      <div className="one">
-        <h1>Diamond Jewellery</h1>
-        <p style={{fontFamily:"PlayfairDisplay"}}>Sparkle through the festive nights with timeless diamonds</p>
+       <div className="one">
+        <h1 className="main-heading" style={{textTransform:"capitalize"}}>Diamond Jewellery</h1>
+        <p  className="sub-heading" style={{fontFamily:"PlayfairDisplay"}}>Sparkle through the festive nights with timeless diamonds</p>
       </div>
       <div className="diamond-container">
         <div

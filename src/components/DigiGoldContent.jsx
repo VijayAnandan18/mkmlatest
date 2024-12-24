@@ -5,8 +5,8 @@ const DigiGoldContent = () => {
   return (
     <div className="digi-gold-container" style={{ backgroundColor: "#daa5208f" }}>
       <div className="content-section one">
-        <h1>Download and Install the MKM  Thangamaligai App</h1>
-        <p style={{ color: "#333", textAlign:"justify" , fontFamily:"Playfairdisplay",  fontSize: "12px"}}>
+        <h1 className="main-heading" style={{textTransform:"capitalize"}}>Download and Install the MKM  Thangamaligai App</h1>
+        <p className="sub-heading" style={{fontFamily:"PlayfairDisplay"}}>
           Unlock the power of gold savings with the MKM Thangamaligai Digigold! Simply download the app, register with your KYC details,below we have also provided a video tutorial on downloading the Digi Gold app and applying for schemes.
         </p>
       </div>

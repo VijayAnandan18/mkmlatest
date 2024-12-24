@@ -18,10 +18,9 @@ const GoldJewellery = () => {
 
   return (
     <div className="goldjewellery-container">
-      {/* Heading Section */}
-      <div className="one">
-        <h1>Gold Jewellery</h1>
-        <p style={{fontFamily:"PlayfairDisplay"}}>Embrace the golden glow this festive season</p>
+  <div className="one">
+        <h1 className="main-heading" style={{textTransform:"capitalize"}}>Gold Jewellery</h1>
+        <p className="sub-heading"style={{fontFamily:"PlayfairDisplay"}}>Embrace the golden glow this festive season</p>
       </div>
 
       {/* Cards Section */}

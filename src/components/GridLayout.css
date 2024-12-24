@@ -4,29 +4,7 @@
   box-sizing: border-box;
 }
 
-/* Heading Styles */
-h1 {
-  position: relative;
-  margin: 0;
-  font-family: "Mier demi", sans-serif;
-  font-weight: 300;
-  font-size: 40px;
-  color: #080808;
-  transition: all 0.4s ease;
-}
 
-.one h1 {
-  text-align: center;
-  padding-bottom: 5px;
-}
-
-.about-description {
-  text-align: center;
-  font-size: 18px;
-  color: #555;
-  margin: 15px 0 30px;
-  font-family: "Arial", sans-serif;
-}
 
 /* Image Container */
 .about-image {

@@ -16,10 +16,9 @@ const SilverCards = () => {
 
   return (
     <div className="silverjewellery-container">
-      {/* Heading Section */}
-      <div className="one">
-        <h1>Silver Collections</h1>
-        <p style={{fontFamily:"PlayfairDisplay"}}>Shine with the brilliance of our exquisite silver designs.</p>
+    <div className="one">
+        <h1 className="main-heading" style={{textTransform:"capitalize"}}>Silver Collections</h1>
+        <p className="sub-heading" style={{fontFamily:"PlayfairDisplay"}}>Shine with the brilliance of our exquisite silver designs.</p>
       </div>
 
       {/* Cards Section */}
