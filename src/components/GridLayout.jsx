@@ -5,6 +5,7 @@ import "./GridLayout.css";
 const GridLayout = () => {
   const navigate = useNavigate();
   const [isImageVisible, setIsImageVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(true); // Track loading state of the image
 
   const handleImageClick = () => {
     // Scroll to the top of the page before navigating
@@ -23,8 +24,14 @@ const GridLayout = () => {
     }
   };
 
+  // Handle image load event
+  const handleImageLoad = () => {
+    setIsLoading(false); // Set loading to false once the image has loaded
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -33,15 +40,23 @@ const GridLayout = () => {
   return (
     <div className="Gridlayout">
       <div className="one">
-        <h1 className="main-heading"  style={{textTransform:"capitalize"}}>Our Sparkling Heritage</h1>
-      <p className="sub-heading" style={{fontFamily:"PlayfairDisplay"}}> Get in touch with us for a complete jewellery shopping experience! </p>
+        <h1 className="main-heading" style={{ textTransform: "capitalize" }}>
+          Our Sparkling Heritage
+        </h1>
+        <p className="sub-heading" style={{ fontFamily: "PlayfairDisplay" }}>
+          Get in touch with us for a complete jewellery shopping experience!
+        </p>
       </div>
 
       {/* Full-Width Image Section */}
-      <div className={`about-image ${isImageVisible ? "visible" : ""}`} onClick={handleImageClick}>
+      <div
+        className={`about-image ${isImageVisible ? "visible" : ""} ${isLoading ? "loading" : ""}`}
+        onClick={handleImageClick}
+      >
         <img
           src="assets/about.png"
           alt="About Us"
+          onLoad={handleImageLoad} // Call handleImageLoad when the image is loaded
         />
       </div>
     </div>
@@ -49,3 +64,4 @@ const GridLayout = () => {
 };
 
 export default GridLayout;
+

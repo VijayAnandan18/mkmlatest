@@ -17,7 +17,7 @@ const Schemes = () => {
         <a href="/digigold"><button>Explore DigiGold...</button></a>
       </div>
         <section className="schemes-section">
-          <h3 className="schemes-subheading">Available Saving Schemes:</h3>
+          <h3 className="schemes-subheading" style={{marginLeft:"2px"}}>Available Saving Schemes:</h3>
           <div className="schemes-list">
             <div className="scheme-item">
               <div className="scheme-item-content">
@@ -74,7 +74,7 @@ const Schemes = () => {
         </section>
 
         <section className="schemes-section">
-          <h3 className="schemes-heading">Convenience Through Technology</h3>
+          <h3 className="schemes-heading"  style={{marginLeft:"2px"}}>Conclusion</h3>
           <p className="schemes-description">
             All these schemes can be managed effortlessly using the MKM app, making it easier for you to track your investments, manage contributions, and stay updated on gold prices. Invest smartly and securely with the MKM Saving Schemes and turn your dreams of owning gold into a reality!
           </p>
