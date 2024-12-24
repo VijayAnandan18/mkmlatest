@@ -71,13 +71,13 @@ const FutureGoldContent = () => {
             The MKM Future Gold Scheme offers a structured, flexible way to invest in gold. By contributing ₹10,000 each month for 11 months, participants can accumulate gold at current market rates, with the option to redeem it as a gold jewel at the end of the period. This scheme allows for gold investments while benefiting from market price fluctuations, and offers a jewel without labor or wastage charges. It is a great option for those looking to invest in gold systematically over time.
           </p>
         </div>
-              {/* Contact Section */}
-              <div className="flexi-gold-section flexi-gold-contact">
+             {/* Contact Section */}
+        <div className="flexi-gold-section flexi-gold-contact">
           <h2 className="flexi-gold-heading">For Any Scheme Related Query</h2>
           <p className="flexi-gold-text">
-            <strong>Contact Us @:</strong> <br />
+            <strong>Contact Us :</strong> <br />
             <strong>Mail-Id:</strong> <a href="mailto:mkmthangamaligai@gmail.com">mkmthangamaligai@gmail.com</a> <br />
-            <strong>Toll-Free No.:</strong> +0462 4055001
+            <strong>Landline No.:</strong> +0462 4055001
           </p>
         </div>
       </div>

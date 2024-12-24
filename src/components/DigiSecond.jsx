@@ -10,7 +10,7 @@ const DigiSecond = () => {
       </div>
 
       <div className="one">
-        <h1 className="festive-main-heading">Festive Gifting</h1>
+        <h1 className="festive-main-heading"> Giftings</h1>
         <p className="festive-description">Celebrate the completion of your gold schemes with exclusive gifts!</p>
       </div>
 
@@ -22,9 +22,9 @@ const DigiSecond = () => {
     <div className="flexi-gold-section flexi-gold-contact" style={{textalign:"center"}}>
           <h2 className="flexi-gold-heading">For Any Scheme Related Query</h2>
           <p className="flexi-gold-text">
-            <strong>Contact Us @:</strong> <br />
+            <strong>Contact Us :</strong> <br />
             <strong>Mail-Id:</strong> <a href="mailto:mkmthangamaligai@gmail.com">mkmthangamaligai@gmail.com</a> <br />
-            <strong>Toll-Free No.:</strong> +0462 4055001
+            <strong>Landline No:</strong> +0462 4055001
           </p>
         </div>
         <div className="shop-explore-more">

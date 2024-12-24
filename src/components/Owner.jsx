@@ -23,7 +23,7 @@ const Owner = () => {
                 borderRadius: "5px",
               }}
             >
-              MKM SYED AHAMED KABEER
+              Mr. MKM SYED AHAMED KABEER
             </h3>
             <div style={{ textAlign: "justify" }}>
               An ambitious and visionary and socially responsible exemplary
@@ -55,7 +55,7 @@ const Owner = () => {
                 borderRadius: "5px",
               }}
             >
-              MKMS.MOHAMED VAJITH MEERAN
+              Mr. MKMS.MOHAMED VAJITH MEERAN
             </h3>
             <div style={{ textAlign: "justify" }}>
               An Enthusiastic Business Professional Holding a Master Degree in
@@ -82,7 +82,7 @@ const Owner = () => {
                 borderRadius: "5px",
               }}
             >
-              MKMS IMTHIAS
+               Mr. MKMS IMTHIAS
             </h3>
             <div style={{ textAlign: "justify" }}>
               An MBA graduate, very passionate about business administration and
@@ -109,7 +109,7 @@ const Owner = () => {
                 borderRadius: "5px",
               }}
             >
-              MKM MOHAMED NAKIB
+              Mr. MKM MOHAMED NAKIB
             </h3>
             <div style={{ textAlign: "justify" }}>
               An Senior person Experienced and Passionate Person with wide

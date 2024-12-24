@@ -8,6 +8,7 @@ const Footer = () => {
   return (
     <footer className="footer-container">
       <div className="footer-sections">
+     
         <div className="footer-section">
           <h3>Get to know us</h3>
           <ul className="footer-links">
@@ -48,7 +49,7 @@ const Footer = () => {
           <div className="footer-logo">
             <img src="assets/tamillogo.webp" alt="Tamil Logo" className="logo-image" />
           </div>
-          <h3>Explore MKM Thangamaligai's Collection Online. Anytime. Anywhere.</h3>
+          <h3>Explore MKM Thangamaligai's Collection Online. Anytime! Anywhere!</h3>
           <p style={{ textAlign: "justify" }}>
             Explore our exclusive collection of Gold, Diamond Jewellery from the comfort of your home. From timeless classics to modern designs, find the perfect piece that reflects your style with ease and security. Download our app for a seamless shopping experience and access to the finest collection of jewellery anytime, anywhere.
           </p>

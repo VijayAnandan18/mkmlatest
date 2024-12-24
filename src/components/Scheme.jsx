@@ -5,7 +5,7 @@ const Scheme = () => {
   return (
     <div className="scheme-container">
       <div className="one">
-        <h1>MKM THANGAMALIGAI Schemes</h1>
+        <h1 style={{textTransform:"capitalize"}}>MKM THANGAMALIGAI Schemes</h1>
         <div className="shop-explore-more">
         <a href="/schemes"><button>Explore More...</button></a>
       </div>

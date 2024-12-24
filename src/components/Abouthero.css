@@ -39,7 +39,7 @@
 
 /* Heading styles */
 .about-hero-heading {
-  font-size: 1.5em;
+  font-size: 25px;
   font-weight: bold;
   color: #544114;
   border-bottom: 2px solid #c67e00;
@@ -51,7 +51,7 @@
 /* Paragraph styles */
 .about-section p {
   text-align: justify;
-  font-size: 1em;
+  font-size: 18px;
   line-height: 1.5;
   color: black;
 }

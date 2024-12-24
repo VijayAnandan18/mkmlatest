@@ -8,9 +8,9 @@ const Schemes = () => {
       <div className="schemes-content">
         
         <section className="schemes-section">
-          <h2 className="schemes-heading">Saving Schemes: Your Path to Systematic Gold Investment</h2>
+          <h2 className="schemes-heading">Saving Schemes: Your Path to Systematic Gold Investment!</h2>
           <p className="schemes-description">
-            The MKM Saving Schemes offer a range of flexible and structured plans designed to help individuals invest in gold systematically and affordably. With these schemes, you can contribute a fixed amount periodically and accumulate gold over time, taking advantage of price fluctuations in the market. These plans not only make saving for gold easy but also allow you to redeem your savings as exquisite gold jewelry after completing the investment cycle.
+            The MKM Saving Schemes offer a range of flexible and structured plans designed to help individuals invest in gold systematically and affordably. With these schemes, you can contribute a fixed amount periodically and accumulate gold over time, taking advantage of price fluctuations in the market. These plans not only make saving for gold easy but also allow you to redeem your savings as exquisite gold jewelry after completing the investment cycle
           </p>
         </section>
         <div className="shop-explore-more">
@@ -27,7 +27,7 @@ const Schemes = () => {
                 <div className="scheme-item-text">
                   <h4 className="scheme-title">MKM Flexi Gold Scheme</h4>
                 
-                  <Link to="/flexigold" className="read-more-link">Read More</Link>
+                  <Link to="/flexigold" className="read-more-link" style={{fontWeight:"bold"}}>Read More...</Link>
                 </div>
               </div>
             </div>
@@ -40,7 +40,7 @@ const Schemes = () => {
                 <div className="scheme-item-text">
                   <h4 className="scheme-title">MKM Future Gold Scheme</h4>
                
-                  <Link to="/futuregold" className="read-more-link">Read More</Link>
+                  <Link to="/futuregold" className="read-more-link">Read More...</Link>
                 </div>
               </div>
             </div>
@@ -53,7 +53,7 @@ const Schemes = () => {
                 <div className="scheme-item-text">
                   <h4 className="scheme-title">MKM Future Plus Scheme</h4>
             
-                  <Link to="/futureplus" className="read-more-link">Read More</Link>
+                  <Link to="/futureplus" className="read-more-link">Read More...</Link>
                 </div>
               </div>
             </div>
@@ -66,7 +66,7 @@ const Schemes = () => {
                 <div className="scheme-item-text">
                   <h4 className="scheme-title">MKM Daily Collection Scheme</h4>
                 
-                  <Link to="/dailycollection" className="read-more-link">Read More</Link>
+                  <Link to="/dailycollection" className="read-more-link">Read More...</Link>
                 </div>
               </div>
             </div>
@@ -74,7 +74,7 @@ const Schemes = () => {
         </section>
 
         <section className="schemes-section">
-          <h3 className="schemes-subheading">Convenience Through Technology</h3>
+          <h3 className="schemes-heading">Convenience Through Technology</h3>
           <p className="schemes-description">
             All these schemes can be managed effortlessly using the MKM app, making it easier for you to track your investments, manage contributions, and stay updated on gold prices. Invest smartly and securely with the MKM Saving Schemes and turn your dreams of owning gold into a reality!
           </p>
@@ -83,9 +83,9 @@ const Schemes = () => {
             <div className="flexi-gold-section flexi-gold-contact">
           <h2 className="flexi-gold-heading">For Any Scheme Related Query</h2>
           <p className="flexi-gold-text">
-            <strong>Contact Us @:</strong> <br />
+            <strong>Contact Us :</strong> <br />
             <strong>Mail-Id:</strong> <a href="mailto:mkmthangamaligai@gmail.com">mkmthangamaligai@gmail.com</a> <br />
-            <strong>Toll-Free No.:</strong> +0462 4055001
+            <strong>Landline No:</strong> +0462 4055001
           </p>
         </div>
     

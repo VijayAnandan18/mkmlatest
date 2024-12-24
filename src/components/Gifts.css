@@ -61,9 +61,7 @@
       font-size: 1.5rem; /* Adjust heading size */
     }
   
-    .one p {
-      font-size: 1rem; /* Adjust paragraph size */
-    }
+
   }
   
   @media (max-width: 480px) {

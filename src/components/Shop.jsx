@@ -27,7 +27,7 @@ const Shop = () => {
   return (
     <div className="shop-container">
       {/* Heading Section */}
-      <div className="shop-heading one">
+      <div className="one">
         <h1>Our Collections</h1>
         <p>Find Jewellery for Women, Men, and Kids</p>
       </div>

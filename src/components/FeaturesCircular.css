@@ -10,7 +10,7 @@
   white-space: nowrap;
   scroll-behavior: smooth; /* Smooth scrolling */
   scrollbar-width: thin;
-  scrollbar-color: #d89700 transparent; /* Change scrollbar color */
+  scrollbar-color: white transparent; /* Change scrollbar color */
 }
 
 .features-circular-container::-webkit-scrollbar {

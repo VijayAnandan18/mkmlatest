@@ -39,11 +39,13 @@
     /* Removed the perspective property */
     transition: transform 0.3s ease-in-out; /* Keep the smooth transition */
   }
-/* Card image */
+
+/* Ensure consistent image size */
 .shop-card img {
-  max-width: 100%;
+  width: 100%; /* Adjust to card width */
   height: auto;
   border-radius: 5px;
+  object-fit: cover; /* Avoid distortion */
 }
 
 /* Add 3D hover effect */
@@ -74,11 +76,10 @@
 .shop-heading {
   margin-bottom: 1rem; /* Reduce the space between heading and grid */
 }
-
-/* Ensure the grid layout remains consistent */
+/* Grid Layout for all devices */
 .shop-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust column sizes */
   gap: 1.6rem;
   max-width: 1200px;
   margin: auto;

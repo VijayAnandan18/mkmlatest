@@ -7,8 +7,8 @@
 }
 
 .spinner {
-  width: 150px; /* Default size for larger screens */
-  animation: fade 1s ease-in-out infinite; /* Continuous fade effect */
+  width: 50px; /* Default size for larger screens */
+  animation: rotate 2s linear infinite, fade 1s ease-in-out infinite; /* Combine rotate and fade animations */
 }
 
 /* Keyframe for fading */
@@ -24,9 +24,19 @@
   }
 }
 
+/* Keyframe for rotation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); /* Initial position */
+  }
+  100% {
+    transform: rotate(360deg); /* Full rotation */
+  }
+}
+
 /* Media query for mobile devices */
 @media (max-width: 768px) {
   .spinner {
-    width: 80px; /* Reduced size for mobile screens */
+    width: 30px; /* Reduced size for mobile screens */
   }
 }

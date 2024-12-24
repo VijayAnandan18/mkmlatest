@@ -131,6 +131,7 @@ const Sidebar = () => {
                 </ul>
               )}
             </li>
+            
             <li>
               <div
                 className="custom-sidebar-dropdown-title"
@@ -155,6 +156,7 @@ const Sidebar = () => {
                 </ul>
               )}
             </li>
+            <li onClick={() => handleNavigation("/digigold")} style={{fontWeight:"bold"}}>MKM DIGIGOLD</li>
             <li onClick={() => handleNavigation("/about")}>About Us</li>
             <li onClick={() => handleNavigation("/enquiry")}>Contact Us</li>
           </ul>

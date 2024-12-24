@@ -66,13 +66,13 @@ const FuturePlusContent = () => {
             The MKM Future Plus Scheme offers a flexible and structured way to invest in gold. By committing to a monthly investment, participants not only accumulate gold but also benefit from an increment at the end of the 11-month period. With no additional labor or wastage charges on the purchased jewel, this scheme is an excellent way for people to invest in gold, especially for those who want to save systematically and receive a tangible asset at the end of the investment cycle.
           </p>
         </div>
-              {/* Contact Section */}
-              <div className="flexi-gold-section flexi-gold-contact">
+           {/* Contact Section */}
+        <div className="flexi-gold-section flexi-gold-contact">
           <h2 className="flexi-gold-heading">For Any Scheme Related Query</h2>
           <p className="flexi-gold-text">
-            <strong>Contact Us @:</strong> <br />
+            <strong>Contact Us :</strong> <br />
             <strong>Mail-Id:</strong> <a href="mailto:mkmthangamaligai@gmail.com">mkmthangamaligai@gmail.com</a> <br />
-            <strong>Toll-Free No.:</strong> +0462 4055001
+            <strong>Landline No.:</strong> +0462 4055001
           </p>
         </div>
       </div>

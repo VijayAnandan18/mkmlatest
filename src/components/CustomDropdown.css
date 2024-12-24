@@ -9,6 +9,7 @@
     position: relative;
     background: white;
     border: 1px solid #b57f00; /* Updated border color */
+
     border-radius: 5px;
     padding: 10px;
     height:18px;
@@ -24,8 +25,8 @@
   
   .custom-dropdown-current {
     font-size: 16px;
-    font-weight: bold;
-    color: #333;
+  
+    color: #b57f00;
     display: block; /* Ensures the selected option is always visible */
   }
   
