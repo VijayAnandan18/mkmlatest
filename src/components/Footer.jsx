@@ -18,13 +18,7 @@ const Footer = () => {
         </div>
         
 
-        <div className="footer-section">
-          <h3>Let us help you</h3>
-          <ul className="footer-links">
-            <li><a href="/enquiry">Contact us</a></li>
-          
-          </ul>
-        </div>
+       
         <div className="footer-section">
           <h3>Schemes</h3>
           <ul className="footer-links">
@@ -45,18 +39,21 @@ const Footer = () => {
             <li><a href="/gold-jewellery#coins">Gold Coins</a></li>
           </ul>
         </div>
-        <div className="footer-section">
-  <h3>Contact Us</h3>
-  <ul className="footer-links">
- <li>Mr. MKM SYED AHAMED KABEER</li> 
-    <li>
-      <a href="mailto:mkmthangamaligai@gmail.com">mkmthangamaligai@gmail.com</a>
+ <div className="footer-section">
+          <h3>Let us help you</h3>
+          <ul className="footer-links">
+            <li><a href="/enquiry">Contact us</a></li>
+            <li><b>Mr. MKM SYED AHAMED KABEER M.D</b></li> 
+            <li>
+      <a href="mailto:mkmthangamaligai@gmail.com"> <b>Mail-ID:mkmthangamaligai@gmail.com</b></a>
+      
     </li>
     <li>
-      <a href="tel:+04624055001">+0462 4055001</a>
+      <a href="tel:+04624055001" ><b>Landline no:+0462 4055001</b></a>
     </li>
-  </ul>
-</div>
+          
+          </ul>
+        </div>
       </div>
       
       <div className="footer-about-row">
