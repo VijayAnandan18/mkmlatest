@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import './SilverHero.css';
+import React, { useState, useEffect } from "react";
+import "./SilverHero.css";
 
 const SilverHero = () => {
-  const [videoSource, setVideoSource] = useState('assets/silverhero.webp');
+  const [imageSource, setImageSource] = useState("assets/silverhero.png");
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
-        setVideoSource('assets/silvermobile.mp4');
+        setImageSource("assets/silvermobile.png");
       } else {
-        setVideoSource('assets/silverhero.mp4');
+        setImageSource("assets/silverhero.png");
       }
     };
 
@@ -17,22 +17,20 @@ const SilverHero = () => {
     handleResize();
 
     // Add event listener for window resize
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Cleanup on unmount
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
-    <div className="silver-hero-video-container">
-      <video
-        className="silver-hero-video"
-        src={videoSource}
-        autoPlay
-        muted
-        loop
+    <div className="silver-hero-container">
+      <img
+        className="silver-hero-image"
+        src={imageSource}
+        alt="Silver Hero"
       />
     </div>
   );

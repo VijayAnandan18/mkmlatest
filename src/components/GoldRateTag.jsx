@@ -8,7 +8,7 @@ const GoldRateTag = () => {
   useEffect(() => {
     const fetchGoldRates = async () => {
       try {
-        const accessKey = "goldapi-1d03vsm471m42s-io"; // Replace with your API key
+        const accessKey = "goldapi-y9n7jsm54wasio-io"; // Replace with your API key
         const cachedGoldRates = localStorage.getItem("goldRates");
         const cachedTime = localStorage.getItem("goldRatesTime");
 
@@ -74,28 +74,27 @@ const GoldRateTag = () => {
                  <th style={{ background: "#700B00", color: "white" }}>Price (₹)</th>
                </tr>
              </thead>
-<tbody>
-<tr>
- <td>24k</td>
- <td>₹{goldRates?.price_gram_24k ? goldRates.price_gram_24k.toFixed(2) : "N/A"}</td>
-</tr>
-<tr>
- <td>22k</td>
- <td>₹{goldRates?.price_gram_22k ? goldRates.price_gram_22k.toFixed(2) : "N/A"}</td>
-</tr>
-<tr>
- <td>21k</td>
- <td>₹{goldRates?.price_gram_21k ? goldRates.price_gram_21k.toFixed(2) : "N/A"}</td>
-</tr>
-<tr>
- <td>20k</td>
- <td>₹{goldRates?.price_gram_20k ? goldRates.price_gram_20k.toFixed(2) : "N/A"}</td>
-</tr>
-<tr>
- <td>18k</td>
- <td>₹{goldRates?.price_gram_18k ? goldRates.price_gram_18k.toFixed(2) : "N/A"}</td>
-</tr>
+             <tbody>
+  <tr>
+    <td>24k</td>
+    <td>₹{goldRates?.price_gram_24k ? goldRates.price_gram_24k.toFixed(2) : "7773"}</td>
+  </tr>
+  <tr>
+    <td>22k</td>
+    <td>₹{goldRates?.price_gram_22k ? goldRates.price_gram_22k.toFixed(2) : "7125"}</td>
+  </tr>
+
+
+  <tr>
+    <td>18k</td>
+    <td>₹{goldRates?.price_gram_18k ? goldRates.price_gram_18k.toFixed(2) : "5830"}</td>
+  </tr>
+  <tr>
+    <td>Silver</td>
+    <td>₹{goldRates?.price_gram_21k ? goldRates.price_gram_21k.toFixed(2) : "100"}</td>
+  </tr>
 </tbody>
+
 
 
 

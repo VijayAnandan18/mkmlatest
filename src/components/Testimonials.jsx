@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Testimonials.css';
-
+import { FaFacebook, FaEnvelope, FaInstagram, FaYoutube } from 'react-icons/fa'; // Correctly import FaEnvelope
 const Testimonials = () => {
   const [slideIndex, setSlideIndex] = useState(1);
 
@@ -39,10 +39,16 @@ const Testimonials = () => {
 
   return (
     <div className='testimonials-justheading'>
-      <div className="one">
-        <h1 className="main-heading" style={{textTransform:"capitalize"}}>Testimonials & Reviews</h1>
-       
-      </div>
+   <div className="one" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+  <h1 className="main-heading" style={{ textTransform: "capitalize" }}>Testimonials & Reviews</h1>
+  <ul style={{ alignItems: "center", padding: 0, listStyle: "none", display: "flex", gap: "10px" }}>
+    <li><a href="https://www.facebook.com/people/MKM-Thangamaligai/61555917721795/?mibextid=ZbWKwL" aria-label="Facebook"><FaFacebook size={30} /></a></li>
+    <li><a href="https://www.instagram.com/mkmthangamaligai/profilecard/?igsh=MnE0MzcxeHRzYWl0" aria-label="Instagram"><FaInstagram size={30} /></a></li>
+    <li><a href="https://www.youtube.com/@MKMThangamaligai" aria-label="YouTube"><FaYoutube size={30} /></a></li>
+  </ul>
+</div>
+
+
       <section className="testimonials-section" style={{ backgroundImage: "url(/assets/testmonialbg.jpg)" }}>
         <div className="testimonials-rectangle"></div>
         <div className="testimonials-slideshow-container">

@@ -230,7 +230,7 @@ const HeaderTwo = () => {
     <li>
       <a href="/gold-jewellery#coins">
         <img
-          src="/assets/jewels/gold/goldcoins/coin1.webp"
+          src="/assets/jewels/gold/goldcoins/coin1.png"
           alt="Silver Idols"
           className="dropdown-image"
         />
@@ -240,7 +240,7 @@ const HeaderTwo = () => {
     <li>
       <a href="/gold-jewellery#coins">
         <img
-          src="/assets/jewels/gold/goldcoins/coin2.webp"
+          src="/assets/jewels/gold/goldcoins/coin2.png"
           alt="Silver Articles"
           className="dropdown-image"
         />
@@ -250,7 +250,7 @@ const HeaderTwo = () => {
     <li>
       <a href="/gold-jewellery#coins">
         <img
-          src="/assets/jewels/gold/goldcoins/coin3.webp"
+          src="/assets/jewels/gold/goldcoins/coin3.png"
           alt="Silver Bangles"
           className="dropdown-image"
         />
@@ -260,7 +260,7 @@ const HeaderTwo = () => {
     <li>
       <a href="/gold-jewellery#coins">
         <img
-          src="/assets/jewels/gold/goldcoins/coin4.webp"
+          src="/assets/jewels/gold/goldcoins/coin4.png"
           alt="Silver Bracelets"
           className="dropdown-image"
         />

@@ -11,7 +11,7 @@ const HeroCarousel = () => {
     { type: 'image', src: "assets/hero6.webp" },
     { type: 'image', src: "assets/hero7.webp" },
     { type: 'image', src: "assets/hero8.webp" },
-    { type: 'image', src: "assets/hero9.webp" },
+  
     { type: 'image', src: "assets/hero10.webp" },
     { type: 'image', src: "assets/hero11.webp" },
     { type: 'image', src: "assets/hero12.webp" },
@@ -20,10 +20,7 @@ const HeroCarousel = () => {
 
   const mobileMedia = [
     { type: 'image', src: "assets/mobilehero1.png" },
-    { type: 'image', src: "assets/gold1.webp" },
-    { type: 'image', src: "assets/gold2.webp" },
-    { type: 'image', src: "assets/gold3.webp" },
-    { type: 'image', src: "assets/gold4.webp" },
+
     { type: 'image', src: "assets/mobilehero2.png" },
     { type: 'image', src: "assets/mobilehero3.png" },
     { type: 'image', src: "assets/mobilehero4.png" },

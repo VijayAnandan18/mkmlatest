@@ -76,8 +76,8 @@ const FutureGoldContent = () => {
           <h2 className="flexi-gold-heading">For Any Scheme Related Query</h2>
           <p className="flexi-gold-text">
             <strong>Contact Us :</strong> <br />
-            <strong>Mail-Id:</strong> <a href="mailto:mkmthangamaligai@gmail.com">mkmthangamaligai@gmail.com</a> <br />
-            <strong>Landline No.:</strong> +0462 4055001
+            <strong style={{marginLeft:"10px"}}>Mail-Id:</strong> <a href="mailto:mkmthangamaligai@gmail.com">mkmthangamaligai@gmail.com</a> <br />
+            <strong style={{marginLeft:"10px"}}>Landline No.:</strong> +0462 4055001
           </p>
         </div>
       </div>

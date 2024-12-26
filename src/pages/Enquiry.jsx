@@ -90,7 +90,7 @@ const Enquiry = () => {
 <div className="contact-container" style={{backgroundImage: "url(/assets/contactbg.jpg)"}}>
 
     <div className="contact-form-wrapper">
-    <img src="assets/spinner.png" style={{width:"200px", height:"80px"}}></img>
+    <img src="assets/enquirylogo.png" style={{width:"220px", height:"60px"}}></img>
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
   <div className="form-row">

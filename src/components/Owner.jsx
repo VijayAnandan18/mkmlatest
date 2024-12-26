@@ -4,7 +4,15 @@ import "./Owner.css"; // Import the unique CSS styles for this component
 const Owner = () => {
   return (
     <div className="owner-body">
-     <div className="one"> <h1  style={{fontSize:"25px", backgroundColor:"rgb(230, 199, 101)", color:"black", borderRadius:"20px"}}>Managing Directors of MKM Thanagamaligai</h1></div>
+     <div className="owner-heading"> <h1    style={{
+      fontSize: "25px",
+      backgroundColor: "rgb(230, 199, 101)",
+      color: "black",
+      borderRadius: "20px",
+      fontFamily: "PlayfairDisplay",
+      display: "inline-block", // Ensures the background wraps tightly
+      padding: "10px 20px", // Add padding to control the background width
+    }}>Managing Directors of MKM Thanagamaligai</h1></div>
       <div className="owner-card-container">
         <div className="owner-a-box">
           <div className="owner-img-container">

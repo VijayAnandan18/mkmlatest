@@ -12,8 +12,19 @@
   position: relative;
   transition: transform 0.3s ease; /* Smooth zoom effect */
 }
+/* Keyframe for slide-in effect */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
-/* Default Image Style */
+/* Apply the animation on hover */
 .about-image img {
   width: 100%;
   height: auto;
@@ -21,8 +32,16 @@
   margin: 0 auto;
   border-radius: 10px;
   opacity: 1;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
+
+/* Trigger animation on hover */
+.about-image:hover img {
+  animation: slideInFromLeft 0.7s ease-out;
+  animation-fill-mode: forwards; /* Ensures animation only runs once */
+  transform: none; /* Reset transform */
+}
+
 
 /* Zoom-out effect while loading */
 .about-image.loading img {
@@ -36,7 +55,3 @@
   opacity: 1;
 }
 
-/* Zoom effect on hover */
-.about-image:hover img {
-  transform: scale(1.05); /* Slight zoom-in */
-}

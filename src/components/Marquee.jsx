@@ -6,7 +6,7 @@ const Marquee = () => {
     <div className="marquee-wrapper">
       <div className="marquee-container-custom">
         <div className="marquee-text-custom">
-          நம் நெல்லையில் புதிய தொடக்கம்  MKM தங்க மாளிகை! 
+          நம் நெல்லையில்  MKM தங்க மாளிகை!  இன்றைய தங்க விலை கிராம் ஒன்றிற்கு 24k- Rs.7773, 22k- Rs.7125, 18k-5830, வெள்ளி கிராம் ஒன்றிற்கு Rs.100/-
         </div>
       </div>
     </div>

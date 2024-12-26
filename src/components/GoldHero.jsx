@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import './GoldHero.css';
+import React, { useState, useEffect } from "react";
+import "./GoldHero.css";
 
 const GoldHero = () => {
-  const [videoSource, setVideoSource] = useState('assets/goldhero.webm');
+  const [imageSource, setImageSource] = useState("assets/goldhero.png");
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
-        setVideoSource('assets/goldmobile.mp4');
+        setImageSource("assets/goldmobile.png");
       } else {
-        setVideoSource('assets/goldhero.mp4');
+        setImageSource("assets/goldhero.png");
       }
     };
 
@@ -17,22 +17,20 @@ const GoldHero = () => {
     handleResize();
 
     // Add event listener for window resize
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Cleanup on unmount
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
-    <div className="gold-hero-video-container">
-      <video
-        className="gold-hero-video"
-        src={videoSource}
-        autoPlay
-        muted
-        loop
+    <div className="gold-hero-container">
+      <img
+        className="gold-hero-image"
+        src={imageSource}
+        alt="Gold Hero"
       />
     </div>
   );
