@@ -89,6 +89,12 @@
 .testimonial-dot.active {
   background-color: #700B00;
 }
+.testimonial-rating {
+  margin-top: 0px;
+  font-size: 1.2rem; /* Adjust size of the stars */
+  display: flex;
+  justify-content: center; /* Center align stars */
+}
 
 /* Mobile View - Hide testimonials section */
 @media only screen and (max-width: 768px) {

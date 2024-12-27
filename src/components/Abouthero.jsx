@@ -39,6 +39,8 @@ const AboutHero = () => {
             To create trending & fashionable jewellery which combines elegance with uniqueness. We're continuously crafting and updating our collections to reinforce our reputation for the most admired range of jewellery and accessories.
           </p>
         </div>
+        <div><img src="/assets/aboutstretch.png"  alt="Stretch Image" 
+    className="about-stretch"  /></div>
       </div>
     </div>
   );

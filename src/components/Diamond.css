@@ -15,6 +15,61 @@
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* === BASE HEADING === */ 
+.one {
+  text-align: center;
+  margin-bottom: 10px; /* Adds space between the heading and cards */
+}
+
+.one h1 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: 'Playfair Display', serif; /* Font applied */
+  font-weight: 400;
+  font-size: 40px;
+  color: #080808;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.one h1 span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1.3;
+}
+
+.one h1 em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.one h1:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #700B00;
+}
+
+.one h1:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 15px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #700B00;
+}
+
+
 /* Full-width image column */
 .diamond-full {
   grid-column: 1 / 2;

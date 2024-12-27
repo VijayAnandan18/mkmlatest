@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Testimonials.css';
-import { FaFacebook, FaEnvelope, FaInstagram, FaYoutube } from 'react-icons/fa'; // Correctly import FaEnvelope
+
 const Testimonials = () => {
   const [slideIndex, setSlideIndex] = useState(1);
 
@@ -38,16 +38,39 @@ const Testimonials = () => {
   };
 
   return (
-    <div className='testimonials-justheading'>
-   <div className="one" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-  <h1 className="main-heading" style={{ textTransform: "capitalize" }}>Testimonials & Reviews</h1>
-  <ul style={{ alignItems: "center", padding: 0, listStyle: "none", display: "flex", gap: "10px" }}>
-    <li><a href="https://www.facebook.com/people/MKM-Thangamaligai/61555917721795/?mibextid=ZbWKwL" aria-label="Facebook"><FaFacebook size={30} /></a></li>
-    <li><a href="https://www.instagram.com/mkmthangamaligai/profilecard/?igsh=MnE0MzcxeHRzYWl0" aria-label="Instagram"><FaInstagram size={30} /></a></li>
-    <li><a href="https://www.youtube.com/@MKMThangamaligai" aria-label="YouTube"><FaYoutube size={30} /></a></li>
-  </ul>
-</div>
-
+    <div className="testimonials-justheading">
+      <div className="one" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+        <h1 className="main-heading" style={{ textTransform: "capitalize" }}>Testimonials & Reviews</h1>
+        <ul style={{ alignItems: "center", padding: 0, listStyle: "none", display: "flex", gap: "10px" }}>
+          <li>
+            <a href="https://www.facebook.com/people/MKM-Thangamaligai/61555917721795/?mibextid=ZbWKwL" aria-label="Facebook">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                alt="Facebook"
+                style={{ width: '30px', height: '30px' }}
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/mkmthangamaligai/profilecard/?igsh=MnE0MzcxeHRzYWl0" aria-label="Instagram">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                alt="Instagram"
+                style={{ width: '30px', height: '30px' }}
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@MKMThangamaligai" aria-label="YouTube">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png"
+                alt="YouTube"
+                style={{ width: '30px', height: '30px' }}
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
 
       <section className="testimonials-section" style={{ backgroundImage: "url(/assets/testmonialbg.jpg)" }}>
         <div className="testimonials-rectangle"></div>
@@ -59,24 +82,31 @@ const Testimonials = () => {
                 Wonderful gesture while purchasing and Creative collections on MKM Thangamaligai..I would personally recommend this shop to your Gold & Diamond Purchase collections!
               </q>
             </div>
+            <div className="testimonial-rating">
+    <span style={{ color: "gold" }}>★ ★ ★ ★ ★</span> {/* 5-star rating */}
+  </div>
             <p className="testimonial-author" style={{ color: "white" }}>By: <span style={{ color: "white" }}>Banu Priya</span></p>
           </div>
-
           <div className="testimonial-slide">
             <div className="testimonial-content">
               <q style={{ color: "white" }}>
                 The experience which I got when I visit the shop was literally awesome, and the design is really good and unique.
               </q>
             </div>
+            <div className="testimonial-rating">
+    <span style={{ color: "gold" }}>★ ★ ★ ★ ★</span> {/* 5-star rating */}
+  </div>
             <p className="testimonial-author" style={{ color: "white" }}>By: <span style={{ color: "white" }}>Nirmal</span></p>
           </div>
-
           <div className="testimonial-slide">
             <div className="testimonial-content">
               <q style={{ color: "white" }}>
                 Great experience.
               </q>
             </div>
+            <div className="testimonial-rating">
+    <span style={{ color: "gold" }}>★ ★ ★ ★ ★</span> {/* 5-star rating */}
+  </div>
             <p className="testimonial-author" style={{ color: "white" }}>By: <span style={{ color: "white" }}>Gandhi Raj</span></p>
           </div>
 
@@ -86,6 +116,7 @@ const Testimonials = () => {
 
         {/* Dots Navigation */}
         <div className="testimonial-dot-container">
+          
           <span className="testimonial-dot"></span>
           <span className="testimonial-dot"></span>
           <span className="testimonial-dot"></span>
