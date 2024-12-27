@@ -1,29 +1,30 @@
-/* Diamond Hero Video Container */
-.diamond-hero-video-container {
+/* Container for the DiamondHero component */
+.diamond-hero-container {
   position: relative;
   width: 100%;
-  height: 0;
-  padding-top: 21.22%; /* Maintain 1365x290 aspect ratio (290/1365 = ~0.2122) */
-  overflow: hidden;
-  margin-top: 0px;
-  margin-bottom: 40px;
-  z-index: 5;
+  max-width: 1358px;
+  margin: 0 auto;
 }
 
-/* Diamond Hero Video */
-.diamond-hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Desktop View */
+.diamond-hero-desktop {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the video covers the container */
-  object-position: center; /* Center the video */
+  display: block;
 }
 
-/* Mobile View Adjustments */
-@media (max-width: 768px) {
-  .diamond-hero-video-container {
-    padding-top: 56.25%; /* Adjust for a more appropriate aspect ratio on mobile if needed */
+/* Mobile View */
+.diamond-hero-mobile {
+  width: 100%;
+  display: none; /* Hidden by default, shown in smaller screens */
+}
+
+/* Media query for mobile view */
+@media only screen and (max-width: 768px) {
+  .diamond-hero-desktop {
+    display: none; /* Hide desktop image in mobile view */
+  }
+
+  .diamond-hero-mobile {
+    display: block; /* Show mobile image */
   }
 }
