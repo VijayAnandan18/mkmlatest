@@ -1,0 +1,69 @@
+/* General login container styling */
+.login-container-mkmadmin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .login-form-mkmadmin {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-heading-mkmadmin {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .input-group-mkmadmin {
+    margin-bottom: 15px;
+  }
+  
+  .label-mkmadmin {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .input-mkmadmin {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .error-message-mkmadmin {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .login-btn-mkmadmin {
+    width: 100%;
+    padding: 12px;
+    background-color: #700b00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .login-btn-mkmadmin:hover {
+    background-color: #9e2a2f;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 600px) {
+    .login-form-mkmadmin {
+      padding: 20px;
+    }
+  }
+  

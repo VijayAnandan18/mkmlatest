@@ -1,0 +1,18 @@
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDuI4z1Eq1Na-a7pRapholyTmRfC9D-pkY",
+  authDomain: "mkmthangamaligai-a4e5c.firebaseapp.com",
+  projectId: "mkmthangamaligai-a4e5c",
+  storageBucket: "mkmthangamaligai-a4e5c.firebasestorage.app",
+  messagingSenderId: "999444851582",
+  appId: "1:999444851582:web:177cf17fb7103257c9212f",
+  measurementId: "G-R7ZSYLF51Y"
+};
+
+const firebaseApp = initializeApp(firebaseConfig);
+
+// Use default export for firebaseApp
+export default firebaseApp;

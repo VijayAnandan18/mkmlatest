@@ -1,5 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import { initializeApp } from 'firebase/app';
 import './GoldRateTag.css';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDuI4z1Eq1Na-a7pRapholyTmRfC9D-pkY",
+  authDomain: "mkmthangamaligai-a4e5c.firebaseapp.com",
+  projectId: "mkmthangamaligai-a4e5c",
+  storageBucket: "mkmthangamaligai-a4e5c.appspot.com",
+  messagingSenderId: "999444851582",
+  appId: "1:999444851582:web:177cf17fb7103257c9212f",
+  measurementId: "G-R7ZSYLF51Y",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app); // Initialize Firestore
 
 const GoldRateTag = () => {
   const [goldRates, setGoldRates] = useState(null);
@@ -8,33 +23,13 @@ const GoldRateTag = () => {
   useEffect(() => {
     const fetchGoldRates = async () => {
       try {
-        const accessKey = "goldapi-y9n7jsm54wasio-io"; // Replace with your API key
-        const cachedGoldRates = localStorage.getItem("goldRates");
-        const cachedTime = localStorage.getItem("goldRatesTime");
+        const goldRateDocRef = doc(db, "goldRates", "vz4Dq1HGcagWIleTFqs5");
+        const docSnap = await getDoc(goldRateDocRef);
 
-        if (cachedGoldRates && cachedTime) {
-          const currentTime = new Date().getTime();
-          const timeDifference = currentTime - cachedTime;
-          if (timeDifference < 24 * 60 * 60 * 1000) {
-            setGoldRates(JSON.parse(cachedGoldRates));
-            return;
-          }
-        }
-
-        const response = await fetch("https://www.goldapi.io/api/XAU/INR", {
-          headers: {
-            "x-access-token": accessKey,
-            "Content-Type": "application/json"
-          }
-        });
-        const data = await response.json();
-
-        if (data) {
-          setGoldRates(data);
-          localStorage.setItem("goldRates", JSON.stringify(data));
-          localStorage.setItem("goldRatesTime", new Date().getTime());
+        if (docSnap.exists()) {
+          setGoldRates(docSnap.data());
         } else {
-          console.error("Invalid data received from Gold API.");
+          console.error("No gold rates found in Firestore.");
         }
       } catch (error) {
         console.error("Error fetching gold rates:", error);
@@ -52,53 +47,46 @@ const GoldRateTag = () => {
       {showRates && (
         <div className="gold-rate-dropdown">
           {goldRates ? (
-             <table className="gold-rate-table">
-             <thead>
-               <tr>
-                 <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>Today's Gold Rate</th>
-               </tr>
-               <tr>
-<th
- colSpan="2"
- style={{ background: "#700B00", color: "white", textAlign: "center" }}
->
- Updated on: {`${new Date().toLocaleDateString("en-GB", {
-   day: "2-digit",
-   month: "2-digit",
-   year: "numeric",
- })} 10:05 AM`} {/* Fixed time */}
-</th>
-</tr>
-               <tr>
-                 <th style={{ background: "#700B00", color: "white" }}>Gold Type</th>
-                 <th style={{ background: "#700B00", color: "white" }}>Price (₹)</th>
-               </tr>
-             </thead>
-             <tbody>
-  <tr>
-    <td>24k</td>
-    <td>₹{goldRates?.price_gram_24k ? goldRates.price_gram_24k.toFixed(2) : "7773"}</td>
-  </tr>
-  <tr>
-    <td>22k</td>
-    <td>₹{goldRates?.price_gram_22k ? goldRates.price_gram_22k.toFixed(2) : "7125"}</td>
-  </tr>
-
-
-  <tr>
-    <td>18k</td>
-    <td>₹{goldRates?.price_gram_18k ? goldRates.price_gram_18k.toFixed(2) : "5830"}</td>
-  </tr>
-  <tr>
-    <td>Silver</td>
-    <td>₹{goldRates?.price_gram_21k ? goldRates.price_gram_21k.toFixed(2) : "100"}</td>
-  </tr>
-</tbody>
-
-
-
-
-           </table>
+            <table className="gold-rate-table">
+              <thead>
+                <tr>
+                  <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>
+                    Today's Gold Rate
+                  </th>
+                </tr>
+                <tr>
+                  <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>
+                    Updated on: {`${new Date(goldRates.lastUpdated).toLocaleDateString("en-GB", {
+                      day: "2-digit",
+                      month: "2-digit",
+                      year: "numeric",
+                    })} 10:05 AM`} {/* Fixed time */}
+                  </th>
+                </tr>
+                <tr>
+                  <th style={{ background: "#700B00", color: "white" }}>Gold Type</th>
+                  <th style={{ background: "#700B00", color: "white" }}>Price (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>24k</td>
+                  <td>₹{goldRates.gold24K ? goldRates.gold24K : "Not available"}</td>
+                </tr>
+                <tr>
+                  <td>22k</td>
+                  <td>₹{goldRates.gold22K ? goldRates.gold22K : "Not available"}</td>
+                </tr>
+                <tr>
+                  <td>18k</td>
+                  <td>₹{goldRates.gold18K ? goldRates.gold18K : "Not available"}</td>
+                </tr>
+                <tr>
+                  <td>Silver</td>
+                  <td>₹{goldRates.silver ? goldRates.silver : "Not available"}</td>
+                </tr>
+              </tbody>
+            </table>
           ) : (
             <p>Loading...</p>
           )}

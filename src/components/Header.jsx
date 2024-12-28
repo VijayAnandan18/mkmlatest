@@ -3,43 +3,39 @@ import { IoLocationOutline } from "react-icons/io5"; // Location icon
 import { GiRotaryPhone } from "react-icons/gi";
 import CustomDropdown from "./CustomDropdown"; // Import the CustomDropdown component
 import "./Header.css"; // Header styles
+import { getFirestore, doc, getDoc } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
 
 const Header = () => {
   const [country, setCountry] = useState("India");
   const [flag, setFlag] = useState("india-flag.png");
-  const [goldRates, setGoldRates] = useState(null);
 
-  // Function to fetch and cache gold rates
+  const firebaseConfig = {
+    apiKey: "AIzaSyDuI4z1Eq1Na-a7pRapholyTmRfC9D-pkY",
+    authDomain: "mkmthangamaligai-a4e5c.firebaseapp.com",
+    projectId: "mkmthangamaligai-a4e5c",
+    storageBucket: "mkmthangamaligai-a4e5c.appspot.com",
+    messagingSenderId: "999444851582",
+    appId: "1:999444851582:web:177cf17fb7103257c9212f",
+    measurementId: "G-R7ZSYLF51Y",
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app); // Initialize Firestore
+
+  const [goldRates, setGoldRates] = useState(null);
+  const [showRates, setShowRates] = useState(false);
+
   useEffect(() => {
     const fetchGoldRates = async () => {
       try {
-        const accessKey = "goldapi-y9n7jsm54wasio-io"; // Replace with your API key
-        const cachedGoldRates = localStorage.getItem("goldRates");
-        const cachedTime = localStorage.getItem("goldRatesTime");
+        const goldRateDocRef = doc(db, "goldRates", "vz4Dq1HGcagWIleTFqs5");
+        const docSnap = await getDoc(goldRateDocRef);
 
-        if (cachedGoldRates && cachedTime) {
-          const currentTime = new Date().getTime();
-          const timeDifference = currentTime - cachedTime;
-          if (timeDifference < 24 * 60 * 60 * 1000) {
-            setGoldRates(JSON.parse(cachedGoldRates));
-            return;
-          }
-        }
-
-        const response = await fetch("https://www.goldapi.io/api/XAU/INR", {
-          headers: {
-            "x-access-token": accessKey,
-            "Content-Type": "application/json"
-          }
-        });
-        const data = await response.json();
-
-        if (data) {
-          setGoldRates(data);
-          localStorage.setItem("goldRates", JSON.stringify(data));
-          localStorage.setItem("goldRatesTime", new Date().getTime());
+        if (docSnap.exists()) {
+          setGoldRates(docSnap.data());
         } else {
-          console.error("Invalid data received from Gold API.");
+          console.error("No gold rates found in Firestore.");
         }
       } catch (error) {
         console.error("Error fetching gold rates:", error);
@@ -48,6 +44,7 @@ const Header = () => {
 
     fetchGoldRates();
   }, []);
+
   useEffect(() => {
     const fetchLocation = async () => {
       try {
@@ -59,7 +56,6 @@ const Header = () => {
         if (data.country_name && data.country_code) {
           setCountry(data.country_name);
           setFlag(`https://flagcdn.com/w40/${data.country_code.toLowerCase()}.png`);
-          // Save the current date in localStorage
           localStorage.setItem("lastFetchDate", new Date().toISOString());
         } else {
           throw new Error("Invalid API response");
@@ -67,31 +63,27 @@ const Header = () => {
       } catch (error) {
         console.error("Error fetching location:", error);
         setCountry("India");
-        setFlag("https://flagcdn.com/w40/in.png"); // Indian flag as default
+        setFlag("https://flagcdn.com/w40/in.png");
       }
     };
 
-    // Check if the API call should be made (once daily)
     const lastFetchDate = localStorage.getItem("lastFetchDate");
-    const today = new Date().toISOString().split("T")[0]; // Get only the date part
+    const today = new Date().toISOString().split("T")[0];
     const lastFetchDay = lastFetchDate ? lastFetchDate.split("T")[0] : null;
 
     if (lastFetchDay !== today) {
       fetchLocation();
     } else {
-      // Default to India if API call is skipped
       setCountry("India");
       setFlag("https://flagcdn.com/w40/in.png");
     }
   }, []);
+
   return (
     <header className="header">
       <div className="logo-container">
-      
-        <img src="assets/spinner.png" alt="Logo" className="logo" style={{ width: "250px", height:"50px"}} />
+        <img src="assets/spinner.png" alt="Logo" className="logo" style={{ width: "250px", height: "50px" }} />
       </div>
-
-    
 
       <div className="location-container">
         <IoLocationOutline className="location-icon" />
@@ -109,71 +101,63 @@ const Header = () => {
         <img src={flag} alt={`${country} Flag`} className="country-flag" />
         <span className="country-name" style={{ color: "#700B00" }}>{country}</span>
       </div>
-     {/* <div className="phone-container">
-        <GiRotaryPhone className="phone-icon" />
-        <a href="tel:+0462 4055001" className="phone-link">
-          <span className="phone-number">+0462 4055001</span>
-        </a>
-      </div>*/}
+
       <div className="goldtext-rate">
         <p className="shiny-text2" data-text="Gold Rate">Gold Rate</p>
         <div className="dropdown-header">
           <div className="dropdown-content-header">
-            {goldRates ? (
-              <table className="gold-rate-table">
-                <thead>
-                  <tr>
-                    <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>Today's Gold Rate</th>
-                  </tr>
-                  <tr>
-  <th
-    colSpan="2"
-    style={{ background: "#700B00", color: "white", textAlign: "center" }}
-  >
-    Updated on: {`${new Date().toLocaleDateString("en-GB", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-    })} 10:05 AM`} {/* Fixed time */}
-  </th>
-</tr>
-                  <tr>
-                    <th style={{ background: "#700B00", color: "white" }}>Gold Type</th>
-                    <th style={{ background: "#700B00", color: "white" }}>Price (₹)</th>
-                  </tr>
-                </thead>
-   <tbody>
-  <tr>
-    <td>24k</td>
-    <td>₹{goldRates?.price_gram_24k ? goldRates.price_gram_24k.toFixed(2) : "7773"}</td>
-  </tr>
-  <tr>
-    <td>22k</td>
-    <td>₹{goldRates?.price_gram_22k ? goldRates.price_gram_22k.toFixed(2) : "7125"}</td>
-  </tr>
-
-
-  <tr>
-    <td>18k</td>
-    <td>₹{goldRates?.price_gram_18k ? goldRates.price_gram_18k.toFixed(2) : "5830"}</td>
-  </tr>
-  <tr>
-    <td>Silver</td>
-    <td>₹{goldRates?.price_gram_21k ? goldRates.price_gram_21k.toFixed(2) : "100"}</td>
-  </tr>
-</tbody>
-
-
-
-              </table>
-            ) : (
-              <p>Loading...</p>
+            {showRates && (
+              <div className="gold-rate-dropdown">
+                {goldRates ? (
+                  <table className="gold-rate-table">
+                    <thead>
+                      <tr>
+                        <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>
+                          Today's Gold Rate
+                        </th>
+                      </tr>
+                      <tr>
+                        <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>
+                          Updated on: {`${new Date(goldRates.lastUpdated).toLocaleDateString("en-GB", {
+                            day: "2-digit",
+                            month: "2-digit",
+                            year: "numeric",
+                          })} 10:05 AM`}
+                        </th>
+                      </tr>
+                      <tr>
+                        <th style={{ background: "#700B00", color: "white" }}>Gold Type</th>
+                        <th style={{ background: "#700B00", color: "white" }}>Price (₹)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>24k</td>
+                        <td>₹{goldRates.gold24K || "Not available"}</td>
+                      </tr>
+                      <tr>
+                        <td>22k</td>
+                        <td>₹{goldRates.gold22K || "Not available"}</td>
+                      </tr>
+                      <tr>
+                        <td>18k</td>
+                        <td>₹{goldRates.gold18K || "Not available"}</td>
+                      </tr>
+                      <tr>
+                        <td>Silver</td>
+                        <td>₹{goldRates.silver || "Not available"}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                ) : (
+                  <p>Loading...</p>
+                )}
+              </div>
             )}
           </div>
         </div>
       </div>
 
-    
       <div className="search-container">
         <CustomDropdown
           options={[

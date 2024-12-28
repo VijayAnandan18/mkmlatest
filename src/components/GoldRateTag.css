@@ -1,7 +1,7 @@
 /* Gold Rate Tag Styles */
 .gold-rate-container {
     position: absolute;
-    top: 550px;
+    top: 520px;
     right: 8px;
     z-index: 10;
   }
