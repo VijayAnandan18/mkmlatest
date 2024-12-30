@@ -23,7 +23,7 @@ const GoldRateTag = () => {
   useEffect(() => {
     const fetchGoldRates = async () => {
       try {
-        const goldRateDocRef = doc(db, "goldRates", "vz4Dq1HGcagWIleTFqs5");
+        const goldRateDocRef = doc(db, "goldRates", "Z9LLCzCMAGDMBSQqzBgH");
         const docSnap = await getDoc(goldRateDocRef);
 
         if (docSnap.exists()) {
@@ -71,19 +71,19 @@ const GoldRateTag = () => {
               <tbody>
                 <tr>
                   <td>24k</td>
-                  <td>₹{goldRates.gold24K ? goldRates.gold24K : "Not available"}</td>
+                  <td>₹{goldRates["Gold-24K"] || "Not available"}</td>
                 </tr>
                 <tr>
                   <td>22k</td>
-                  <td>₹{goldRates.gold22K ? goldRates.gold22K : "Not available"}</td>
+                  <td>₹{goldRates["Gold-22K"] || "Not available"}</td>
                 </tr>
                 <tr>
                   <td>18k</td>
-                  <td>₹{goldRates.gold18K ? goldRates.gold18K : "Not available"}</td>
+                  <td>₹{goldRates["Gold-18K"] || "Not available"}</td>
                 </tr>
                 <tr>
                   <td>Silver</td>
-                  <td>₹{goldRates.silver ? goldRates.silver : "Not available"}</td>
+                  <td>₹{goldRates.silver || "Not available"}</td>
                 </tr>
               </tbody>
             </table>

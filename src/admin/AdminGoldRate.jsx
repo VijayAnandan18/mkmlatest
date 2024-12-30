@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { getFirestore, collection, addDoc, getDocs, query, updateDoc, doc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -20,13 +20,11 @@ const db = getFirestore(app); // Initialize Firestore
 const analytics = getAnalytics(app);
 
 const AdminGoldRate = () => {
-  const [rates, setRates] = useState({
-    gold24K: "",
-    gold22K: "",
-    gold18K: "",
-    silver: "", // New silver rate field
-  });
-  const [lastUpdated, setLastUpdated] = useState(null);
+  const lastUpdatedRef = useRef(null);
+  const gold24KRef = useRef(null);
+  const gold22KRef = useRef(null);
+  const gold18KRef = useRef(null);
+  const silverRef = useRef(null);
   const navigate = useNavigate();
 
   // Check if goldRates document exists
@@ -36,24 +34,29 @@ const AdminGoldRate = () => {
       const querySnapshot = await getDocs(q);
       if (!querySnapshot.empty) {
         querySnapshot.forEach((doc) => {
-          setRates(doc.data()); // Set the rates directly from the document data
-          setLastUpdated(doc.data().lastUpdated);
+          const data = doc.data();
+          gold24KRef.current.value = data["Gold-24K"];
+          gold22KRef.current.value = data["Gold-22K"];
+          gold18KRef.current.value = data["Gold-18K"];
+          silverRef.current.value = data.silver;
+          lastUpdatedRef.current.textContent = new Date(data.lastUpdated).toLocaleString();
         });
       }
     };
     fetchRates();
   }, []);
 
-  const handleInputChange = (field, value) => {
-    setRates((prevRates) => ({
-      ...prevRates,
-      [field]: value,
-    }));
-  };
-
   const handleSubmit = async () => {
     try {
       const timestamp = new Date().toISOString();
+
+      // Gather data from input fields
+      const updatedRates = {
+        "Gold-24K": gold24KRef.current.value,
+        "Gold-22K": gold22KRef.current.value,
+        "Gold-18K": gold18KRef.current.value,
+        silver: silverRef.current.value,
+      };
 
       // Check if a document already exists
       const q = query(collection(db, "goldRates"));
@@ -63,14 +66,14 @@ const AdminGoldRate = () => {
         // If a document exists, update it
         querySnapshot.forEach((docSnapshot) => {
           const docRef = doc(db, "goldRates", docSnapshot.id);
-          updateDoc(docRef, { ...rates, lastUpdated: timestamp });
+          updateDoc(docRef, { ...updatedRates, lastUpdated: timestamp });
         });
       } else {
         // If no document exists, create a new one
-        await addDoc(collection(db, "goldRates"), { ...rates, lastUpdated: timestamp });
+        await addDoc(collection(db, "goldRates"), { ...updatedRates, lastUpdated: timestamp });
       }
 
-      setLastUpdated(timestamp);
+      lastUpdatedRef.current.textContent = new Date(timestamp).toLocaleString();
       alert("Rates updated successfully!");
     } catch (error) {
       console.error("Error updating rates: ", error);
@@ -89,7 +92,7 @@ const AdminGoldRate = () => {
       </p>
       <h1 className="admin-gold-rate-title">Today's Rates</h1>
       <p className="admin-gold-rate-updated">
-        Updated on: {lastUpdated ? new Date(lastUpdated).toLocaleString() : "Not updated yet"}
+        Updated on: <span ref={lastUpdatedRef}>Not updated yet</span>
       </p>
       <table className="admin-gold-rate-table">
         <thead>
@@ -99,27 +102,86 @@ const AdminGoldRate = () => {
           </tr>
         </thead>
         <tbody>
-          {Object.keys(rates).map((rateKey) => (
-            <tr key={rateKey} className="admin-gold-rate-row">
-              <td className="admin-gold-rate-cell">
-                <input
-                  type="text"
-                  className="admin-gold-rate-input"
-                  value={rateKey} // Display the rate type
-                  readOnly // Make the type field read-only
-                />
-              </td>
-              <td className="admin-gold-rate-cell">
-                <input
-                  type="number"
-                  className="admin-gold-rate-input"
-                  placeholder="Enter Price"
-                  value={rates[rateKey]} // Bind value to the respective rate
-                  onChange={(e) => handleInputChange(rateKey, e.target.value)} // Update the corresponding rate
-                />
-              </td>
-            </tr>
-          ))}
+          <tr className="admin-gold-rate-row">
+            <td className="admin-gold-rate-cell">
+              <input
+                type="text"
+                className="admin-gold-rate-input"
+                value="Gold-24K" // Display the rate type
+                readOnly
+                style={{ backgroundColor: "#f0f0f0", cursor: "not-allowed" }} // Indicate it's not changeable
+              />
+            </td>
+            <td className="admin-gold-rate-cell">
+              <input
+                type="number"
+                className="admin-gold-rate-input"
+                ref={gold24KRef}
+                placeholder="Enter Price"
+                min="0"  // Prevent negative values
+              />
+            </td>
+          </tr>
+          <tr className="admin-gold-rate-row">
+            <td className="admin-gold-rate-cell">
+              <input
+                type="text"
+                className="admin-gold-rate-input"
+                value="Gold-22K" // Display the rate type
+                readOnly
+                style={{ backgroundColor: "#f0f0f0", cursor: "not-allowed" }}
+              />
+            </td>
+            <td className="admin-gold-rate-cell">
+              <input
+                type="number"
+                className="admin-gold-rate-input"
+                ref={gold22KRef}
+                placeholder="Enter Price"
+                min="0"  // Prevent negative values
+              />
+            </td>
+          </tr>
+          <tr className="admin-gold-rate-row">
+            <td className="admin-gold-rate-cell">
+              <input
+                type="text"
+                className="admin-gold-rate-input"
+                value="Gold-18K" // Display the rate type
+                readOnly
+                style={{ backgroundColor: "#f0f0f0", cursor: "not-allowed" }}
+              />
+            </td>
+            <td className="admin-gold-rate-cell">
+              <input
+                type="number"
+                className="admin-gold-rate-input"
+                ref={gold18KRef}
+                placeholder="Enter Price"
+                min="0"  // Prevent negative values
+              />
+            </td>
+          </tr>
+          <tr className="admin-gold-rate-row">
+            <td className="admin-gold-rate-cell">
+              <input
+                type="text"
+                className="admin-gold-rate-input"
+                value="Silver" // Display the rate type
+                readOnly
+                style={{ backgroundColor: "#f0f0f0", cursor: "not-allowed" }}
+              />
+            </td>
+            <td className="admin-gold-rate-cell">
+              <input
+                type="number"
+                className="admin-gold-rate-input"
+                ref={silverRef}
+                placeholder="Enter Price"
+                min="0"  // Prevent negative values
+              />
+            </td>
+          </tr>
         </tbody>
       </table>
       <div className="admin-gold-rate-button-container">
@@ -135,7 +197,7 @@ const AdminGoldRate = () => {
         <button
           className="admin-gold-rate-submit-button"
           onClick={handleLogout}
-          style={{ background: "linear-gradient(90deg, #614100cc, #d89700, #6b4700c4)" }} // Same style as Update Rates button
+          style={{ background: "linear-gradient(90deg, #614100cc, #d89700, #6b4700c4)" }}
         >
           Logout
         </button>

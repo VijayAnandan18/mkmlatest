@@ -22,7 +22,7 @@ const Marquee = () => {
   useEffect(() => {
     const fetchGoldRates = async () => {
       try {
-        const goldRateDocRef = doc(db, "goldRates", "vz4Dq1HGcagWIleTFqs5");
+        const goldRateDocRef = doc(db, "goldRates", "Z9LLCzCMAGDMBSQqzBgH");
         const docSnap = await getDoc(goldRateDocRef);
 
         if (docSnap.exists()) {
@@ -46,9 +46,9 @@ const Marquee = () => {
             <>
               நம் நெல்லையில் MKM தங்க மாளிகை! 
               இன்றைய தங்க விலை கிராம் ஒன்றிற்கு 
-              24k - ₹{goldRates.gold24K ? goldRates.gold24K : "Not available"}, 
-              22k - ₹{goldRates.gold22K ? goldRates.gold22K : "Not available"}, 
-              18k - ₹{goldRates.gold18K ? goldRates.gold18K : "Not available"}, 
+              24k - ₹{goldRates["Gold-24K"] ? goldRates["Gold-24K"] : "Not available"}, 
+              22k - ₹{goldRates["Gold-22K"] ? goldRates["Gold-22K"] : "Not available"}, 
+              18k - ₹{goldRates["Gold-18K"] ? goldRates["Gold-18K"] : "Not available"}, 
               வெள்ளி கிராம் ஒன்றிற்கு ₹{goldRates.silver ? goldRates.silver : "Not available"}    
                  -மட்டுமே!
             </>

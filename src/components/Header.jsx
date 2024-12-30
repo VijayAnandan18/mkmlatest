@@ -29,7 +29,7 @@ const Header = () => {
   useEffect(() => {
     const fetchGoldRates = async () => {
       try {
-        const goldRateDocRef = doc(db, "goldRates", "vz4Dq1HGcagWIleTFqs5");
+        const goldRateDocRef = doc(db, "goldRates", "Z9LLCzCMAGDMBSQqzBgH");
         const docSnap = await getDoc(goldRateDocRef);
 
         if (docSnap.exists()) {
@@ -116,46 +116,46 @@ const Header = () => {
       {showRates && (
         <div className="gold-rate-dropdown">
           {goldRates ? (
-            <table className="gold-rate-table">
-              <thead>
-                <tr>
-                  <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>
-                    Today's Gold Rate
-                  </th>
-                </tr>
-                <tr>
-                  <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>
-                    Updated on: {`${new Date(goldRates.lastUpdated).toLocaleDateString("en-GB", {
-                      day: "2-digit",
-                      month: "2-digit",
-                      year: "numeric",
-                    })} 10:05 AM`}
-                  </th>
-                </tr>
-                <tr>
-                  <th style={{ background: "#700B00", color: "white" }}>Gold Type</th>
-                  <th style={{ background: "#700B00", color: "white" }}>Price (₹)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>24k</td>
-                  <td>₹{goldRates.gold24K || "Not available"}</td>
-                </tr>
-                <tr>
-                  <td>22k</td>
-                  <td>₹{goldRates.gold22K || "Not available"}</td>
-                </tr>
-                <tr>
-                  <td>18k</td>
-                  <td>₹{goldRates.gold18K || "Not available"}</td>
-                </tr>
-                <tr>
-                  <td>Silver</td>
-                  <td>₹{goldRates.silver || "Not available"}</td>
-                </tr>
-              </tbody>
-            </table>
+           <table className="gold-rate-table">
+           <thead>
+             <tr>
+               <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>
+                 Today's Gold Rate
+               </th>
+             </tr>
+             <tr>
+               <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>
+                 Updated on: {`${new Date(goldRates.lastUpdated).toLocaleDateString("en-GB", {
+                   day: "2-digit",
+                   month: "2-digit",
+                   year: "numeric",
+                 })} 10:05 AM`} {/* Fixed time */}
+               </th>
+             </tr>
+             <tr>
+               <th style={{ background: "#700B00", color: "white" }}>Gold Type</th>
+               <th style={{ background: "#700B00", color: "white" }}>Price (₹)</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr>
+               <td>24k</td>
+               <td>₹{goldRates["Gold-24K"] || "Not available"}</td>
+             </tr>
+             <tr>
+               <td>22k</td>
+               <td>₹{goldRates["Gold-22K"] || "Not available"}</td>
+             </tr>
+             <tr>
+               <td>18k</td>
+               <td>₹{goldRates["Gold-18K"] || "Not available"}</td>
+             </tr>
+             <tr>
+               <td>Silver</td>
+               <td>₹{goldRates.silver || "Not available"}</td>
+             </tr>
+           </tbody>
+         </table>
           ) : (
             <p>Loading...</p>
           )}
