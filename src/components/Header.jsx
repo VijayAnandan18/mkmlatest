@@ -81,9 +81,17 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="logo-container">
-        <img src="assets/spinner.png" alt="Logo" className="logo" style={{ width: "250px", height: "50px" }} />
-      </div>
+      
+<div className="logo-container">
+  <Link to="/">
+    <img
+      src="assets/spinner.png"
+      alt="Logo"
+      className="logo"
+      style={{ width: "250px", height: "50px" }}
+    />
+  </Link>
+</div>
 
       <div className="location-container">
         <IoLocationOutline className="location-icon" />
