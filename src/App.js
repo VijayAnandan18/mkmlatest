@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
@@ -19,10 +19,8 @@ import ScrollToTop from "./pages/ScrollToTop";
 import DailyCollection from "./pages/DailyCollection";
 import AdminGoldRate from "./admin/AdminGoldRate";
 import MKMadminlogin from "./admin/MKMadminlogin";
-
 function App() {
   const [loading, setLoading] = useState(true);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login state
 
   // Simulate loading time, adjust as needed
   useEffect(() => {
@@ -31,24 +29,18 @@ function App() {
     }, 1000); // Adjust time as needed (e.g., 3 seconds for demo)
     return () => clearTimeout(timer);
   }, []);
-
   useEffect(() => {
     AOS.init({
       duration: 1000, // Animation duration in milliseconds
       once: true, // Whether animation should happen only once
     });
   }, []);
-
-  // Function to handle login (for demo purposes)
-  const handleLogin = () => {
-    setIsLoggedIn(true); // Set login state to true
-  };
-
   return (
     <Router>
-      <ScrollToTop />
+        <ScrollToTop /> 
       {loading ? (
-        <Spinner /> // Show spinner while loading
+        <Spinner /> 
+      // Show spinner while loading
       ) : (
         <Routes>
           <Route path="/" element={<Home />} />
@@ -58,24 +50,14 @@ function App() {
           <Route path="/gold-jewellery" element={<CollectionPage />} />
           <Route path="/diamond-jewellery" element={<DiamondPage />} />
           <Route path="/silver-collection" element={<SilverPage />} />
-          <Route path="/schemes" element={<SchemesPage />} />
+          <Route path="/schemes" element={<SchemesPage/>} />
           <Route path="/digigold" element={<DigiGold />} />
-          <Route path="/futureplus" element={<FuturePlus />} />
-          <Route path="/futuregold" element={<FutureGold />} />
-          <Route path="/flexigold" element={<FlexiGold />} />
-          <Route path="/dailycollection" element={<DailyCollection />} />
-          
-          {/* Protected Admin Route */}
-          <Route
-            path="/mkmadmin"
-            element={isLoggedIn ? <AdminGoldRate /> : <Navigate to="/mkmadminlogin" />}
-          />
-          
-          {/* Login Route */}
-          <Route
-            path="/mkmadminlogin"
-            element={<MKMadminlogin handleLogin={handleLogin} />}
-          />
+          <Route path="/futureplus" element={<FuturePlus/>} />
+          <Route path="/futuregold" element={<FutureGold/>} />
+          <Route path="/flexigold" element={<FlexiGold/>} />
+          <Route path="/dailycollection" element={<DailyCollection/>} />
+          <Route path="/mkmadmin" element={<AdminGoldRate/>}/>
+          <Route path="/mkmadminlogin" element={<MKMadminlogin/>}/>
         </Routes>
       )}
     </Router>
