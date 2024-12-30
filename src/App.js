@@ -18,6 +18,7 @@ import FlexiGold from "./pages/FlexiGold";
 import ScrollToTop from "./pages/ScrollToTop";
 import DailyCollection from "./pages/DailyCollection";
 import AdminGoldRate from "./admin/AdminGoldRate";
+import MKMadminlogin from "./admin/MKMadminlogin";
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -56,6 +57,7 @@ function App() {
           <Route path="/flexigold" element={<FlexiGold/>} />
           <Route path="/dailycollection" element={<DailyCollection/>} />
           <Route path="/mkmadmin" element={<AdminGoldRate/>}/>
+          <Route path="/mkmadminlogin" element={<MKMadminlogin/>}/>
         </Routes>
       )}
     </Router>

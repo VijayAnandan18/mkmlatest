@@ -1,69 +1,114 @@
 /* General login container styling */
 .login-container-mkmadmin {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Use min-height to ensure it always covers the viewport */
+  background-color: rgb(240, 240, 240);
+  padding: 10px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box; /* Ensures padding is included in width calculations */
+}
+
+.login-form-mkmadmin {
+  background: rgba(255, 255, 255, 0.9); /* Slightly increase opacity for better readability */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Use a percentage for better responsiveness */
+  max-width: 400px; /* Restrict the max width for a card-like appearance */
+  text-align: center;
+  box-sizing: border-box; /* Ensures padding is included in width calculations */
+}
+
+.login-heading-mkmadmin {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #700b00;
+  font-weight: bold;
+}
+
+.input-group-mkmadmin {
+  margin-bottom: 15px;
+}
+
+.label-mkmadmin {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+/* Wrapper for the password input and icon */
+.password-wrapper {
+  position: relative;
+}
+
+.password-visibility-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #700b00;
+}
+
+/* Optional: Add a hover effect for the visibility icon */
+.password-visibility-icon:hover {
+  color: #9e2a2f;
+}
+
+.input-mkmadmin {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.error-message-mkmadmin {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-btn-mkmadmin {
+  width: 100%;
+  padding: 12px;
+  background-color: #700b00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-btn-mkmadmin:hover {
+  background-color: #9e2a2f;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+  .login-container-mkmadmin {
+    padding: 20px; /* Adjust padding for smaller screens */
   }
-  
+
   .login-form-mkmadmin {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+    padding: 15px; /* Reduce padding for smaller devices */
   }
-  
+
   .login-heading-mkmadmin {
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
   }
-  
-  .input-group-mkmadmin {
-    margin-bottom: 15px;
-  }
-  
-  .label-mkmadmin {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
-  }
-  
+
   .input-mkmadmin {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding: 8px; /* Adjust input padding for smaller screens */
   }
-  
-  .error-message-mkmadmin {
-    color: red;
-    font-size: 14px;
-    text-align: center;
-  }
-  
+
   .login-btn-mkmadmin {
-    width: 100%;
-    padding: 12px;
-    background-color: #700b00;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+    padding: 10px; /* Adjust button padding for smaller screens */
   }
-  
-  .login-btn-mkmadmin:hover {
-    background-color: #9e2a2f;
-  }
-  
-  /* Media query for responsiveness */
-  @media (max-width: 600px) {
-    .login-form-mkmadmin {
-      padding: 20px;
-    }
-  }
-  
+}

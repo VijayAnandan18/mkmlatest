@@ -103,60 +103,68 @@ const Header = () => {
       </div>
 
       <div className="goldtext-rate">
-        <p className="shiny-text2" data-text="Gold Rate">Gold Rate</p>
-        <div className="dropdown-header">
-          <div className="dropdown-content-header">
-            {showRates && (
-              <div className="gold-rate-dropdown">
-                {goldRates ? (
-                  <table className="gold-rate-table">
-                    <thead>
-                      <tr>
-                        <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>
-                          Today's Gold Rate
-                        </th>
-                      </tr>
-                      <tr>
-                        <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>
-                          Updated on: {`${new Date(goldRates.lastUpdated).toLocaleDateString("en-GB", {
-                            day: "2-digit",
-                            month: "2-digit",
-                            year: "numeric",
-                          })} 10:05 AM`}
-                        </th>
-                      </tr>
-                      <tr>
-                        <th style={{ background: "#700B00", color: "white" }}>Gold Type</th>
-                        <th style={{ background: "#700B00", color: "white" }}>Price (₹)</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>24k</td>
-                        <td>₹{goldRates.gold24K || "Not available"}</td>
-                      </tr>
-                      <tr>
-                        <td>22k</td>
-                        <td>₹{goldRates.gold22K || "Not available"}</td>
-                      </tr>
-                      <tr>
-                        <td>18k</td>
-                        <td>₹{goldRates.gold18K || "Not available"}</td>
-                      </tr>
-                      <tr>
-                        <td>Silver</td>
-                        <td>₹{goldRates.silver || "Not available"}</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                ) : (
-                  <p>Loading...</p>
-                )}
-              </div>
-            )}
-          </div>
+  <p
+    className="shiny-text2"
+    data-text="Gold Rate"
+    onClick={() => setShowRates((prevShowRates) => !prevShowRates)} // Toggle on click
+    style={{ cursor: "pointer" }} // Add pointer cursor to indicate clickable
+  >
+    Gold Rate
+  </p>
+  <div className="dropdown-header">
+    <div className="dropdown-content-header">
+      {showRates && (
+        <div className="gold-rate-dropdown">
+          {goldRates ? (
+            <table className="gold-rate-table">
+              <thead>
+                <tr>
+                  <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>
+                    Today's Gold Rate
+                  </th>
+                </tr>
+                <tr>
+                  <th colSpan="2" style={{ background: "#700B00", color: "white", textAlign: "center" }}>
+                    Updated on: {`${new Date(goldRates.lastUpdated).toLocaleDateString("en-GB", {
+                      day: "2-digit",
+                      month: "2-digit",
+                      year: "numeric",
+                    })} 10:05 AM`}
+                  </th>
+                </tr>
+                <tr>
+                  <th style={{ background: "#700B00", color: "white" }}>Gold Type</th>
+                  <th style={{ background: "#700B00", color: "white" }}>Price (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>24k</td>
+                  <td>₹{goldRates.gold24K || "Not available"}</td>
+                </tr>
+                <tr>
+                  <td>22k</td>
+                  <td>₹{goldRates.gold22K || "Not available"}</td>
+                </tr>
+                <tr>
+                  <td>18k</td>
+                  <td>₹{goldRates.gold18K || "Not available"}</td>
+                </tr>
+                <tr>
+                  <td>Silver</td>
+                  <td>₹{goldRates.silver || "Not available"}</td>
+                </tr>
+              </tbody>
+            </table>
+          ) : (
+            <p>Loading...</p>
+          )}
         </div>
-      </div>
+      )}
+    </div>
+  </div>
+</div>
+
 
       <div className="search-container">
         <CustomDropdown

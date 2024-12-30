@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getFirestore, collection, addDoc, getDocs, query, updateDoc, doc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { useNavigate } from "react-router-dom";
 import "./AdminGoldRate.css";
 
 const firebaseConfig = {
@@ -26,6 +27,7 @@ const AdminGoldRate = () => {
     silver: "", // New silver rate field
   });
   const [lastUpdated, setLastUpdated] = useState(null);
+  const navigate = useNavigate();
 
   // Check if goldRates document exists
   useEffect(() => {
@@ -73,6 +75,10 @@ const AdminGoldRate = () => {
     } catch (error) {
       console.error("Error updating rates: ", error);
     }
+  };
+
+  const handleLogout = () => {
+    navigate("/mkmadminlogin");
   };
 
   return (
@@ -123,6 +129,15 @@ const AdminGoldRate = () => {
           style={{ background: "linear-gradient(90deg, #614100cc, #d89700, #6b4700c4)" }}
         >
           Update Rates
+        </button>
+      </div>
+      <div className="admin-gold-rate-button-container">
+        <button
+          className="admin-gold-rate-submit-button"
+          onClick={handleLogout}
+          style={{ background: "linear-gradient(90deg, #614100cc, #d89700, #6b4700c4)" }} // Same style as Update Rates button
+        >
+          Logout
         </button>
       </div>
     </div>
