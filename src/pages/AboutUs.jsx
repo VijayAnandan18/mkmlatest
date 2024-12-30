@@ -11,6 +11,7 @@ import CustomBottomNavigation from "../components/BottomNavbar"; // Ensure this 
 import AboutBack from "../components/AboutBack";
 import Owner from "../components/Owner";
 import Sidebar from "../components/Sidebar"; // Ensure Sidebar is imported
+import UpArrow from "./UpArrow";
 
 const AboutUs = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -39,6 +40,7 @@ const AboutUs = () => {
       <Abouthero />
       <Owner />
       <Timeline />
+      <UpArrow/>
       <Footer />
       {/* Display the bottom navigation only if it's a mobile screen */}
       {isMobile && <CustomBottomNavigation />}

@@ -90,7 +90,7 @@ const Enquiry = () => {
 <div className="contact-container" style={{backgroundImage: "url(/assets/contactbg.jpg)"}}>
 
     <div className="contact-form-wrapper">
-    <img src="assets/spinnerbg.png" style={{width:"220px", height:"60px"}}></img>
+    <img src="assets/spinnerbg.png" style={{width:"280px", height:"60px"}}></img>
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
   <div className="form-row">
@@ -103,6 +103,8 @@ const Enquiry = () => {
         value={formData.fullName}
         onChange={handleChange}
         required
+        placeholder="Enter your Full Name"
+
       />
     </div>
     <div className="form-group">
@@ -114,6 +116,7 @@ const Enquiry = () => {
         value={formData.email}
         onChange={handleChange}
         required
+          placeholder="Enter your Mail address"
       />
     </div>
   </div>
@@ -128,6 +131,7 @@ const Enquiry = () => {
         value={formData.phone}
         onChange={handleChange}
         required
+              placeholder="Enter your Phone Number"
       />
     </div>
     <div className="form-group">

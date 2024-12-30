@@ -8,6 +8,7 @@ import SilverCollection from "../components/SilverCollection";
 import SilverBack from "../components/SilverBack";
 import BottomNavbar from "../components/BottomNavbar"; // Ensure this path is correct
 import Sidebar from "../components/Sidebar"; // Ensure Sidebar is imported
+import UpArrow from "./UpArrow";
 
 const SilverPage = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -35,6 +36,7 @@ const SilverPage = () => {
       <SilverHero />
       <SilverBack />
       <SilverCollection />
+      <UpArrow/>
       <Footer />
       {/* Display the bottom navigation only if it's a mobile screen */}
       {isMobile && <BottomNavbar />}

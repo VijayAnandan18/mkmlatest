@@ -8,6 +8,7 @@ import CustomBottomNavigation from "../components/BottomNavbar";
 import Footer from "../components/Footer";
 import SchemesBack from "../components/SchemesBack";
 import Sidebar from "../components/Sidebar"; // Ensure Sidebar is imported
+import UpArrow from "./UpArrow";
 const  SchemesPage = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -34,6 +35,7 @@ const  SchemesPage = () => {
    
       <SchemesBack/>
    <Schemes/>
+   <UpArrow/>
       <Footer />
 
       {isMobile && <CustomBottomNavigation />}

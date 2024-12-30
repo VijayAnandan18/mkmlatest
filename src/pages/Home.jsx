@@ -13,7 +13,7 @@ import Diamond from "../components/Diamond";
 import Shop from "../components/Shop";
 import Footer from "../components/Footer";
 import SilverCards from "../components/SilverCards";
-import Gifts from "../components/Gifts";
+import UpArrow from "./UpArrow";
 import Testimonials from "../components/Testimonials";
 import CustomBottomNavigation from "../components/BottomNavbar";
 import GoldRateTag from "../components/GoldRateTag";
@@ -73,6 +73,7 @@ const Home = () => {
       <Scheme />
       <Testimonials />
       <ContactIcons />
+      <UpArrow/>
       <Footer />
       {isMobile && <CustomBottomNavigation />}
     </div>

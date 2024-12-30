@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import FlexiGoldBack from "../components/FlexiGoldBack";
 import Sidebar from "../components/Sidebar"; // Ensure Sidebar is imported
 import FlexiImage from "../components/FlexiImage";
+import UpArrow from "./UpArrow";
 const   FlexiGold = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -36,6 +37,7 @@ const   FlexiGold = () => {
    
       <FlexiGoldBack/>
  <FlexiGoldContent/>
+ <UpArrow/>
       <Footer />
 
       {isMobile && <CustomBottomNavigation />}

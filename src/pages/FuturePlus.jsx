@@ -8,7 +8,7 @@ import CustomBottomNavigation from "../components/BottomNavbar";
 import Footer from "../components/Footer";
 import FuturePlusBack from "../components/FuturePlusback";
 import Sidebar from "../components/Sidebar"; // Ensure Sidebar is imported
-
+import UpArrow from "./UpArrow";
 const  FuturePlus = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -35,6 +35,7 @@ const  FuturePlus = () => {
    
       <FuturePlusBack/>
    <FuturePlusContent/>
+   <UpArrow/>
       <Footer />
 
       {isMobile && <CustomBottomNavigation />}

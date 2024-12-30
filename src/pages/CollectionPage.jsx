@@ -9,6 +9,7 @@ import CustomBottomNavigation from "../components/BottomNavbar"; // Make sure th
 import GoldRateTag from "../components/GoldRateTag";
 import GoldBack from "../components/GoldBack";
 import Sidebar from "../components/Sidebar"; // Ensure Sidebar is imported
+import UpArrow from "./UpArrow";
 const CollectionPage = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -41,6 +42,7 @@ const CollectionPage = () => {
       <GoldHero />
       <GoldBack/>
       <Gold />
+      <UpArrow/>
       <Footer />
       {/* Display the bottom navigation only if it's a mobile screen */}
       {isMobile && <CustomBottomNavigation />}

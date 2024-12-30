@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import DiamondCollection from "../components/DiamondCollection";
 import DiamondBack from "../components/DiamondBack";
 import Sidebar from "../components/Sidebar"; // Ensure Sidebar is imported
+import UpArrow from "./UpArrow";
 const DiamondPage = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -34,6 +35,7 @@ const DiamondPage = () => {
       <DiamondHero />
       <DiamondBack/>
       <DiamondCollection />
+      <UpArrow/>
       <Footer />
       {/* Display the bottom navigation only if it's a mobile screen */}
       {isMobile && <CustomBottomNavigation />}

@@ -10,6 +10,7 @@ import DigiGoldBack from "../components/DigiGoldBack";
 import Sidebar from "../components/Sidebar"; // Ensure Sidebar is imported
 import Scheme from "../components/Scheme"
 import DigiSecond from "../components/DigiSecond";
+import UpArrow from "./UpArrow";
 const  DigiGold = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -37,7 +38,7 @@ const  DigiGold = () => {
       <DigiGoldBack/>
       <DigiGoldContent/>
 <DigiSecond/>
-  
+<UpArrow/>
   
       <Footer />
 
