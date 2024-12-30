@@ -9,12 +9,12 @@ const MobileFeatures = () => {
 
     const scrollStep = () => {
       if (scrollContainer) {
-        // Scroll by -1px (reverse direction)
-        scrollContainer.scrollLeft -= 1;
+        // Scroll by 1px
+        scrollContainer.scrollLeft += 1;
 
-        // Check if the scroll has reached the start (left)
-        if (scrollContainer.scrollLeft <= 0) {
-          scrollContainer.scrollLeft = scrollContainer.scrollWidth; // Reset to end if at the start
+        // Check if the scroll has reached the end
+        if (scrollContainer.scrollLeft + scrollContainer.offsetWidth >= scrollContainer.scrollWidth) {
+          scrollContainer.scrollLeft = 0; // Reset to start if at the end
         }
       }
     };
@@ -96,7 +96,7 @@ const MobileFeatures = () => {
         </div>
         <div className="mobile-features-card">
           <img
-            src="assets/excep.png"
+            src="assets/excep.jpg"
             alt="Labour Practices"
             className="mobile-features-card-image"
           />
@@ -111,3 +111,4 @@ const MobileFeatures = () => {
 };
 
 export default MobileFeatures;
+
