@@ -1,20 +1,26 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./MobileFeatures.css";
 
 const MobileFeatures = () => {
   const scrollContainerRef = useRef(null);
+  const [scrollDirection, setScrollDirection] = useState(1); // 1 for forward, -1 for reverse
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
 
     const scrollStep = () => {
       if (scrollContainer) {
-        // Scroll by 1px
-        scrollContainer.scrollLeft += 1;
+        // Move in the current direction
+        scrollContainer.scrollLeft += scrollDirection;
 
-        // Check if the scroll has reached the end
+        // Check if we've reached the end of the scroll
         if (scrollContainer.scrollLeft + scrollContainer.offsetWidth >= scrollContainer.scrollWidth) {
-          scrollContainer.scrollLeft = 0; // Reset to start if at the end
+          setScrollDirection(-1); // Switch to reverse
+        }
+
+        // Check if we've reached the start of the scroll
+        if (scrollContainer.scrollLeft <= 0) {
+          setScrollDirection(1); // Switch to forward
         }
       }
     };
@@ -23,7 +29,7 @@ const MobileFeatures = () => {
     const interval = setInterval(scrollStep, 10); // Adjust speed as needed (lower value = faster scrolling)
 
     return () => clearInterval(interval); // Cleanup on unmount
-  }, []);
+  }, [scrollDirection]);
 
   return (
     <div className="mobile-features-section">
@@ -111,4 +117,3 @@ const MobileFeatures = () => {
 };
 
 export default MobileFeatures;
-
