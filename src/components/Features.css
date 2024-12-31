@@ -43,7 +43,10 @@
   transform-origin: 50% 50%;
   transition: transform 0.25s ease-out;
 }
+.sub-heading{
+  font-size:12px;
 
+}
 .features-card:hover::before {
   transition-delay: 0.2s;
   transform: scale(40);
@@ -76,7 +79,7 @@
     height: 140px;
   }
   .sub-heading{
-    font-size:12px;
+    font-size:10px;
   
   }
   

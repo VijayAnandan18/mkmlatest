@@ -1,30 +1,35 @@
-/* Container for the GoldHero component */
-.gold-hero-container {
+/* Gold Hero Video Container */
+.gold-hero-video-container {
   position: relative;
   width: 100%;
-  max-width: 1358px;
-  margin: 0 auto;
+  height: 0;
+  padding-top: 21.22%; /* Maintain 1365x290 aspect ratio (290/1365 = ~0.2122) */
+  overflow: hidden;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  z-index: 5;
 }
 
-/* Desktop View */
-.gold-hero-desktop {
+/* Gold Hero Video */
+.gold-hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  display: block;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the container */
+  object-position: center; /* Center the video */
 }
 
-/* Mobile View */
-.gold-hero-mobile {
-  width: 100%;
-  display: none; /* Hidden by default, shown in smaller screens */
-}
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .gold-hero-video-container {
+    padding-top: 56.25%; /* Adjust for a more appropriate aspect ratio on mobile if needed */
 
-/* Media query for mobile view */
-@media only screen and (max-width: 768px) {
-  .gold-hero-desktop {
-    display: none; /* Hide desktop image in mobile view */
   }
 
-  .gold-hero-mobile {
-    display: block; /* Show mobile image */
-  }
+}
+@media (max-width: 480px) {
+.gold-hero-image {
+  object-fit: fill;}
 }
