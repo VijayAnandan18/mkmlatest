@@ -54,7 +54,7 @@ const GridLayout = () => {
         onClick={handleImageClick}
       >
         <img
-          src="assets/about.png"
+          src="assets/elevation.png"
           alt="About Us"
           onLoad={handleImageLoad} // Call handleImageLoad when the image is loaded
         />

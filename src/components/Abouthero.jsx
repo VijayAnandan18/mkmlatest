@@ -6,7 +6,7 @@ const AboutHero = () => {
     <div className="about-hero-container">
       {/* Image Section */}
       <div className="about-hero-image" >
-        <img src="/assets/aboutimage.png" alt="About Us" className="about-hero-img" />
+        <img src="/assets/elevation.png" alt="About Us" className="about-hero-img" />
       </div>
 
       <div className="about-hero-content">
