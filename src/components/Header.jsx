@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 import { IoLocationOutline } from "react-icons/io5"; // Location icon
 import { GiRotaryPhone } from "react-icons/gi";
 import CustomDropdown from "./CustomDropdown"; // Import the CustomDropdown component
-import { Link } from "react-router-dom"; // Import Link
 import "./Header.css"; // Header styles
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
-
+import { Link } from "react-router-dom"; // Import Link
 const Header = () => {
   const [country, setCountry] = useState("India");
   const [flag, setFlag] = useState("india-flag.png");
