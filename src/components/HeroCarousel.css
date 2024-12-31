@@ -100,7 +100,7 @@
   }
 
   .hero-image {
-    object-position: right;
+    object-position: center;
     object-fit: cover;
   }
 }
@@ -111,7 +111,7 @@
   }
 
   .hero-image {
-    object-position: right;
+    object-position: center;
     object-fit: cover;
   }
 }
