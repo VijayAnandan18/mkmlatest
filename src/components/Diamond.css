@@ -27,7 +27,7 @@
   margin: 0;
   font-family: 'Playfair Display', serif; /* Font applied */
   font-weight: 400;
-  font-size: 40px;
+  font-size: 25px;
   color: #080808;
   -webkit-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
@@ -96,7 +96,11 @@
     grid-template-columns: 1fr; /* Single column layout */
     grid-template-rows: auto auto; /* Stack rows */
   }
+  .one h1 {
 
+    font-size: 20px;
+   
+  }
   .diamond-full, .diamond-grid {
     grid-column: 1 / -1; /* Full width for all sections */
   }
