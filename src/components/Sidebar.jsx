@@ -38,7 +38,9 @@ const Sidebar = () => {
         </div>
         <nav className="custom-sidebar-nav">
           <ul>
+          <li  style={{fontWeight:"bold"}}onClick={() => handleNavigation("/about")}>ABOUT US</li>
             <li>
+              
               <div
                 className="custom-sidebar-dropdown-title"
                 onClick={() => toggleMenu("gold")}
@@ -157,7 +159,7 @@ const Sidebar = () => {
               )}
             </li>
             <li onClick={() => handleNavigation("/digigold")} style={{fontWeight:"bold"}}>MKM DIGIGOLD</li>
-            <li onClick={() => handleNavigation("/about")}>About Us</li>
+        
             <li onClick={() => handleNavigation("/enquiry")}>Contact Us</li>
           </ul>
         </nav>

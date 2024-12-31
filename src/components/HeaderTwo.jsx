@@ -16,7 +16,10 @@ const HeaderTwo = () => {
           ☰
         </button>
         <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
-   
+        <li className="nav-item">
+            <a href="/about" style={{ fontFamily: 'Poppins', fontWeight: 'bold' }}>ABOUT US</a>
+         
+          </li>
         <li className="nav-item">
   <a href="/gold-jewellery" style={{ fontFamily: 'Poppins', fontWeight: 'bold' }}>GOLD ▾</a>
   <ul className="dropdown">
@@ -321,10 +324,7 @@ const HeaderTwo = () => {
     </li>
   </ul>
 </li>
-<li className="nav-item">
-            <a href="/about" style={{ fontFamily: 'Poppins', fontWeight: 'bold' }}>ABOUT US</a>
-         
-          </li>
+
           <li className="nav-item">
             <a href="/enquiry" style={{ fontFamily: 'Poppins', fontWeight: 'bold' }}>CONTACT US</a>
          

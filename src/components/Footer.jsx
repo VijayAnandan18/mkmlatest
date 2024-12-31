@@ -43,13 +43,16 @@ const Footer = () => {
           <h3>Let us help you</h3>
           <ul className="footer-links">
             <li><a href="/enquiry">Contact us</a></li>
-            <li><b>Mr. MKM SYED AHAMED KABEER M.D</b></li> 
+           
             <li>
       <a href="mailto:mkmthangamaligai@gmail.com"> <b>Mail-ID:mkmthangamaligai@gmail.com</b></a>
       
     </li>
     <li>
       <a href="tel:+04624055001" ><b>Landline no:+0462 4055001</b></a>
+    </li>
+    <li>
+      <a href="tel:+91 9384810725" ><b>Phone no:+91 9384810725</b></a>
     </li>
           
           </ul>

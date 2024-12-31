@@ -8,13 +8,14 @@
   z-index: 100;
   background-color: white; /* Adjust if needed */
   overflow: hidden;
+  
 }
 
 .marquee-container-custom {
   position: relative;
   width: 100%; /* Full width */
   height: 20px;
-  background-color: #c67e00;
+  background-color: maroon;
   color: white;
   overflow: hidden;
   border-radius: 0; /* No rounding */
@@ -27,7 +28,7 @@
   display: inline-block;
   white-space: nowrap;
   font-size: 1.0rem;
-  font-weight: bold;
+
   animation: scrollLeft 40s linear infinite; /* Adjust the duration as needed */
 }
 

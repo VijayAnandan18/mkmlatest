@@ -7,7 +7,7 @@ const ContactIcons = () => {
     <div>
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/+918870335151"
+        href="https://wa.me/+919384810725"
         className="whatsapp-button"
         target="_blank"
         rel="noopener noreferrer"

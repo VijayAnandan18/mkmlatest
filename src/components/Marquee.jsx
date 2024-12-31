@@ -41,21 +41,23 @@ const Marquee = () => {
   return (
     <div className="marquee-wrapper">
       <div className="marquee-container-custom">
-        <div className="marquee-text-custom">
-          {goldRates ? (
-            <>
-              நம் நெல்லையில் MKM தங்க மாளிகை! 
-              இன்றைய தங்க விலை கிராம் ஒன்றிற்கு 
-              24k - ₹{goldRates["Gold-24K"] ? goldRates["Gold-24K"] : "Not available"}, 
-              22k - ₹{goldRates["Gold-22K"] ? goldRates["Gold-22K"] : "Not available"}, 
-              18k - ₹{goldRates["Gold-18K"] ? goldRates["Gold-18K"] : "Not available"}, 
-              வெள்ளி கிராம் ஒன்றிற்கு ₹{goldRates.silver ? goldRates.silver : "Not available"}    
-                 -மட்டுமே!
-            </>
-          ) : (
-            "Loading gold rates..."
-          )}
-        </div>
+      <div
+  className="marquee-text-custom"
+  style={{ fontFamily: "PlayfairDisplay", wordSpacing: "5px" }}
+>
+  {goldRates ? (
+    <>
+      Welcome to MKM Thangamaligai! 
+      Today's gold price per gram: 
+      24k - ₹{goldRates["Gold-24K"] ? goldRates["Gold-24K"] : "Not available"}, 
+      22k - ₹{goldRates["Gold-22K"] ? goldRates["Gold-22K"] : "Not available"}, 
+      18k - ₹{goldRates["Gold-18K"] ? goldRates["Gold-18K"] : "Not available"}, 
+      and silver per gram - ₹{goldRates.silver ? goldRates.silver : "Not available"} {"only!"}
+    </>
+  ) : (
+    "Loading gold rates..."
+  )}
+</div>
       </div>
     </div>
   );

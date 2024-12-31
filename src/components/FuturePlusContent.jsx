@@ -72,7 +72,9 @@ const FuturePlusContent = () => {
           <p className="flexi-gold-text">
             <strong>Contact Us :</strong> <br />
             <strong style={{marginLeft:"10px"}}>Mail-Id:</strong> <a href="mailto:mkmthangamaligai@gmail.com">mkmthangamaligai@gmail.com</a> <br />
-            <strong style={{marginLeft:"10px"}}>Landline No.:</strong> +0462 4055001
+            <strong style={{marginLeft:"10px"}}>Landline No.:</strong> +0462 4055001<br />
+            
+            <strong style={{marginLeft:"10px"}}>Phone No:</strong> +91 9384810725
           </p>
         </div>
       </div>

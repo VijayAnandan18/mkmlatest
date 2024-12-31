@@ -36,7 +36,7 @@ const Gold = () => {
     { name: 'Sparkle  Kids Earring', image: '/assets/jewels/gold/earrings/earring2.webp' },
     { name: 'Glam Gold Earring', image: '/assets/jewels/gold/earrings/earring3.webp' },
     { name: 'Classic Dew Earring', image: '/assets/jewels/gold/earrings/earring4.webp' },
-    { name: 'Traditional Kids Gold Bracelet', image: '/assets/jewels/gold/bracelet/bracelet1.jpg' },
+    { name: ' Glam Kids Gold Bracelet', image: '/assets/jewels/gold/bracelet/bracelet1.jpg' },
     { name: 'Stylish Kids Gold Bracelet', image: '/assets/jewels/gold/bracelet/bracelet2.jpg' },
     { name: ' Charm Kids Gold Bracelet', image: '/assets/jewels/gold/bracelet/bracelet3.webp' },
     { name: 'Dazzle Band Gold Bracelet', image: '/assets/jewels/gold/bracelet/bracelet4.webp' },
