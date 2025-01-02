@@ -3,7 +3,7 @@ import './HeroCarousel.css';
 
 const HeroCarousel = () => {
   const desktopMedia = [
-    { type: 'image', src: "assets/hero1.webp" },
+    { type: 'image', src: "assets/hero1.png" },
     { type: 'image', src: "assets/hero2.webp" },
     { type: 'image', src: "assets/hero3.webp" },
     { type: 'image', src: "assets/hero4.webp" },

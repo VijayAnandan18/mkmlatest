@@ -95,23 +95,23 @@
 /* Mobile View Adjustments */
 @media (max-width: 768px) {
   .hero-carousel {
-    height: 32vh;
+    height: 34vh;
     padding-bottom: 0;
   }
 
   .hero-image {
     object-position: center;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 @media (max-width: 480px) {
   .hero-carousel {
-    height: 32vh;
+    height: 34vh;
     padding-bottom: 0;
   }
 
   .hero-image {
     object-position: center;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
