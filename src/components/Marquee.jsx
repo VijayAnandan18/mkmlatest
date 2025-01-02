@@ -43,7 +43,7 @@ const Marquee = () => {
       <div className="marquee-container-custom">
       <div
   className="marquee-text-custom"
-  style={{ fontFamily: "PlayfairDisplay", wordSpacing: "5px" }}
+  style={{ fontFamily: "Cursive", wordSpacing: "5px" }}
 >
   {goldRates ? (
     <>
